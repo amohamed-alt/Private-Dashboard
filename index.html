@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retention Command Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">R</div>
+      <div>
+        <strong>Retention Command</strong>
+        <span>Fadi · Jihad · Faizan</span>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Dashboard navigation">
+      <button class="nav-item active" data-tab="overview">
+        <span>Overview</span>
+      </button>
+      <button class="nav-item" data-tab="forecast">
+        <span>Forecast View</span>
+      </button>
+      <button class="nav-item" data-tab="Fadi">
+        <span>Fadi</span>
+      </button>
+      <button class="nav-item" data-tab="Jihad">
+        <span>Jihad</span>
+      </button>
+      <button class="nav-item" data-tab="Faizan">
+        <span>Faizan</span>
+      </button>
+      <button class="nav-item" data-tab="compare">
+        <span>Plan vs Calculated</span>
+      </button>
+      <button class="nav-item" data-tab="accounts">
+        <span>Accounts Explorer</span>
+      </button>
+      <button class="nav-item" data-tab="actions">
+        <span>Action Center</span>
+      </button>
+      <button class="nav-item" data-tab="quality">
+        <span>Data Quality</span>
+      </button>
+    </nav>
+
+    <div class="side-panel">
+      <div class="side-label">Data source</div>
+      <div class="side-value">n8n → live-data.js</div>
+      <div class="side-muted" id="sidebarMeta">Loading...</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Retention only · acquisition hidden from the view</div>
+        <h1 id="pageTitle">Retention Overview</h1>
+        <p id="pageSubtitle">Loading latest retention sync...</p>
+      </div>
+
+      <div class="top-actions">
+        <div class="scenario-switch" id="scenarioSwitch" aria-label="Forecast scenario">
+          <button data-scenario="worst">Worst</button>
+          <button data-scenario="medium" class="active">Medium</button>
+          <button data-scenario="best">Best</button>
+          <button data-scenario="bestPlusLost">Best + Lost</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="alert" id="riskBanner"></section>
+
+    <section id="app" class="app">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <h2>Loading retention dashboard...</h2>
+        <p>Reading <code>data/live-data.js</code></p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function loadDashboardData() {
+      const version = Date.now();
+      const dataScript = document.createElement("script");
+      dataScript.src = "./data/live-data.js?v=" + version;
+      dataScript.onload = function () {
+        const appScript = document.createElement("script");
+        appScript.src = "./app.js?v=" + version;
+        document.body.appendChild(appScript);
+      };
+      dataScript.onerror = function () {
+        document.getElementById("app").innerHTML = `
+          <div class="empty-state">
+            <h2>Could not load <code>data/live-data.js</code></h2>
+            <p>Run the n8n workflow and confirm the generated file exists on GitHub.</p>
+          </div>
+        `;
+      };
+      document.body.appendChild(dataScript);
+    })();
+  </script>
+</body>
+</html>
