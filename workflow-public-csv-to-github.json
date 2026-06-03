@@ -1,0 +1,9 @@
+const built = $items("Build Dashboard Data")[0].json;
+const existing = $items("GitHub Get Existing File")[0]?.json || {};
+const body = {
+  message: built.commitMessage,
+  content: Buffer.from(built.generatedFileContent, "utf8").toString("base64"),
+  branch: "main"
+};
+if (existing.sha) body.sha = existing.sha;
+return [{ json: body }];

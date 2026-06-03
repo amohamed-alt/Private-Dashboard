@@ -1,0 +1,313 @@
+{
+  "name": "Private Dashboard - Google Sheets to GitHub every 12 hours",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 12
+            }
+          ]
+        }
+      },
+      "id": "schedule",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.SUMMARY_CSV_URL || 'PASTE_SUMMARY_CSV_EXPORT_URL_HERE' }}",
+        "responseFormat": "string",
+        "options": {}
+      },
+      "id": "summary",
+      "name": "Read Summary CSV",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        90
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.RETENTION_CSV_URL || 'PASTE_RETENTION_CSV_EXPORT_URL_HERE' }}",
+        "responseFormat": "string",
+        "options": {}
+      },
+      "id": "retention",
+      "name": "Read Retention CSV",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        520,
+        90
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function parseCSV(text) {\n  const rows = [];\n  let row = [];\n  let cell = '';\n  let quoted = false;\n  for (let i = 0; i < text.length; i++) {\n    const char = text[i];\n    const next = text[i + 1];\n    if (char === '\"') {\n      if (quoted && next === '\"') { cell += '\"'; i++; }\n      else quoted = !quoted;\n    } else if (char === ',' && !quoted) {\n      row.push(cell); cell = '';\n    } else if ((char === '\\n' || char === '\\r') && !quoted) {\n      if (char === '\\r' && next === '\\n') i++;\n      row.push(cell);\n      if (row.some(v => String(v).trim() !== '')) rows.push(row);\n      row = []; cell = '';\n    } else {\n      cell += char;\n    }\n  }\n  row.push(cell);\n  if (row.some(v => String(v).trim() !== '')) rows.push(row);\n  const headers = rows.shift().map(h => String(h || '').trim());\n  return rows.map(values => Object.fromEntries(headers.map((h, i) => [h, values[i] ?? ''])));\n}\nconst summaryCsv = $items('Read Summary CSV')[0].json.body || $items('Read Summary CSV')[0].json.data || '';\nconst retentionCsv = $items('Read Retention CSV')[0].json.body || $items('Read Retention CSV')[0].json.data || '';\nreturn [\n  ...parseCSV(summaryCsv).map(row => ({ json: { sourceSheet: 'Summary', ...row } })),\n  ...parseCSV(retentionCsv).map(row => ({ json: { sourceSheet: 'Retention', ...row } }))\n];"
+      },
+      "id": "parse",
+      "name": "Parse CSV Sheets",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        780,
+        90
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const allRows = $items('Parse CSV Sheets').map(item => item.json);\nconst summaryRows = allRows.filter(row => row.sourceSheet === 'Summary').map(({ sourceSheet, ...row }) => ({ json: row }));\nconst retentionRows = allRows.filter(row => row.sourceSheet === 'Retention').map(({ sourceSheet, ...row }) => ({ json: row }));\nreturn [{ json: { summaryRows: summaryRows.map(x => x.json), retentionRows: retentionRows.map(x => x.json) } }];"
+      },
+      "id": "bundle",
+      "name": "Bundle Rows",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        90
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Adapter for CSV workflow: exposes rows with same variable names used by the private Google Sheets workflow.\nconst input = $items('Bundle Rows')[0].json;\nglobalThis.__summaryRows = input.summaryRows;\nglobalThis.__retentionRowsRaw = input.retentionRows;\nconst originalItems = globalThis.$items;\nglobalThis.$items = (name) => {\n  if (name === 'Read Summary') return globalThis.__summaryRows.map(json => ({ json }));\n  if (name === 'Read Retention') return globalThis.__retentionRowsRaw.map(json => ({ json }));\n  return originalItems(name);\n};\nconst MONTHS = [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"];\nconst RETENTION_TEAM = [\"Fadi\", \"Jihad\", \"Faizan\"];\nconst OWNER_ALIASES = { fadi: \"Fadi\", faizan: \"Faizan\", jehad: \"Jihad\", jihad: \"Jihad\", gihad: \"Jihad\" };\nconst PROJECTED_EXPENSES = 3600000;\n\nfunction cleanText(value) { return String(value ?? \"\").trim(); }\nfunction normalizeOwner(value) { return OWNER_ALIASES[cleanText(value).toLowerCase()] || cleanText(value); }\nfunction normalizeProduct(value) {\n  const key = cleanText(value).toLowerCase();\n  if (key === \"afterhire\") return \"AfterHire\";\n  if (key === \"talentera\") return \"Talentera\";\n  if (key === \"evalufy\") return \"Evalufy\";\n  return cleanText(value);\n}\nfunction normalizeRenewalStatus(value) {\n  const status = cleanText(value).replace(/Pending\\s*-\\s*/i, \"Pending \").replace(/\\s+/g, \" \").trim().toLowerCase();\n  if (status === \"renewed\") return \"Renewed\";\n  if (status === \"lost\") return \"Lost\";\n  if (status.includes(\"high\")) return \"Pending High\";\n  if (status.includes(\"medium\")) return \"Pending Medium\";\n  if (status.includes(\"low\")) return \"Pending Low\";\n  return cleanText(value) || \"Unknown\";\n}\nfunction parseMoney(value) {\n  if (value === null || value === undefined || value === \"\") return 0;\n  if (typeof value === \"number\") return Number.isFinite(value) ? value : 0;\n  let text = String(value).trim();\n  if (!text || text.toLowerCase() === \"nan\") return 0;\n  if (/#REF!|#VALUE!|#DIV\\/0!/i.test(text)) return 0;\n  let negative = text.startsWith(\"-\") || (text.startsWith(\"(\") && text.endsWith(\")\"));\n  text = text.replace(/[$,%()\\s]/g, \"\").replace(/-/g, \"\").replace(/,/g, \"\");\n  const number = Number(text);\n  if (!Number.isFinite(number)) return 0;\n  return negative ? -number : number;\n}\nfunction hasFormulaError(value) { return /#REF!|#VALUE!|#DIV\\/0!/i.test(String(value ?? \"\")); }\nfunction roundMoney(value) { return Math.round(Number(value || 0)); }\nfunction sum(rows, fn) { return roundMoney(rows.reduce((total, row) => total + fn(row), 0)); }\nfunction groupBy(rows, fn) {\n  return rows.reduce((acc, row) => {\n    const key = fn(row) || \"Unknown\";\n    if (!acc[key]) acc[key] = [];\n    acc[key].push(row);\n    return acc;\n  }, {});\n}\n\nconst summaryRows = $items(\"Read Summary\").map(item => item.json);\nconst retentionRowsRaw = $items(\"Read Retention\").map(item => item.json);\n\nconst summaryNameCol = \"Unnamed: 0\";\nconst summaryCols = {\n  acqTarget: \"Target\",\n  retTarget: \"Unnamed: 2\",\n  totalTarget: \"Unnamed: 3\",\n  bookedRet: \"Actual\",\n  bookedAcq: \"Unnamed: 5\",\n  cashedRet: \"Unnamed: 6\",\n  cashedAcq: \"Unnamed: 7\",\n  totalBooking: \"Unnamed: 8\",\n  totalCashing: \"Unnamed: 9\",\n  receivables: \"Receivables \\n(booked - cashed) + last year load\",\n  confirmedRevenue: \"Cashed YTD + Prospective Receivables\"\n};\n\nconst summaryPeopleNames = [\"Ursula\", \"Marita\", \"Zain\", \"Ahmed\", \"Mohammed\", \"Jehad\", \"Jihad\", \"Fadi\", \"Faizan\", \"Bandar\"];\nconst seenSummaryNames = new Set();\nconst summaryPeople = summaryRows\n  .filter(row => {\n    const name = cleanText(row[summaryNameCol]);\n    if (!summaryPeopleNames.includes(name) || seenSummaryNames.has(name)) return false;\n    seenSummaryNames.add(name);\n    return true;\n  })\n  .map(row => ({\n    owner: normalizeOwner(row[summaryNameCol]),\n    sourceName: cleanText(row[summaryNameCol]),\n    acqTarget: roundMoney(parseMoney(row[summaryCols.acqTarget])),\n    retTarget: roundMoney(parseMoney(row[summaryCols.retTarget])),\n    totalTarget: roundMoney(parseMoney(row[summaryCols.totalTarget])),\n    bookedRet: roundMoney(parseMoney(row[summaryCols.bookedRet])),\n    bookedAcq: roundMoney(parseMoney(row[summaryCols.bookedAcq])),\n    cashedRet: roundMoney(parseMoney(row[summaryCols.cashedRet])),\n    cashedAcq: roundMoney(parseMoney(row[summaryCols.cashedAcq])),\n    totalBooking: roundMoney(parseMoney(row[summaryCols.totalBooking])),\n    totalCashing: roundMoney(parseMoney(row[summaryCols.totalCashing])),\n    receivables: roundMoney(parseMoney(row[summaryCols.receivables])),\n    confirmedRevenue: roundMoney(parseMoney(row[summaryCols.confirmedRevenue]))\n  }));\n\nconst retentionRows = retentionRowsRaw\n  .map((row, index) => {\n    const owner = normalizeOwner(row[\"RM 2026\"]);\n    const monthly = Object.fromEntries(MONTHS.map(month => [month, roundMoney(parseMoney(row[month]))]));\n    const value2026 = roundMoney(parseMoney(row[\"2026 Value\"]));\n    const monthlyTotal = sum(MONTHS, month => monthly[month]);\n    return {\n      rowNumber: index + 2,\n      status: cleanText(row[\"Status (Abdullah)\"]),\n      product: normalizeProduct(row[\"Product\"]),\n      csmName: cleanText(row[\"CSM Name\"]),\n      location: cleanText(row[\"Location\"]),\n      owner,\n      clientName: cleanText(row[\"Client name\"]),\n      value2026,\n      renewalStatus: normalizeRenewalStatus(row[\"Renewal Status\"]),\n      monthly,\n      monthlyTotal,\n      sheetTotal: roundMoney(parseMoney(row[\"Total\"])),\n      sheetDifference: roundMoney(parseMoney(row[\"Difference\"])),\n      valueVsMonthlyDiff: roundMoney(monthlyTotal - value2026)\n    };\n  })\n  .filter(row => RETENTION_TEAM.includes(row.owner));\n\nconst summaryErrors = [];\nsummaryRows.forEach((row, index) => {\n  Object.entries(row).forEach(([column, value]) => {\n    if (hasFormulaError(value)) summaryErrors.push({ rowNumber: index + 2, column, value: String(value) });\n  });\n});\n\nconst totalTarget = sum(summaryPeople, row => row.totalTarget);\nconst totalBooking = sum(summaryPeople, row => row.totalBooking);\nconst totalCashing = sum(summaryPeople, row => row.totalCashing);\nconst totalReceivables = sum(summaryPeople, row => row.receivables);\nconst confirmedRevenue = roundMoney(totalCashing + totalReceivables);\n\nconst byStatus = {\n  renewed: sum(retentionRows.filter(row => row.renewalStatus === \"Renewed\"), row => row.value2026),\n  pendingHigh: sum(retentionRows.filter(row => row.renewalStatus === \"Pending High\"), row => row.value2026),\n  pendingMedium: sum(retentionRows.filter(row => row.renewalStatus === \"Pending Medium\"), row => row.value2026),\n  pendingLow: sum(retentionRows.filter(row => row.renewalStatus === \"Pending Low\"), row => row.value2026),\n  lost: sum(retentionRows.filter(row => row.renewalStatus === \"Lost\"), row => row.value2026)\n};\n\nconst scenarioValues = {\n  worst: confirmedRevenue + byStatus.pendingHigh,\n  medium: confirmedRevenue + byStatus.pendingHigh + byStatus.pendingMedium,\n  best: confirmedRevenue + byStatus.pendingHigh + byStatus.pendingMedium + byStatus.pendingLow,\n  outstanding: confirmedRevenue + byStatus.pendingHigh + byStatus.pendingMedium + byStatus.pendingLow\n};\n\nfunction scenarioModel(value, target = totalTarget) {\n  const revenue = roundMoney(value);\n  const gapToTarget = roundMoney(revenue - target);\n  const netAfterExpenses = roundMoney(revenue - PROJECTED_EXPENSES);\n  const achievementPct = target ? Number(((revenue / target) * 100).toFixed(1)) : 0;\n  const marginPct = revenue ? Number(((netAfterExpenses / revenue) * 100).toFixed(1)) : 0;\n  let status = \"Critical\";\n  if (achievementPct >= 100 && netAfterExpenses > 0) status = \"Safe\";\n  else if (achievementPct >= 80 && netAfterExpenses > 0) status = \"Watch\";\n  return { revenue, gapToTarget, netAfterExpenses, achievementPct, marginPct, status };\n}\n\nconst summaryByOwner = Object.fromEntries(summaryPeople.map(row => [row.owner, row]));\nfunction ownerSummary(owner) {\n  const rows = retentionRows.filter(row => row.owner === owner);\n  const summary = summaryByOwner[owner] || {};\n  const target = summary.retTarget || summary.totalTarget || 0;\n  const cashedYtd = (summary.cashedRet || 0) + (summary.cashedAcq || 0);\n  const receivables = summary.receivables || 0;\n  const confirmed = roundMoney(cashedYtd + receivables);\n  const renewed = sum(rows.filter(row => row.renewalStatus === \"Renewed\"), row => row.value2026);\n  const pendingHigh = sum(rows.filter(row => row.renewalStatus === \"Pending High\"), row => row.value2026);\n  const pendingMedium = sum(rows.filter(row => row.renewalStatus === \"Pending Medium\"), row => row.value2026);\n  const pendingLow = sum(rows.filter(row => row.renewalStatus === \"Pending Low\"), row => row.value2026);\n  const lost = sum(rows.filter(row => row.renewalStatus === \"Lost\"), row => row.value2026);\n  const worst = confirmed + pendingHigh;\n  const medium = worst + pendingMedium;\n  const best = medium + pendingLow;\n  return {\n    owner,\n    accountsCount: rows.length,\n    target,\n    totalValue: sum(rows, row => row.value2026),\n    bookedYtd: (summary.bookedRet || 0) + (summary.bookedAcq || 0),\n    cashedYtd,\n    receivables,\n    confirmedRevenue: confirmed,\n    renewed,\n    pendingHigh,\n    pendingMedium,\n    pendingLow,\n    lost,\n    forecasts: {\n      worst: scenarioModel(worst, target),\n      medium: scenarioModel(medium, target),\n      best: scenarioModel(best, target),\n      outstanding: scenarioModel(best, target)\n    },\n    topAccounts: [...rows].sort((a, b) => b.value2026 - a.value2026).slice(0, 15),\n    pendingHighAccounts: rows.filter(row => row.renewalStatus === \"Pending High\").sort((a, b) => b.value2026 - a.value2026).slice(0, 15),\n    riskyAccounts: rows.filter(row => row.renewalStatus === \"Lost\" || row.status.toLowerCase().includes(\"expected to be lost\") || Math.abs(row.valueVsMonthlyDiff) > 1).sort((a, b) => Math.max(b.value2026, Math.abs(b.valueVsMonthlyDiff)) - Math.max(a.value2026, Math.abs(a.valueVsMonthlyDiff))).slice(0, 15)\n  };\n}\n\nconst owners = Object.fromEntries(RETENTION_TEAM.map(owner => [owner, ownerSummary(owner)]));\nconst byProduct = Object.entries(groupBy(retentionRows, row => row.product)).map(([product, rows]) => ({ product, accountsCount: rows.length, value: sum(rows, row => row.value2026) })).sort((a, b) => b.value - a.value);\nconst byMonth = MONTHS.map(month => ({ month, value: sum(retentionRows, row => row.monthly[month] || 0), accountsCount: retentionRows.filter(row => (row.monthly[month] || 0) !== 0).length }));\nconst byLocation = Object.entries(groupBy(retentionRows, row => row.location)).map(([location, rows]) => ({\n  location,\n  accountsCount: rows.length,\n  value: sum(rows, row => row.value2026),\n  renewed: sum(rows.filter(row => row.renewalStatus === \"Renewed\"), row => row.value2026),\n  pendingHigh: sum(rows.filter(row => row.renewalStatus === \"Pending High\"), row => row.value2026),\n  pendingMedium: sum(rows.filter(row => row.renewalStatus === \"Pending Medium\"), row => row.value2026),\n  pendingLow: sum(rows.filter(row => row.renewalStatus === \"Pending Low\"), row => row.value2026),\n  lost: sum(rows.filter(row => row.renewalStatus === \"Lost\"), row => row.value2026)\n})).sort((a, b) => b.value - a.value);\n\nconst lostWithValue = retentionRows.filter(row => row.renewalStatus === \"Lost\" && row.value2026 > 0);\nconst expectedLost = retentionRows.filter(row => row.status.toLowerCase().includes(\"expected to be lost\"));\nconst monthlyMismatches = retentionRows.filter(row => Math.abs(row.valueVsMonthlyDiff) > 1);\nconst zeroRenewed = retentionRows.filter(row => row.renewalStatus === \"Renewed\" && row.value2026 === 0);\nconst dataQuality = [];\nif (summaryErrors.length) dataQuality.push({ severity: \"critical\", title: \"Summary sheet contains formula errors\", count: summaryErrors.length, financialImpact: null, examples: summaryErrors.slice(0, 20), recommendedFix: \"Fix #REF!, #VALUE!, and #DIV/0! formulas in the Summary sheet.\" });\nif (lostWithValue.length) dataQuality.push({ severity: \"critical\", title: \"Lost accounts still carry 2026 value\", count: lostWithValue.length, financialImpact: sum(lostWithValue, row => row.value2026), examples: lostWithValue.slice(0, 15).map(row => ({ rowNumber: row.rowNumber, owner: row.owner, clientName: row.clientName, value2026: row.value2026 })), recommendedFix: \"Exclude confirmed Lost accounts from positive forecast or move them to a win-back scenario.\" });\nif (monthlyMismatches.length) dataQuality.push({ severity: \"warning\", title: \"2026 Value does not match monthly total\", count: monthlyMismatches.length, financialImpact: sum(monthlyMismatches, row => Math.abs(row.valueVsMonthlyDiff)), examples: monthlyMismatches.slice(0, 15).map(row => ({ rowNumber: row.rowNumber, owner: row.owner, clientName: row.clientName, value2026: row.value2026, monthlyTotal: row.monthlyTotal, valueVsMonthlyDiff: row.valueVsMonthlyDiff })), recommendedFix: \"Reconcile official 2026 Value with Jan-Dec distribution.\" });\nif (zeroRenewed.length) dataQuality.push({ severity: \"warning\", title: \"Renewed accounts with zero value\", count: zeroRenewed.length, financialImpact: 0, examples: zeroRenewed.slice(0, 15).map(row => ({ rowNumber: row.rowNumber, owner: row.owner, clientName: row.clientName, product: row.product })), recommendedFix: \"Confirm whether these are true zero-value renewals or missing values.\" });\nif (expectedLost.length) dataQuality.push({ severity: \"warning\", title: \"Expected to Be Lost accounts need separate risk handling\", count: expectedLost.length, financialImpact: sum(expectedLost, row => row.value2026), examples: expectedLost.slice(0, 15).map(row => ({ rowNumber: row.rowNumber, owner: row.owner, clientName: row.clientName, value2026: row.value2026, renewalStatus: row.renewalStatus })), recommendedFix: \"Keep Expected to Be Lost accounts in a risk register.\" });\n\nconst actions = [];\nretentionRows.filter(row => row.renewalStatus === \"Pending High\" && row.value2026 >= 30000).sort((a, b) => b.value2026 - a.value2026).slice(0, 20).forEach(row => actions.push({ priority: \"High\", owner: row.owner, account: row.clientName, value: row.value2026, issue: \"High-value Pending High renewal\", recommendedAction: \"Immediate follow-up. Confirm renewal timeline, owner next step, and expected cashing month.\" }));\nmonthlyMismatches.sort((a, b) => Math.abs(b.valueVsMonthlyDiff) - Math.abs(a.valueVsMonthlyDiff)).slice(0, 15).forEach(row => actions.push({ priority: \"High\", owner: row.owner, account: row.clientName, value: Math.abs(row.valueVsMonthlyDiff), issue: `2026 Value differs from monthly total by ${row.valueVsMonthlyDiff}`, recommendedAction: \"Reconcile official value vs monthly distribution before management review.\" }));\nlostWithValue.sort((a, b) => b.value2026 - a.value2026).slice(0, 15).forEach(row => actions.push({ priority: \"High\", owner: row.owner, account: row.clientName, value: row.value2026, issue: \"Lost account still has positive value\", recommendedAction: \"Remove from active forecast or move to separate win-back scenario.\" }));\n\nconst dashboardData = {\n  generatedAt: new Date().toISOString(),\n  source: { summaryRows: summaryRows.length, retentionRows: retentionRows.length, refreshType: \"n8n scheduled sync\", refreshEveryHours: 12 },\n  executive: { totalTarget, totalBooking, totalCashing, totalReceivables, confirmedRevenue, projectedExpenses: PROJECTED_EXPENSES, scenarios: Object.fromEntries(Object.entries(scenarioValues).map(([key, value]) => [key, scenarioModel(value)])) },\n  retention: { team: RETENTION_TEAM, accountsCount: retentionRows.length, totalValue: sum(retentionRows, row => row.value2026), byStatus, byProduct, byMonth, byLocation },\n  owners,\n  summaryPeople,\n  accounts: retentionRows,\n  actions,\n  dataQuality\n};\nconst generatedFileContent = `window.DASHBOARD_DATA = ${JSON.stringify(dashboardData, null, 2)};\\nwindow.DASHBOARD_DATA_LOADED_AT = \"${new Date().toISOString()}\";\\n`;\nreturn [{ json: { repository: \"amohamed-alt/Private-Dashboard\", path: \"data/live-data.js\", commitMessage: `Update dashboard data - ${new Date().toISOString()}`, generatedFileContent, generatedAt: dashboardData.generatedAt, summary: { totalTarget, totalCashing, totalReceivables, confirmedRevenue, retentionAccounts: retentionRows.length, actions: actions.length, dataQualityIssues: dataQuality.length } } }];\n"
+      },
+      "id": "build",
+      "name": "Build Dashboard Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        90
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.github.com/repos/amohamed-alt/Private-Dashboard/contents/data/live-data.js",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "X-GitHub-Api-Version",
+              "value": "2022-11-28"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "getfile",
+      "name": "GitHub Get Existing File",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1560,
+        90
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "PUT_GITHUB_TOKEN_CREDENTIAL_ID",
+          "name": "GitHub Token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const built = $items(\"Build Dashboard Data\")[0].json;\nconst existing = $items(\"GitHub Get Existing File\")[0]?.json || {};\nconst body = {\n  message: built.commitMessage,\n  content: Buffer.from(built.generatedFileContent, \"utf8\").toString(\"base64\"),\n  branch: \"main\"\n};\nif (existing.sha) body.sha = existing.sha;\nreturn [{ json: body }];\n"
+      },
+      "id": "prepare",
+      "name": "Prepare GitHub Upload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1820,
+        90
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "https://api.github.com/repos/amohamed-alt/Private-Dashboard/contents/data/live-data.js",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "X-GitHub-Api-Version",
+              "value": "2022-11-28"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json }}",
+        "options": {}
+      },
+      "id": "updatefile",
+      "name": "GitHub Update Live Data",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2080,
+        90
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "PUT_GITHUB_TOKEN_CREDENTIAL_ID",
+          "name": "GitHub Token"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read Summary CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read Summary CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Summary CSV": {
+      "main": [
+        [
+          {
+            "node": "Read Retention CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Retention CSV": {
+      "main": [
+        [
+          {
+            "node": "Parse CSV Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse CSV Sheets": {
+      "main": [
+        [
+          {
+            "node": "Bundle Rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bundle Rows": {
+      "main": [
+        [
+          {
+            "node": "Build Dashboard Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Dashboard Data": {
+      "main": [
+        [
+          {
+            "node": "GitHub Get Existing File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub Get Existing File": {
+      "main": [
+        [
+          {
+            "node": "Prepare GitHub Upload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare GitHub Upload": {
+      "main": [
+        [
+          {
+            "node": "GitHub Update Live Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "versionId": "private-dashboard-v1",
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}

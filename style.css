@@ -1,0 +1,41 @@
+# Private Dashboard — 2026 Sales & P&L Command Center
+
+This repo contains a static GitHub Pages dashboard. n8n updates `data/live-data.js` every 12 hours from the Summary and Retention sheets.
+
+## Files
+
+- `index.html` — dashboard shell
+- `style.css` — design system
+- `app.js` — dynamic rendering logic
+- `data/live-data.js` — generated data file updated by n8n
+- `n8n/workflow-public-csv-to-github.json` — importable n8n workflow
+- `n8n/build-dashboard-data.js` — full transformation code used inside n8n
+
+## n8n Setup
+
+1. Import `n8n/workflow-public-csv-to-github.json` into n8n.
+2. Add a Header Auth credential named `GitHub Token`:
+   - Header name: `Authorization`
+   - Header value: `Bearer YOUR_GITHUB_TOKEN`
+3. In the workflow, replace:
+   - `PASTE_SUMMARY_CSV_EXPORT_URL_HERE`
+   - `PASTE_RETENTION_CSV_EXPORT_URL_HERE`
+4. Run `Manual Trigger` once.
+5. Confirm GitHub receives an updated `data/live-data.js` commit.
+6. Activate the workflow. It is scheduled every 12 hours.
+
+## Google Sheets CSV URLs
+
+Use this format:
+
+```text
+https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/export?format=csv&gid=SHEET_GID
+```
+
+The dashboard is designed for the Retention team only:
+
+- Fadi
+- Jihad
+- Faizan
+
+Lost values are not added to Best Case as positive forecast.

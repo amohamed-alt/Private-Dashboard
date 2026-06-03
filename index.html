@@ -1,0 +1,212 @@
+let DATA = null;
+let currentTab = 'executive';
+let currentScenario = 'medium';
+let currentActionFilter = 'All';
+let currentSearch = '';
+
+const $ = s => document.querySelector(s);
+const app = () => $('#app');
+const money = n => {
+  const v = Number(n || 0);
+  return (v < 0 ? '-$' : '$') + Math.abs(Math.round(v)).toLocaleString();
+};
+const pct = n => `${Number(n || 0).toFixed(1)}%`;
+const esc = v => String(v ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+const badge = (label, type='blue') => `<span class="badge b-${type}">${esc(label)}</span>`;
+const statusBadge = s => {
+  if (s === 'Renewed') return badge('Renewed','green');
+  if (s === 'Pending High') return badge('Pending High','blue');
+  if (s === 'Pending Medium') return badge('Pending Medium','amber');
+  if (s === 'Pending Low') return badge('Pending Low','purple');
+  if (s === 'Lost') return badge('Lost','red');
+  return badge(s || 'Unknown','blue');
+};
+
+function boot() {
+  setTimeout(() => {
+    if (window.DASHBOARD_DATA_LOAD_ERROR || !window.DASHBOARD_DATA) {
+      app().innerHTML = `<div class="loading"><h2>No data loaded yet</h2><p>Run the n8n workflow once to create <code>data/live-data.js</code>, or check GitHub Pages deployment.</p></div>`;
+      return;
+    }
+    DATA = window.DASHBOARD_DATA;
+    bindEvents();
+    render();
+  }, 250);
+}
+
+function bindEvents() {
+  document.querySelectorAll('.nav-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentTab = btn.dataset.tab;
+      document.querySelectorAll('.nav-item').forEach(x => x.classList.toggle('active', x === btn));
+      render();
+    });
+  });
+  document.querySelectorAll('#scenarioSwitch button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentScenario = btn.dataset.scenario;
+      document.querySelectorAll('#scenarioSwitch button').forEach(x => x.classList.toggle('active', x === btn));
+      render();
+    });
+  });
+}
+
+function setPage(title, subtitle='') {
+  $('#pageTitle').textContent = title;
+  $('#pageSubtitle').textContent = subtitle;
+}
+
+function updateMeta() {
+  const d = new Date(DATA.generatedAt);
+  $('#sidebarMeta').innerHTML = `Updated:<br>${d.toLocaleString()}<br><br>${DATA.source?.retentionRows || 0} retention rows<br>${DATA.actions?.length || 0} actions<br>${DATA.dataQuality?.length || 0} data issues`;
+}
+
+function renderRisk() {
+  const sc = DATA.executive.scenarios[currentScenario];
+  const el = $('#riskBanner');
+  el.className = 'alert ' + (sc.status || '').toLowerCase();
+  el.textContent = `${sc.status} — ${currentScenario.toUpperCase()} forecast is ${money(sc.revenue)} (${pct(sc.achievementPct)} of target), net after expenses ${money(sc.netAfterExpenses)}.`;
+}
+
+function kpi(label, value, sub='', accent='') {
+  return `<div class="kpi ${accent}"><div class="label">${esc(label)}</div><div class="value">${value}</div>${sub ? `<div class="sub">${sub}</div>` : ''}</div>`;
+}
+function card(title, body, sub='') {
+  return `<div class="card"><div class="card-head"><div><div class="card-title">${esc(title)}</div>${sub ? `<div class="card-sub">${esc(sub)}</div>` : ''}</div></div><div class="card-body">${body}</div></div>`;
+}
+function table(headers, rows) {
+  return `<table class="table"><thead><tr>${headers.map(h => `<th class="${h.num?'num':''}">${esc(h.label)}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table>`;
+}
+
+function render() {
+  updateMeta();
+  renderRisk();
+  if (currentTab === 'executive') return renderExecutive();
+  if (currentTab === 'retention') return renderRetention();
+  if (['Fadi','Jihad','Faizan'].includes(currentTab)) return renderOwner(currentTab);
+  if (currentTab === 'pnl') return renderPnl();
+  if (currentTab === 'actions') return renderActions();
+  if (currentTab === 'quality') return renderQuality();
+}
+
+function renderExecutive() {
+  const e = DATA.executive;
+  const sc = e.scenarios[currentScenario];
+  setPage('Executive Overview', '12-hour GitHub sync from n8n · Scenario-aware management view');
+  const scenarioCards = Object.entries(e.scenarios).map(([key, val]) => `
+    <div class="kpi scenario-card ${key === currentScenario ? 'active' : ''}" onclick="currentScenario='${key}';document.querySelector('[data-scenario=${key}]').click()">
+      <div class="label">${key}</div><div class="value">${money(val.revenue)}</div>
+      <div class="sub">${pct(val.achievementPct)} of target · Net ${money(val.netAfterExpenses)}</div>
+      <div class="progress"><div class="bar" style="width:${Math.min(100, val.achievementPct)}%"></div></div>
+    </div>`).join('');
+  app().innerHTML = `
+    <div class="grid cols-5">
+      ${kpi('Total Target', money(e.totalTarget), 'All reps from Summary')}
+      ${kpi('Cash YTD', money(e.totalCashing), 'Total cashing', 'accent-green')}
+      ${kpi('Receivables', money(e.totalReceivables), 'Booked - cashed + load', 'accent-amber')}
+      ${kpi('Confirmed Revenue', money(e.confirmedRevenue), 'Cash + receivables', 'accent-blue')}
+      ${kpi(`${currentScenario} Net`, money(sc.netAfterExpenses), `${pct(sc.marginPct)} margin`, sc.netAfterExpenses >= 0 ? 'accent-green' : 'accent-red')}
+    </div>
+    <div class="section-gap"></div>
+    <div class="grid cols-4">${scenarioCards}</div>
+    <div class="section-gap"></div>
+    <div class="grid cols-2">
+      ${card('Retention Status Mix', renderStatusBars())}
+      ${card('Monthly Renewal Concentration', renderMonthBars(), 'Uses Jan-Dec columns from Retention')}
+    </div>
+    <div class="section-gap"></div>
+    ${card('Team Summary', renderTeamSummaryTable(), 'Retention team is Fadi, Jihad, Faizan only')}
+  `;
+}
+
+function renderStatusBars() {
+  const s = DATA.retention.byStatus;
+  const total = DATA.retention.totalValue || 1;
+  const rows = [['Renewed',s.renewed,'green'],['Pending High',s.pendingHigh,'blue'],['Pending Medium',s.pendingMedium,'amber'],['Pending Low',s.pendingLow,'purple'],['Lost',s.lost,'red']];
+  return rows.map(([label,val,type]) => `<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;font-weight:700;font-size:12px"><span>${label}</span><span>${money(val)}</span></div><div class="progress"><div class="bar" style="width:${Math.min(100,val/total*100)}%;background:var(--${type})"></div></div></div>`).join('');
+}
+
+function renderMonthBars() {
+  const rows = DATA.retention.byMonth || [];
+  const max = Math.max(...rows.map(r => r.value), 1);
+  return `<div class="mini-bars">${rows.map(r => `<div class="mini-bar"><strong>${r.value ? '$'+Math.round(r.value/1000)+'K' : ''}</strong><div class="mini-fill" style="height:${Math.max(2, r.value/max*90)}px;background:${r.value > max*.75 ? 'var(--red)' : r.value > max*.45 ? 'var(--amber)' : 'var(--blue)'}"></div><span>${r.month}</span></div>`).join('')}</div>`;
+}
+
+function renderTeamSummaryTable() {
+  const rows = Object.values(DATA.owners).map(o => {
+    const f = o.forecasts[currentScenario];
+    return `<tr><td><strong>${esc(o.owner)}</strong></td><td class="num">${o.accountsCount}</td><td class="num">${money(o.target)}</td><td class="num">${money(o.totalValue)}</td><td class="num">${money(o.renewed)}</td><td class="num">${money(o.pendingHigh)}</td><td class="num">${money(f.revenue)}</td><td class="num">${pct(f.achievementPct)}</td><td>${badge(f.status, f.status==='Safe'?'green':f.status==='Watch'?'amber':'red')}</td></tr>`;
+  });
+  return table([{label:'Owner'},{label:'Accounts',num:true},{label:'Target',num:true},{label:'Value',num:true},{label:'Renewed',num:true},{label:'Pending High',num:true},{label:'Forecast',num:true},{label:'Achv.',num:true},{label:'Status'}], rows);
+}
+
+function renderRetention() {
+  setPage('Retention Overview', 'Fadi · Jihad · Faizan only');
+  const r = DATA.retention;
+  app().innerHTML = `
+    <div class="grid cols-5">
+      ${kpi('Accounts', r.accountsCount, 'Retention rows')}
+      ${kpi('Total 2026 Value', money(r.totalValue), 'Pipeline value')}
+      ${kpi('Renewed', money(r.byStatus.renewed), 'Closed renewal', 'accent-green')}
+      ${kpi('Pending High', money(r.byStatus.pendingHigh), 'Near-term conversion', 'accent-blue')}
+      ${kpi('Lost', money(r.byStatus.lost), 'Excluded from best forecast', 'accent-red')}
+    </div>
+    <div class="section-gap"></div>
+    <div class="grid cols-2">${card('Product Breakdown', renderProductTable())}${card('Location Breakdown', renderLocationTable())}</div>
+  `;
+}
+
+function renderProductTable(){
+  return table([{label:'Product'},{label:'Accounts',num:true},{label:'Value',num:true}], DATA.retention.byProduct.map(p=>`<tr><td>${esc(p.product)}</td><td class="num">${p.accountsCount}</td><td class="num">${money(p.value)}</td></tr>`));
+}
+function renderLocationTable(){
+  return table([{label:'Location'},{label:'Accounts',num:true},{label:'Value',num:true},{label:'High',num:true},{label:'Lost',num:true}], DATA.retention.byLocation.slice(0,14).map(l=>`<tr><td>${esc(l.location)}</td><td class="num">${l.accountsCount}</td><td class="num">${money(l.value)}</td><td class="num">${money(l.pendingHigh)}</td><td class="num">${money(l.lost)}</td></tr>`));
+}
+
+function renderOwner(owner) {
+  const o = DATA.owners[owner];
+  const f = o.forecasts[currentScenario];
+  setPage(`${owner} — Retention Manager`, `${o.accountsCount} accounts · ${currentScenario} forecast ${money(f.revenue)}`);
+  app().innerHTML = `
+    <div class="grid cols-5">
+      ${kpi('Target', money(o.target))}
+      ${kpi('Total Value', money(o.totalValue))}
+      ${kpi('Cash YTD', money(o.cashedYtd),'','accent-green')}
+      ${kpi('Receivables', money(o.receivables),'','accent-amber')}
+      ${kpi(`${currentScenario} Forecast`, money(f.revenue), `${pct(f.achievementPct)} of target`, f.status==='Safe'?'accent-green':f.status==='Watch'?'accent-amber':'accent-red')}
+    </div>
+    <div class="section-gap"></div>
+    <div class="grid cols-2">
+      ${card('Top Accounts by Value', renderAccountsTable(o.topAccounts))}
+      ${card('Pending High Accounts', renderAccountsTable(o.pendingHighAccounts))}
+    </div>
+    <div class="section-gap"></div>
+    ${card('Risk / Data Issues for Owner', renderAccountsTable(o.riskyAccounts, true))}
+  `;
+}
+
+function renderAccountsTable(rows, withIssue=false) {
+  const filtered = rows.filter(r => !currentSearch || r.clientName.toLowerCase().includes(currentSearch.toLowerCase()));
+  return table([{label:'Account'},{label:'Product'},{label:'Status'},{label:'Value',num:true},{label:withIssue?'Issue':'Month'}], filtered.map(a => `<tr><td>${esc(a.clientName)}</td><td>${esc(a.product)}</td><td>${statusBadge(a.renewalStatus)}</td><td class="num">${money(a.value2026)}</td><td>${withIssue ? esc(a.status || ('Diff '+money(a.valueVsMonthlyDiff))) : Object.entries(a.monthly||{}).filter(([,v])=>v).map(([m])=>m).join(', ') || '—'}</td></tr>`));
+}
+
+function renderPnl() {
+  setPage('P&L / Expense Control', 'Scenario revenue vs projected expenses');
+  const e = DATA.executive;
+  const rows = Object.entries(e.scenarios).map(([name,s]) => `<tr><td>${badge(name, name==='worst'?'red':name==='medium'?'amber':name==='best'?'green':'blue')}</td><td class="num">${money(s.revenue)}</td><td class="num">${money(e.projectedExpenses)}</td><td class="num">${money(s.netAfterExpenses)}</td><td class="num">${pct(s.marginPct)}</td><td class="num">${money(s.gapToTarget)}</td><td>${badge(s.status, s.status==='Safe'?'green':s.status==='Watch'?'amber':'red')}</td></tr>`);
+  app().innerHTML = `${card('Scenario P&L Table', table([{label:'Scenario'},{label:'Revenue',num:true},{label:'Expenses',num:true},{label:'Net',num:true},{label:'Margin',num:true},{label:'Gap',num:true},{label:'Status'}], rows))}`;
+}
+
+function renderActions() {
+  setPage('Action Center', 'Prioritized operational actions generated by n8n');
+  const filters = ['All','High','Fadi','Jihad','Faizan'];
+  const items = DATA.actions.filter(a => currentActionFilter==='All' || a.priority===currentActionFilter || a.owner===currentActionFilter);
+  app().innerHTML = `<div class="filters">${filters.map(f=>`<button onclick="currentActionFilter='${f}';renderActions()" class="${currentActionFilter===f?'active':''}">${f}</button>`).join('')}<input class="search" placeholder="Search account..." oninput="currentSearch=this.value;renderActions()" value="${esc(currentSearch)}"></div><div class="card"><div class="card-body" style="padding:0">${items.filter(a=>!currentSearch||a.account.toLowerCase().includes(currentSearch.toLowerCase())).map(a=>`<div class="action-row"><div>${badge(a.priority,a.priority==='High'?'red':'amber')}</div><div><strong>${esc(a.owner)}</strong></div><div><strong>${esc(a.account)}</strong><br><span style="color:var(--muted);font-size:12px">${esc(a.issue)}</span></div><div class="num">${money(a.value)}</div><div>${esc(a.recommendedAction)}</div></div>`).join('')}</div></div>`;
+}
+
+function renderQuality() {
+  setPage('Data Quality', 'Validation issues detected during n8n normalization');
+  app().innerHTML = `<div class="grid cols-3">${kpi('Issues', DATA.dataQuality.length)}${kpi('Actions', DATA.actions.length)}${kpi('Rows Checked', DATA.source.retentionRows)}</div><div class="section-gap"></div>${DATA.dataQuality.map(d=>`<div class="dq-row"><div class="dq-head"><span class="dot ${d.severity}"></span><span>${esc(d.title)}</span><span style="margin-left:auto">${d.count}</span>${d.financialImpact?`<span>${money(d.financialImpact)}</span>`:''}</div><div class="dq-body"><strong>Fix:</strong> ${esc(d.recommendedFix)}<br><br>${(d.examples||[]).slice(0,8).map(x=>`↳ ${esc(x.clientName||x.value||JSON.stringify(x))}`).join('<br>')}</div></div>`).join('')}`;
+}
+
+boot();
