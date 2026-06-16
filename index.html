@@ -11,14 +11,7 @@
 </head>
 <body>
   <aside class="sidebar">
-    <div class="brand">
-      <div class="brand-mark">R</div>
-      <div>
-        <strong>Retention Command Center</strong>
-        <span>Fadi · Jihad · Faizan</span>
-      </div>
-    </div>
-
+    <div class="brand"><div class="brand-mark">R</div><div><strong>Retention Command Center</strong><span>Fadi · Jihad · Faizan</span></div></div>
     <nav class="nav">
       <button class="nav-item active" data-tab="overview"><span class="nav-icon">⌂</span><span>Overview</span></button>
       <button class="nav-item" data-tab="forecast"><span class="nav-icon">↗</span><span>Forecast View</span></button>
@@ -28,46 +21,26 @@
       <button class="nav-item" data-tab="accounts"><span class="nav-icon">▦</span><span>Accounts</span></button>
       <button class="nav-item" data-tab="actions"><span class="nav-icon">☑</span><span>Action Center</span></button>
       <button class="nav-item" data-tab="quality"><span class="nav-icon">◎</span><span>Data Quality</span></button>
-      <button class="nav-item" data-tab="audit"><span class="nav-icon">≡</span><span>Summary Audit</span></button>
+      <button class="nav-item" data-tab="compare"><span class="nav-icon">≡</span><span>Summary Audit</span></button>
     </nav>
-
     <div class="sidebar-footer">
-      <div class="footer-row"><span class="footer-dot">◷</span><div><small>Last updated</small><strong id="lastUpdated">Loading...</strong></div></div>
-      <div class="footer-row"><span class="footer-dot">✓</span><div><small>Source</small><strong>n8n · Google Sheets</strong></div></div>
+      <div class="footer-row"><span class="footer-dot">◷</span><div><small>Live dashboard</small><strong>Updated by n8n</strong></div></div>
+      <div class="footer-row"><span class="footer-dot">✓</span><div><small>Source</small><strong>Google Sheets</strong></div></div>
       <div class="footer-meta" id="sidebarMeta">Retention only</div>
     </div>
   </aside>
-
   <main class="main">
     <header class="topbar">
       <div><h1 id="pageTitle">Retention Command Center</h1><p id="pageSubtitle">Fadi · Jihad · Faizan</p></div>
       <div class="scenario-shell"><span>Scenario</span><div class="scenario-switch" id="scenarioSwitch">
-        <button data-scenario="worst">Worst</button>
-        <button data-scenario="medium" class="active">Medium</button>
-        <button data-scenario="best">Best</button>
-        <button data-scenario="bestPlusLost">Best + Lost</button>
+        <button data-scenario="worst">Worst</button><button data-scenario="medium" class="active">Medium</button><button data-scenario="best">Best</button><button data-scenario="bestPlusLost">Best + Lost</button>
       </div></div>
     </header>
-
-    <section id="riskBanner" class="status-banner"></section>
-    <section id="app" class="app"><div class="loading-card"><div class="spinner"></div><h2>Loading retention data...</h2><p>Waiting for <code>data/live-data.js</code></p></div></section>
+    <section id="riskBanner" class="alert"></section>
+    <section id="app" class="app"><div class="loading-state"><div class="spinner"></div><h2>Loading retention data...</h2><p>Waiting for <code>data/live-data.js</code></p></div></section>
   </main>
-
   <script>
-    (function loadDashboardData() {
-      const version = Date.now();
-      const dataScript = document.createElement("script");
-      dataScript.src = "./data/live-data.js?v=" + version;
-      dataScript.onload = function () {
-        const appScript = document.createElement("script");
-        appScript.src = "./app.js?v=" + version;
-        document.body.appendChild(appScript);
-      };
-      dataScript.onerror = function () {
-        document.getElementById("app").innerHTML = `<div class="empty-state"><h2>Could not load data/live-data.js</h2><p>Run the n8n workflow first and make sure the generated file exists.</p></div>`;
-      };
-      document.body.appendChild(dataScript);
-    })();
+    (function(){const v=Date.now(),d=document.createElement('script');d.src='./data/live-data.js?v='+v;d.onload=function(){const a=document.createElement('script');a.src='./app.js?v='+v;document.body.appendChild(a)};d.onerror=function(){document.getElementById('app').innerHTML='<div class="empty-state"><h2>Could not load data/live-data.js</h2><p>Run the n8n workflow first.</p></div>'};document.body.appendChild(d)})();
   </script>
 </body>
 </html>
