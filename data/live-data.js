@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-06-16T15:28:28.815Z",
+  "generatedAt": "2026-06-16T16:08:07.942Z",
   "source": {
     "summaryRows": 77,
     "retentionRows": 188,
@@ -8,12 +8,12 @@ window.DASHBOARD_DATA = {
   },
   "executive": {
     "scope": "retention_only",
-    "note": "Acquisition values are excluded from dashboard totals and owner forecasts.",
+    "note": "Acquisition booking and cashing are excluded. Retention projection values and receivables follow the manager-approved Summary sheet.",
     "totalTarget": 4782548,
     "totalBooking": 1979705,
     "totalCashing": 980339,
-    "totalReceivables": 1352343,
-    "confirmedRevenue": 2332682,
+    "totalReceivables": 1426427,
+    "confirmedRevenue": 2406766,
     "excludedAcquisition": {
       "target": 610000,
       "booking": 162002,
@@ -23,35 +23,35 @@ window.DASHBOARD_DATA = {
     "projectedExpenses": 3600000,
     "scenarios": {
       "worst": {
-        "revenue": 3880891,
-        "gapToTarget": -901657,
-        "netAfterExpenses": 280891,
-        "achievementPct": 81.1,
-        "marginPct": 7.2,
-        "status": "Watch"
+        "revenue": 3683101,
+        "gapToTarget": -1099447,
+        "netAfterExpenses": 83101,
+        "achievementPct": 77,
+        "marginPct": 2.3,
+        "status": "Critical"
       },
       "medium": {
-        "revenue": 4841433,
-        "gapToTarget": 58885,
-        "netAfterExpenses": 1241433,
-        "achievementPct": 101.2,
-        "marginPct": 25.6,
-        "status": "Safe"
+        "revenue": 4639242,
+        "gapToTarget": -143306,
+        "netAfterExpenses": 1039242,
+        "achievementPct": 97,
+        "marginPct": 22.4,
+        "status": "Watch"
       },
       "best": {
-        "revenue": 5304918,
-        "gapToTarget": 522370,
-        "netAfterExpenses": 1704918,
-        "achievementPct": 110.9,
-        "marginPct": 32.1,
+        "revenue": 5102727,
+        "gapToTarget": 320179,
+        "netAfterExpenses": 1502727,
+        "achievementPct": 106.7,
+        "marginPct": 29.4,
         "status": "Safe"
       },
       "outstanding": {
-        "revenue": 5304918,
-        "gapToTarget": 522370,
-        "netAfterExpenses": 1704918,
-        "achievementPct": 110.9,
-        "marginPct": 32.1,
+        "revenue": 5102727,
+        "gapToTarget": 320179,
+        "netAfterExpenses": 1502727,
+        "achievementPct": 106.7,
+        "marginPct": 29.4,
         "status": "Safe"
       }
     }
@@ -66,8 +66,8 @@ window.DASHBOARD_DATA = {
     "totalValue": 4712548,
     "byStatus": {
       "renewed": 1641550,
-      "pendingHigh": 1548209,
-      "pendingMedium": 960542,
+      "pendingHigh": 1276335,
+      "pendingMedium": 956141,
       "pendingLow": 463485,
       "lost": 98762
     },
@@ -309,17 +309,17 @@ window.DASHBOARD_DATA = {
       "cashing": 87918,
       "receivables": 74084
     },
-    "confirmedRevenue": 2332682,
-    "worst": 3880891,
-    "medium": 4841433,
-    "bestExcludingLost": 5304918,
-    "bestIncludingLost": 5403680,
+    "confirmedRevenue": 2406766,
+    "worst": 3683101,
+    "medium": 4639242,
+    "bestExcludingLost": 5102727,
+    "bestIncludingLost": 5201489,
     "plan": {
       "target": 4782548,
-      "worst": 3880891,
-      "medium": 4841433,
-      "best": 5403680,
-      "outstanding": 5403680,
+      "worst": 3683101,
+      "medium": 4639242,
+      "best": 5201489,
+      "outstanding": 5201489,
       "booking": 1979705,
       "cashing": 980339
     },
@@ -348,53 +348,53 @@ window.DASHBOARD_DATA = {
       "totalValue": 1948650,
       "bookedYtd": 939515,
       "cashedYtd": 432295,
-      "receivables": 747978,
-      "confirmedRevenue": 1180273,
+      "receivables": 797061,
+      "confirmedRevenue": 1229356,
       "renewed": 619083,
-      "pendingHigh": 547642,
-      "pendingMedium": 581872,
+      "pendingHigh": 440442,
+      "pendingMedium": 577471,
       "pendingLow": 121467,
       "lost": 78586,
       "forecasts": {
         "worst": {
-          "revenue": 1727915,
-          "gapToTarget": -220733,
-          "achievementPct": 88.7,
+          "revenue": 1669798,
+          "gapToTarget": -278850,
+          "achievementPct": 85.7,
           "status": "Watch"
         },
         "medium": {
-          "revenue": 2309787,
-          "gapToTarget": 361139,
-          "achievementPct": 118.5,
+          "revenue": 2247269,
+          "gapToTarget": 298621,
+          "achievementPct": 115.3,
           "status": "Safe"
         },
         "best": {
-          "revenue": 2431254,
-          "gapToTarget": 482606,
-          "achievementPct": 124.8,
+          "revenue": 2368736,
+          "gapToTarget": 420088,
+          "achievementPct": 121.6,
           "status": "Safe"
         },
         "outstanding": {
-          "revenue": 2431254,
-          "gapToTarget": 482606,
-          "achievementPct": 124.8,
+          "revenue": 2368736,
+          "gapToTarget": 420088,
+          "achievementPct": 121.6,
           "status": "Safe"
         }
       },
       "calculatedForecasts": {
-        "worst": 1727915,
-        "medium": 2309787,
-        "bestExcludingLost": 2431254,
-        "bestIncludingLost": 2509840
+        "worst": 1669798,
+        "medium": 2247269,
+        "bestExcludingLost": 2368736,
+        "bestIncludingLost": 2447322
       },
       "planComparison": {
         "plan": {
           "owner": "Fadi",
           "target": 1948648,
-          "worst": 1727915,
-          "medium": 2309787,
-          "best": 2509840,
-          "outstanding": 2509840,
+          "worst": 1669798,
+          "medium": 2247269,
+          "best": 2447322,
+          "outstanding": 2447322,
           "booking": 939515,
           "cashing": 432295
         },
@@ -430,7 +430,7 @@ window.DASHBOARD_DATA = {
         "lostAppearsIncludedInPlanBest": true,
         "note": "Retention-only dashboard. Acquisition values are excluded. Best excludes Lost by default; Best + Lost is audit only."
       },
-      "mediumAchievementPct": 118.5,
+      "mediumAchievementPct": 115.3,
       "topAccounts": [
         {
           "rowNumber": 76,
@@ -1426,8 +1426,8 @@ window.DASHBOARD_DATA = {
       "totalValue": 1198852,
       "bookedYtd": 562654,
       "cashedYtd": 215664,
-      "receivables": 418990,
-      "confirmedRevenue": 634654,
+      "receivables": 443991,
+      "confirmedRevenue": 659655,
       "renewed": 521027,
       "pendingHigh": 376611,
       "pendingMedium": 156158,
@@ -1435,44 +1435,44 @@ window.DASHBOARD_DATA = {
       "lost": 20176,
       "forecasts": {
         "worst": {
-          "revenue": 1011265,
-          "gapToTarget": -187587,
-          "achievementPct": 84.4,
+          "revenue": 1036266,
+          "gapToTarget": -162586,
+          "achievementPct": 86.4,
           "status": "Watch"
         },
         "medium": {
-          "revenue": 1167423,
-          "gapToTarget": -31429,
-          "achievementPct": 97.4,
+          "revenue": 1192424,
+          "gapToTarget": -6428,
+          "achievementPct": 99.5,
           "status": "Watch"
         },
         "best": {
-          "revenue": 1292303,
-          "gapToTarget": 93451,
-          "achievementPct": 107.8,
+          "revenue": 1317304,
+          "gapToTarget": 118452,
+          "achievementPct": 109.9,
           "status": "Safe"
         },
         "outstanding": {
-          "revenue": 1292303,
-          "gapToTarget": 93451,
-          "achievementPct": 107.8,
+          "revenue": 1317304,
+          "gapToTarget": 118452,
+          "achievementPct": 109.9,
           "status": "Safe"
         }
       },
       "calculatedForecasts": {
-        "worst": 1011265,
-        "medium": 1167423,
-        "bestExcludingLost": 1292303,
-        "bestIncludingLost": 1312479
+        "worst": 1036266,
+        "medium": 1192424,
+        "bestExcludingLost": 1317304,
+        "bestIncludingLost": 1337480
       },
       "planComparison": {
         "plan": {
           "owner": "Jihad",
           "target": 1198852,
-          "worst": 1011265,
-          "medium": 1167423,
-          "best": 1312479,
-          "outstanding": 1312479,
+          "worst": 1036266,
+          "medium": 1192424,
+          "best": 1337480,
+          "outstanding": 1337480,
           "booking": 562654,
           "cashing": 215664
         },
@@ -1508,7 +1508,7 @@ window.DASHBOARD_DATA = {
         "lostAppearsIncludedInPlanBest": true,
         "note": "Retention-only dashboard. Acquisition values are excluded. Best excludes Lost by default; Best + Lost is audit only."
       },
-      "mediumAchievementPct": 97.4,
+      "mediumAchievementPct": 99.5,
       "topAccounts": [
         {
           "rowNumber": 64,
@@ -2777,50 +2777,50 @@ window.DASHBOARD_DATA = {
       "receivables": 185375,
       "confirmedRevenue": 517755,
       "renewed": 501440,
-      "pendingHigh": 623956,
+      "pendingHigh": 459282,
       "pendingMedium": 222512,
       "pendingLow": 217138,
       "lost": 0,
       "forecasts": {
         "worst": {
-          "revenue": 1141711,
-          "gapToTarget": -493337,
-          "achievementPct": 69.8,
+          "revenue": 977037,
+          "gapToTarget": -658011,
+          "achievementPct": 59.8,
           "status": "Critical"
         },
         "medium": {
-          "revenue": 1364223,
-          "gapToTarget": -270825,
-          "achievementPct": 83.4,
-          "status": "Watch"
+          "revenue": 1199549,
+          "gapToTarget": -435499,
+          "achievementPct": 73.4,
+          "status": "Critical"
         },
         "best": {
-          "revenue": 1581361,
-          "gapToTarget": -53687,
-          "achievementPct": 96.7,
+          "revenue": 1416687,
+          "gapToTarget": -218361,
+          "achievementPct": 86.6,
           "status": "Watch"
         },
         "outstanding": {
-          "revenue": 1581361,
-          "gapToTarget": -53687,
-          "achievementPct": 96.7,
+          "revenue": 1416687,
+          "gapToTarget": -218361,
+          "achievementPct": 86.6,
           "status": "Watch"
         }
       },
       "calculatedForecasts": {
-        "worst": 1141711,
-        "medium": 1364223,
-        "bestExcludingLost": 1581361,
-        "bestIncludingLost": 1581361
+        "worst": 977037,
+        "medium": 1199549,
+        "bestExcludingLost": 1416687,
+        "bestIncludingLost": 1416687
       },
       "planComparison": {
         "plan": {
           "owner": "Faizan",
           "target": 1635048,
-          "worst": 1141711,
-          "medium": 1364223,
-          "best": 1581361,
-          "outstanding": 1581361,
+          "worst": 977037,
+          "medium": 1199549,
+          "best": 1416687,
+          "outstanding": 1416687,
           "booking": 477536,
           "cashing": 332380
         },
@@ -2856,7 +2856,7 @@ window.DASHBOARD_DATA = {
         "lostAppearsIncludedInPlanBest": false,
         "note": "Retention-only dashboard. Acquisition values are excluded. Best excludes Lost by default; Best + Lost is audit only."
       },
-      "mediumAchievementPct": 83.4,
+      "mediumAchievementPct": 73.4,
       "topAccounts": [
         {
           "rowNumber": 10,
@@ -9706,4 +9706,4 @@ window.DASHBOARD_DATA = {
     }
   ]
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-06-16T15:28:28.817Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-06-16T16:08:07.943Z";
