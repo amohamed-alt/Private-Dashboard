@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-06-03T14:42:29.701Z",
+  "generatedAt": "2026-06-16T15:28:28.815Z",
   "source": {
     "summaryRows": 77,
     "retentionRows": 188,
@@ -10,10 +10,10 @@ window.DASHBOARD_DATA = {
     "scope": "retention_only",
     "note": "Acquisition values are excluded from dashboard totals and owner forecasts.",
     "totalTarget": 4782548,
-    "totalBooking": 1901037,
-    "totalCashing": 883128,
-    "totalReceivables": 1370886,
-    "confirmedRevenue": 2254014,
+    "totalBooking": 1979705,
+    "totalCashing": 980339,
+    "totalReceivables": 1352343,
+    "confirmedRevenue": 2332682,
     "excludedAcquisition": {
       "target": 610000,
       "booking": 162002,
@@ -23,35 +23,35 @@ window.DASHBOARD_DATA = {
     "projectedExpenses": 3600000,
     "scenarios": {
       "worst": {
-        "revenue": 3793543,
-        "gapToTarget": -989005,
-        "netAfterExpenses": 193543,
-        "achievementPct": 79.3,
-        "marginPct": 5.1,
-        "status": "Critical"
-      },
-      "medium": {
-        "revenue": 4651550,
-        "gapToTarget": -130998,
-        "netAfterExpenses": 1051550,
-        "achievementPct": 97.3,
-        "marginPct": 22.6,
+        "revenue": 3880891,
+        "gapToTarget": -901657,
+        "netAfterExpenses": 280891,
+        "achievementPct": 81.1,
+        "marginPct": 7.2,
         "status": "Watch"
       },
+      "medium": {
+        "revenue": 4841433,
+        "gapToTarget": 58885,
+        "netAfterExpenses": 1241433,
+        "achievementPct": 101.2,
+        "marginPct": 25.6,
+        "status": "Safe"
+      },
       "best": {
-        "revenue": 5170648,
-        "gapToTarget": 388100,
-        "netAfterExpenses": 1570648,
-        "achievementPct": 108.1,
-        "marginPct": 30.4,
+        "revenue": 5304918,
+        "gapToTarget": 522370,
+        "netAfterExpenses": 1704918,
+        "achievementPct": 110.9,
+        "marginPct": 32.1,
         "status": "Safe"
       },
       "outstanding": {
-        "revenue": 5170648,
-        "gapToTarget": 388100,
-        "netAfterExpenses": 1570648,
-        "achievementPct": 108.1,
-        "marginPct": 30.4,
+        "revenue": 5304918,
+        "gapToTarget": 522370,
+        "netAfterExpenses": 1704918,
+        "achievementPct": 110.9,
+        "marginPct": 32.1,
         "status": "Safe"
       }
     }
@@ -63,29 +63,29 @@ window.DASHBOARD_DATA = {
       "Faizan"
     ],
     "accountsCount": 188,
-    "totalValue": 4562210,
+    "totalValue": 4712548,
     "byStatus": {
-      "renewed": 1498234,
-      "pendingHigh": 1539529,
-      "pendingMedium": 858007,
-      "pendingLow": 519098,
-      "lost": 147342
+      "renewed": 1641550,
+      "pendingHigh": 1548209,
+      "pendingMedium": 960542,
+      "pendingLow": 463485,
+      "lost": 98762
     },
     "byProduct": [
       {
         "product": "Talentera",
         "accountsCount": 132,
-        "value": 3996957
+        "value": 4270295
       },
       {
         "product": "AfterHire",
         "accountsCount": 14,
-        "value": 338979
+        "value": 254979
       },
       {
         "product": "Evalufy",
         "accountsCount": 42,
-        "value": 226274
+        "value": 187274
       }
     ],
     "byMonth": [
@@ -101,12 +101,12 @@ window.DASHBOARD_DATA = {
       },
       {
         "month": "Mar",
-        "value": 754208,
-        "accountsCount": 16
+        "value": 631208,
+        "accountsCount": 14
       },
       {
         "month": "Apr",
-        "value": 424556,
+        "value": 276732,
         "accountsCount": 7
       },
       {
@@ -154,21 +154,21 @@ window.DASHBOARD_DATA = {
       {
         "location": "KSA - Riyadh",
         "accountsCount": 54,
-        "value": 1845391,
-        "renewed": 626091,
-        "pendingHigh": 613844,
-        "pendingMedium": 477405,
-        "pendingLow": 64399,
-        "lost": 63652
+        "value": 1948650,
+        "renewed": 619083,
+        "pendingHigh": 547642,
+        "pendingMedium": 581872,
+        "pendingLow": 121467,
+        "lost": 78586
       },
       {
         "location": "Dubai",
         "accountsCount": 26,
-        "value": 998608,
+        "value": 1040282,
         "renewed": 372721,
-        "pendingHigh": 290603,
-        "pendingMedium": 116561,
-        "pendingLow": 218723,
+        "pendingHigh": 492002,
+        "pendingMedium": 100561,
+        "pendingLow": 74998,
         "lost": 0
       },
       {
@@ -176,9 +176,9 @@ window.DASHBOARD_DATA = {
         "accountsCount": 30,
         "value": 739264,
         "renewed": 294263,
-        "pendingHigh": 248801,
-        "pendingMedium": 126000,
-        "pendingLow": 70200,
+        "pendingHigh": 319001,
+        "pendingMedium": 20000,
+        "pendingLow": 106000,
         "lost": 0
       },
       {
@@ -186,18 +186,18 @@ window.DASHBOARD_DATA = {
         "accountsCount": 15,
         "value": 217090,
         "renewed": 23661,
-        "pendingHigh": 60133,
+        "pendingHigh": 63003,
         "pendingMedium": 10300,
-        "pendingLow": 122996,
+        "pendingLow": 120126,
         "lost": 0
       },
       {
         "location": "KSA - EP",
         "accountsCount": 9,
         "value": 172448,
-        "renewed": 24000,
-        "pendingHigh": 93335,
-        "pendingMedium": 40533,
+        "renewed": 102668,
+        "pendingHigh": 0,
+        "pendingMedium": 55200,
         "pendingLow": 14580,
         "lost": 0
       },
@@ -205,30 +205,30 @@ window.DASHBOARD_DATA = {
         "location": "Abu Dhabi",
         "accountsCount": 9,
         "value": 166603,
-        "renewed": 0,
-        "pendingHigh": 166603,
-        "pendingMedium": 0,
+        "renewed": 45251,
+        "pendingHigh": 68951,
+        "pendingMedium": 52401,
         "pendingLow": 0,
         "lost": 0
       },
       {
         "location": "Kuwait",
         "accountsCount": 10,
-        "value": 135666,
-        "renewed": 54402,
+        "value": 141071,
+        "renewed": 59807,
         "pendingHigh": 0,
-        "pendingMedium": 6250,
-        "pendingLow": 14500,
-        "lost": 60514
+        "pendingMedium": 59250,
+        "pendingLow": 22014,
+        "lost": 0
       },
       {
         "location": "Jordan - Local",
         "accountsCount": 14,
         "value": 76382,
-        "renewed": 12526,
-        "pendingHigh": 38500,
+        "renewed": 33526,
+        "pendingHigh": 25200,
         "pendingMedium": 6500,
-        "pendingLow": 9000,
+        "pendingLow": 1300,
         "lost": 9856
       },
       {
@@ -246,10 +246,10 @@ window.DASHBOARD_DATA = {
         "accountsCount": 6,
         "value": 41530,
         "renewed": 7820,
-        "pendingHigh": 27710,
+        "pendingHigh": 30710,
         "pendingMedium": 0,
         "pendingLow": 3000,
-        "lost": 3000
+        "lost": 0
       },
       {
         "location": "KSA - Hail",
@@ -276,9 +276,9 @@ window.DASHBOARD_DATA = {
         "accountsCount": 5,
         "value": 17920,
         "renewed": 9000,
-        "pendingHigh": 0,
+        "pendingHigh": 1700,
         "pendingMedium": 0,
-        "pendingLow": 1700,
+        "pendingLow": 0,
         "lost": 7220
       },
       {
@@ -309,25 +309,25 @@ window.DASHBOARD_DATA = {
       "cashing": 87918,
       "receivables": 74084
     },
-    "confirmedRevenue": 2254014,
-    "worst": 3793543,
-    "medium": 4651550,
-    "bestExcludingLost": 5170648,
-    "bestIncludingLost": 5317990,
+    "confirmedRevenue": 2332682,
+    "worst": 3880891,
+    "medium": 4841433,
+    "bestExcludingLost": 5304918,
+    "bestIncludingLost": 5403680,
     "plan": {
       "target": 4782548,
-      "worst": 3793543,
-      "medium": 4651550,
-      "best": 5317990,
-      "outstanding": 5317990,
-      "booking": 1901037,
-      "cashing": 883128
+      "worst": 3880891,
+      "medium": 4841433,
+      "best": 5403680,
+      "outstanding": 5403680,
+      "booking": 1979705,
+      "cashing": 980339
     },
     "deltas": {
       "target": 0,
       "worst": 0,
       "medium": 0,
-      "bestExcludingLost": -147342,
+      "bestExcludingLost": -98762,
       "bestIncludingLost": 0
     }
   },
@@ -345,70 +345,70 @@ window.DASHBOARD_DATA = {
         "cashing": 62918,
         "receivables": 49083
       },
-      "totalValue": 1845391,
+      "totalValue": 1948650,
       "bookedYtd": 939515,
       "cashedYtd": 432295,
       "receivables": 747978,
       "confirmedRevenue": 1180273,
-      "renewed": 626091,
-      "pendingHigh": 613844,
-      "pendingMedium": 477405,
-      "pendingLow": 64399,
-      "lost": 63652,
+      "renewed": 619083,
+      "pendingHigh": 547642,
+      "pendingMedium": 581872,
+      "pendingLow": 121467,
+      "lost": 78586,
       "forecasts": {
         "worst": {
-          "revenue": 1794117,
-          "gapToTarget": -154531,
-          "achievementPct": 92.1,
+          "revenue": 1727915,
+          "gapToTarget": -220733,
+          "achievementPct": 88.7,
           "status": "Watch"
         },
         "medium": {
-          "revenue": 2271522,
-          "gapToTarget": 322874,
-          "achievementPct": 116.6,
+          "revenue": 2309787,
+          "gapToTarget": 361139,
+          "achievementPct": 118.5,
           "status": "Safe"
         },
         "best": {
-          "revenue": 2335921,
-          "gapToTarget": 387273,
-          "achievementPct": 119.9,
+          "revenue": 2431254,
+          "gapToTarget": 482606,
+          "achievementPct": 124.8,
           "status": "Safe"
         },
         "outstanding": {
-          "revenue": 2335921,
-          "gapToTarget": 387273,
-          "achievementPct": 119.9,
+          "revenue": 2431254,
+          "gapToTarget": 482606,
+          "achievementPct": 124.8,
           "status": "Safe"
         }
       },
       "calculatedForecasts": {
-        "worst": 1794117,
-        "medium": 2271522,
-        "bestExcludingLost": 2335921,
-        "bestIncludingLost": 2399573
+        "worst": 1727915,
+        "medium": 2309787,
+        "bestExcludingLost": 2431254,
+        "bestIncludingLost": 2509840
       },
       "planComparison": {
         "plan": {
           "owner": "Fadi",
           "target": 1948648,
-          "worst": 1794117,
-          "medium": 2271522,
-          "best": 2399573,
-          "outstanding": 2399573,
+          "worst": 1727915,
+          "medium": 2309787,
+          "best": 2509840,
+          "outstanding": 2509840,
           "booking": 939515,
           "cashing": 432295
         },
         "originalSummaryPlanIncludingAcquisition": {
           "owner": "Fadi",
           "target": 1948648,
-          "worst": 1906117.2900000003,
-          "worstPct": "0.9781742469650754",
-          "medium": 2383522.29,
-          "mediumPct": "1.22316718565898",
-          "best": 2511573.29,
-          "bestPct": "1.2888799259794483",
-          "outstanding": 2511573.29,
-          "outstandingPct": "1.2888799259794483",
+          "worst": 1732715.2900000003,
+          "worstPct": "0.8891884475800659",
+          "medium": 2310186.29,
+          "mediumPct": "1.1855328874173272",
+          "best": 2510239.29,
+          "bestPct": "1.2881953487751507",
+          "outstanding": 2510239.29,
+          "outstandingPct": "1.2881953487751507",
           "booking": 1051516.15,
           "cashing": 495212.65
         },
@@ -424,13 +424,13 @@ window.DASHBOARD_DATA = {
           "cashing": 0,
           "worst": 0,
           "medium": 0,
-          "bestExcludingLost": -63652,
+          "bestExcludingLost": -78586,
           "bestIncludingLost": 0
         },
         "lostAppearsIncludedInPlanBest": true,
         "note": "Retention-only dashboard. Acquisition values are excluded. Best excludes Lost by default; Best + Lost is audit only."
       },
-      "mediumAchievementPct": 116.6,
+      "mediumAchievementPct": 118.5,
       "topAccounts": [
         {
           "rowNumber": 76,
@@ -467,7 +467,7 @@ window.DASHBOARD_DATA = {
           "location": "KSA - Riyadh",
           "owner": "Fadi",
           "clientName": "Ministry of Energy",
-          "value2026": 177000,
+          "value2026": 265200,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
@@ -484,7 +484,7 @@ window.DASHBOARD_DATA = {
             "Dec": 0
           },
           "monthlyTotal": 265200,
-          "valueVsMonthlyDiff": 88200
+          "valueVsMonthlyDiff": 0
         },
         {
           "rowNumber": 112,
@@ -576,7 +576,7 @@ window.DASHBOARD_DATA = {
           "owner": "Fadi",
           "clientName": "Alrajhi Bank",
           "value2026": 73068,
-          "renewalStatus": "Pending High",
+          "renewalStatus": "Pending Medium",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -630,7 +630,7 @@ window.DASHBOARD_DATA = {
           "owner": "Fadi",
           "clientName": "principal buyers",
           "value2026": 63000,
-          "renewalStatus": "Pending High",
+          "renewalStatus": "Pending Medium",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -676,33 +676,6 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 109,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Sara",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "Care - National Medical Company",
-          "value2026": 57000,
-          "renewalStatus": "Renewed",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 42721,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 42721,
-          "valueVsMonthlyDiff": -14279
-        },
-        {
           "rowNumber": 106,
           "status": "Active",
           "product": "Talentera",
@@ -711,7 +684,7 @@ window.DASHBOARD_DATA = {
           "owner": "Fadi",
           "clientName": "Saudi Post",
           "value2026": 50667,
-          "renewalStatus": "Pending Medium",
+          "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -754,6 +727,60 @@ window.DASHBOARD_DATA = {
             "Dec": 48001
           },
           "monthlyTotal": 48001,
+          "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 94,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Sara",
+          "location": "KSA - Riyadh",
+          "owner": "Fadi",
+          "clientName": "Banque Saudi Fransi / Allianz Saudi Fransi",
+          "value2026": 45000,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 45000,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 45000,
+          "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 109,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Sara",
+          "location": "KSA - Riyadh",
+          "owner": "Fadi",
+          "clientName": "Care - National Medical Company",
+          "value2026": 42721,
+          "renewalStatus": "Renewed",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 42721,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 42721,
           "valueVsMonthlyDiff": 0
         },
         {
@@ -838,33 +865,6 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 103,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Sara",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "Saudi Capital Market",
-          "value2026": 32000,
-          "renewalStatus": "Renewed",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 26600,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 26600,
-          "valueVsMonthlyDiff": -5400
-        },
-        {
           "rowNumber": 105,
           "status": "Active",
           "product": "Talentera",
@@ -946,22 +946,22 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 93,
+          "rowNumber": 103,
           "status": "Active",
-          "product": "Evalufy",
+          "product": "Talentera",
           "csmName": "Sara",
           "location": "KSA - Riyadh",
           "owner": "Fadi",
-          "clientName": "Alrajhi Bank",
-          "value2026": 26000,
-          "renewalStatus": "Pending High",
+          "clientName": "Saudi Capital Market",
+          "value2026": 26600,
+          "renewalStatus": "Renewed",
           "monthly": {
-            "Jan": 26000,
+            "Jan": 0,
             "Feb": 0,
             "Mar": 0,
             "Apr": 0,
             "May": 0,
-            "Jun": 0,
+            "Jun": 26600,
             "Jul": 0,
             "Aug": 0,
             "Sep": 0,
@@ -969,7 +969,7 @@ window.DASHBOARD_DATA = {
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 26000,
+          "monthlyTotal": 26600,
           "valueVsMonthlyDiff": 0
         }
       ],
@@ -982,7 +982,7 @@ window.DASHBOARD_DATA = {
           "location": "KSA - Riyadh",
           "owner": "Fadi",
           "clientName": "Ministry of Energy",
-          "value2026": 177000,
+          "value2026": 265200,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
@@ -999,7 +999,7 @@ window.DASHBOARD_DATA = {
             "Dec": 0
           },
           "monthlyTotal": 265200,
-          "valueVsMonthlyDiff": 88200
+          "valueVsMonthlyDiff": 0
         },
         {
           "rowNumber": 104,
@@ -1026,60 +1026,6 @@ window.DASHBOARD_DATA = {
             "Dec": 0
           },
           "monthlyTotal": 81334,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 92,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Sara",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "Alrajhi Bank",
-          "value2026": 73068,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 73068,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 73068,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 114,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Haia",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "principal buyers",
-          "value2026": 63000,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 63000
-          },
-          "monthlyTotal": 63000,
           "valueVsMonthlyDiff": 0
         },
         {
@@ -1110,17 +1056,17 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 93,
+          "rowNumber": 106,
           "status": "Active",
-          "product": "Evalufy",
+          "product": "Talentera",
           "csmName": "Sara",
           "location": "KSA - Riyadh",
           "owner": "Fadi",
-          "clientName": "Alrajhi Bank",
-          "value2026": 26000,
+          "clientName": "Saudi Post",
+          "value2026": 50667,
           "renewalStatus": "Pending High",
           "monthly": {
-            "Jan": 26000,
+            "Jan": 0,
             "Feb": 0,
             "Mar": 0,
             "Apr": 0,
@@ -1129,22 +1075,22 @@ window.DASHBOARD_DATA = {
             "Jul": 0,
             "Aug": 0,
             "Sep": 0,
-            "Oct": 0,
+            "Oct": 50667,
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 26000,
+          "monthlyTotal": 50667,
           "valueVsMonthlyDiff": 0
         },
         {
           "rowNumber": 94,
-          "status": "Expected to Be Lost",
+          "status": "Active",
           "product": "Talentera",
           "csmName": "Sara",
           "location": "KSA - Riyadh",
           "owner": "Fadi",
           "clientName": "Banque Saudi Fransi / Allianz Saudi Fransi",
-          "value2026": 26000,
+          "value2026": 45000,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
@@ -1161,33 +1107,6 @@ window.DASHBOARD_DATA = {
             "Dec": 0
           },
           "monthlyTotal": 45000,
-          "valueVsMonthlyDiff": 19000
-        },
-        {
-          "rowNumber": 82,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Maryam",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "IT Belt Company (CHI- Health Insurance Council)",
-          "value2026": 22667,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 22667,
-            "Dec": 0
-          },
-          "monthlyTotal": 22667,
           "valueVsMonthlyDiff": 0
         },
         {
@@ -1215,60 +1134,6 @@ window.DASHBOARD_DATA = {
             "Dec": 0
           },
           "monthlyTotal": 21467,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 85,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Maryam",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "Bureau of Experts at the Saudi Council of Ministers(CLSR)",
-          "value2026": 20134,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 20134,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 20134,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 172,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Maryam",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "Etihad Jawraa for Telecommunications and Information Technology Lebara",
-          "value2026": 13867,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 13867,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 13867,
           "valueVsMonthlyDiff": 0
         },
         {
@@ -1353,60 +1218,6 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 88,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Maryam",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "360 Human resources",
-          "value2026": 4000,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 4000
-          },
-          "monthlyTotal": 4000,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 91,
-          "status": "Active",
-          "product": "Evalufy",
-          "csmName": "Maryam",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "360 Human resources",
-          "value2026": 1333,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 1333
-          },
-          "monthlyTotal": 1333,
-          "valueVsMonthlyDiff": 0
-        },
-        {
           "rowNumber": 90,
           "status": "Active",
           "product": "AfterHire",
@@ -1432,23 +1243,50 @@ window.DASHBOARD_DATA = {
           },
           "monthlyTotal": 0,
           "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 107,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Sara",
+          "location": "KSA - Riyadh",
+          "owner": "Fadi",
+          "clientName": "General Authority for statistics",
+          "value2026": 0,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 0,
+          "valueVsMonthlyDiff": 0
         }
       ],
       "riskyAccounts": [
         {
-          "rowNumber": 79,
-          "status": "Active",
+          "rowNumber": 81,
+          "status": "Lost",
           "product": "Talentera",
           "csmName": "Maryam",
           "location": "KSA - Riyadh",
           "owner": "Fadi",
-          "clientName": "Ministry of Energy",
-          "value2026": 177000,
-          "renewalStatus": "Pending High",
+          "clientName": "Saudi Food & Drug Authority",
+          "value2026": 0,
+          "renewalStatus": "Lost",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
-            "Mar": 265200,
+            "Mar": 0,
             "Apr": 0,
             "May": 0,
             "Jun": 0,
@@ -1459,143 +1297,8 @@ window.DASHBOARD_DATA = {
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 265200,
-          "valueVsMonthlyDiff": 88200
-        },
-        {
-          "rowNumber": 94,
-          "status": "Expected to Be Lost",
-          "product": "Talentera",
-          "csmName": "Sara",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "Banque Saudi Fransi / Allianz Saudi Fransi",
-          "value2026": 26000,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 45000,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 45000,
-          "valueVsMonthlyDiff": 19000
-        },
-        {
-          "rowNumber": 109,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Sara",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "Care - National Medical Company",
-          "value2026": 57000,
-          "renewalStatus": "Renewed",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 42721,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 42721,
-          "valueVsMonthlyDiff": -14279
-        },
-        {
-          "rowNumber": 98,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Sara",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "Management and Development For Human Resources Co (Tanfeeth) (Atmaal)",
-          "value2026": 12000,
-          "renewalStatus": "Renewed",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 16666,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 3205,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 4800
-          },
-          "monthlyTotal": 24671,
-          "valueVsMonthlyDiff": 12671
-        },
-        {
-          "rowNumber": 103,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Sara",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "Saudi Capital Market",
-          "value2026": 32000,
-          "renewalStatus": "Renewed",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 26600,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 26600,
-          "valueVsMonthlyDiff": -5400
-        },
-        {
-          "rowNumber": 97,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Sara",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "King Khaled Eye Hospital",
-          "value2026": 20000,
-          "renewalStatus": "Pending Medium",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 23067,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 23067,
-          "valueVsMonthlyDiff": 3067
+          "monthlyTotal": 0,
+          "valueVsMonthlyDiff": 0
         },
         {
           "rowNumber": 102,
@@ -1626,7 +1329,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "rowNumber": 108,
-          "status": "Expected to Be Lost",
+          "status": "Lost",
           "product": "Talentera",
           "csmName": "Sara",
           "location": "KSA - Riyadh",
@@ -1649,6 +1352,33 @@ window.DASHBOARD_DATA = {
             "Dec": 0
           },
           "monthlyTotal": 20000,
+          "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 152,
+          "status": "Lost",
+          "product": "Evalufy",
+          "csmName": "Maryam",
+          "location": "KSA - Riyadh",
+          "owner": "Fadi",
+          "clientName": "Learning Space",
+          "value2026": 14934,
+          "renewalStatus": "Lost",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 14934,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 14934,
           "valueVsMonthlyDiff": 0
         },
         {
@@ -1694,71 +1424,71 @@ window.DASHBOARD_DATA = {
         "receivables": 25001
       },
       "totalValue": 1198852,
-      "bookedYtd": 483986,
-      "cashedYtd": 191663,
-      "receivables": 364323,
-      "confirmedRevenue": 555986,
-      "renewed": 421359,
-      "pendingHigh": 408346,
-      "pendingMedium": 247491,
-      "pendingLow": 98480,
-      "lost": 23176,
+      "bookedYtd": 562654,
+      "cashedYtd": 215664,
+      "receivables": 418990,
+      "confirmedRevenue": 634654,
+      "renewed": 521027,
+      "pendingHigh": 376611,
+      "pendingMedium": 156158,
+      "pendingLow": 124880,
+      "lost": 20176,
       "forecasts": {
         "worst": {
-          "revenue": 964332,
-          "gapToTarget": -234520,
-          "achievementPct": 80.4,
+          "revenue": 1011265,
+          "gapToTarget": -187587,
+          "achievementPct": 84.4,
           "status": "Watch"
         },
         "medium": {
-          "revenue": 1211823,
-          "gapToTarget": 12971,
-          "achievementPct": 101.1,
-          "status": "Safe"
+          "revenue": 1167423,
+          "gapToTarget": -31429,
+          "achievementPct": 97.4,
+          "status": "Watch"
         },
         "best": {
-          "revenue": 1310303,
-          "gapToTarget": 111451,
-          "achievementPct": 109.3,
+          "revenue": 1292303,
+          "gapToTarget": 93451,
+          "achievementPct": 107.8,
           "status": "Safe"
         },
         "outstanding": {
-          "revenue": 1310303,
-          "gapToTarget": 111451,
-          "achievementPct": 109.3,
+          "revenue": 1292303,
+          "gapToTarget": 93451,
+          "achievementPct": 107.8,
           "status": "Safe"
         }
       },
       "calculatedForecasts": {
-        "worst": 964332,
-        "medium": 1211823,
-        "bestExcludingLost": 1310303,
-        "bestIncludingLost": 1333479
+        "worst": 1011265,
+        "medium": 1167423,
+        "bestExcludingLost": 1292303,
+        "bestIncludingLost": 1312479
       },
       "planComparison": {
         "plan": {
           "owner": "Jihad",
           "target": 1198852,
-          "worst": 964332,
-          "medium": 1211823,
-          "best": 1333479,
-          "outstanding": 1333479,
-          "booking": 483986,
-          "cashing": 191663
+          "worst": 1011265,
+          "medium": 1167423,
+          "best": 1312479,
+          "outstanding": 1312479,
+          "booking": 562654,
+          "cashing": 215664
         },
         "originalSummaryPlanIncludingAcquisition": {
           "owner": "Jihad",
           "target": 1808852,
-          "worst": 1014333.7273913035,
-          "worstPct": "0.5607610392620864",
-          "medium": 1261824.7273913035,
-          "mediumPct": "0.697583178386791",
-          "best": 1383480.7273913035,
-          "bestPct": "0.7648390953993491",
-          "outstanding": 1383480.7273913035,
-          "outstandingPct": "0.7648390953993491",
-          "booking": 533986.81,
-          "cashing": 216663.74239130353
+          "worst": 1061266.3773913034,
+          "worstPct": "0.5867071365657905",
+          "medium": 1217424.3773913034,
+          "mediumPct": "0.673037029779829",
+          "best": 1362480.3773913034,
+          "bestPct": "0.7532293285416958",
+          "outstanding": 1362480.3773913034,
+          "outstandingPct": "0.7532293285416958",
+          "booking": 612654.4600000001,
+          "cashing": 240664.04239130352
         },
         "excludedAcquisition": {
           "target": 610000,
@@ -1772,13 +1502,13 @@ window.DASHBOARD_DATA = {
           "cashing": 0,
           "worst": 0,
           "medium": 0,
-          "bestExcludingLost": -23176,
+          "bestExcludingLost": -20176,
           "bestIncludingLost": 0
         },
         "lostAppearsIncludedInPlanBest": true,
         "note": "Retention-only dashboard. Acquisition values are excluded. Best excludes Lost by default; Best + Lost is audit only."
       },
-      "mediumAchievementPct": 101.1,
+      "mediumAchievementPct": 97.4,
       "topAccounts": [
         {
           "rowNumber": 64,
@@ -1816,7 +1546,7 @@ window.DASHBOARD_DATA = {
           "owner": "Jihad",
           "clientName": "JUBAIL ENERGY SERVICES (ARCELOR)",
           "value2026": 78668,
-          "renewalStatus": "Pending High",
+          "renewalStatus": "Renewed",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -1870,7 +1600,7 @@ window.DASHBOARD_DATA = {
           "owner": "Jihad",
           "clientName": "Saudi Arabian Logistics SAL",
           "value2026": 68000,
-          "renewalStatus": "Pending Medium",
+          "renewalStatus": "Pending Low",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -2059,7 +1789,7 @@ window.DASHBOARD_DATA = {
           "owner": "Jihad",
           "clientName": "DARP ( Dyoof Al Rahman Program)",
           "value2026": 38000,
-          "renewalStatus": "Pending Medium",
+          "renewalStatus": "Pending Low",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -2167,7 +1897,7 @@ window.DASHBOARD_DATA = {
           "owner": "Jihad",
           "clientName": "JEDCO - Jeddah Airports Company",
           "value2026": 33000,
-          "renewalStatus": "Pending Low",
+          "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -2302,7 +2032,7 @@ window.DASHBOARD_DATA = {
           "owner": "Jihad",
           "clientName": "Central Trade and Auto (ctajo)",
           "value2026": 21000,
-          "renewalStatus": "Pending High",
+          "renewalStatus": "Renewed",
           "monthly": {
             "Jan": 21000,
             "Feb": 0,
@@ -2322,33 +2052,6 @@ window.DASHBOARD_DATA = {
         }
       ],
       "pendingHighAccounts": [
-        {
-          "rowNumber": 46,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Haia",
-          "location": "KSA - EP",
-          "owner": "Jihad",
-          "clientName": "JUBAIL ENERGY SERVICES (ARCELOR)",
-          "value2026": 78668,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 78668,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 78668,
-          "valueVsMonthlyDiff": 0
-        },
         {
           "rowNumber": 47,
           "status": "Active",
@@ -2458,6 +2161,33 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
+          "rowNumber": 65,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Haia",
+          "location": "KSA - Jeddah",
+          "owner": "Jihad",
+          "clientName": "JEDCO - Jeddah Airports Company",
+          "value2026": 33000,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 33000,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 33000,
+          "valueVsMonthlyDiff": 0
+        },
+        {
           "rowNumber": 53,
           "status": "Active",
           "product": "Talentera",
@@ -2512,17 +2242,17 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 164,
+          "rowNumber": 61,
           "status": "Active",
           "product": "Talentera",
-          "csmName": "Hatem",
-          "location": "Jordan - Local",
+          "csmName": "Haia",
+          "location": "KSA - Jeddah",
           "owner": "Jihad",
-          "clientName": "Central Trade and Auto (ctajo)",
-          "value2026": 21000,
+          "clientName": "Middle East & North Africa Beverages Manufacturing Co. MENA Bev.",
+          "value2026": 19200,
           "renewalStatus": "Pending High",
           "monthly": {
-            "Jan": 21000,
+            "Jan": 0,
             "Feb": 0,
             "Mar": 0,
             "Apr": 0,
@@ -2532,10 +2262,10 @@ window.DASHBOARD_DATA = {
             "Aug": 0,
             "Sep": 0,
             "Oct": 0,
-            "Nov": 0,
+            "Nov": 19200,
             "Dec": 0
           },
-          "monthlyTotal": 21000,
+          "monthlyTotal": 19200,
           "valueVsMonthlyDiff": 0
         },
         {
@@ -2566,30 +2296,30 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 83,
+          "rowNumber": 68,
           "status": "Active",
-          "product": "Talentera",
-          "csmName": "Maryam",
-          "location": "KSA - EP",
+          "product": "AfterHire",
+          "csmName": "Haia",
+          "location": "KSA - Jeddah",
           "owner": "Jihad",
-          "clientName": "GCCIA - Gulf Cooperation Council Interconnection Authority",
-          "value2026": 12000,
+          "clientName": "JEDCO Jeddah Airports Company",
+          "value2026": 10000,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
-            "Mar": 0,
+            "Mar": 10000,
             "Apr": 0,
             "May": 0,
             "Jun": 0,
-            "Jul": 12000,
+            "Jul": 0,
             "Aug": 0,
             "Sep": 0,
             "Oct": 0,
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 12000,
+          "monthlyTotal": 10000,
           "valueVsMonthlyDiff": 0
         },
         {
@@ -2647,6 +2377,60 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
+          "rowNumber": 71,
+          "status": "Active",
+          "product": "Evalufy",
+          "csmName": "Haia",
+          "location": "KSA - Jeddah",
+          "owner": "Jihad",
+          "clientName": "JEDCO Jeddah Airports Company",
+          "value2026": 5000,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 5000,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 5000,
+          "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 147,
+          "status": "Active",
+          "product": "Evalufy",
+          "csmName": "Hatem",
+          "location": "Jordan - Local",
+          "owner": "Jihad",
+          "clientName": "Jordan Free and Development Zones Group",
+          "value2026": 5000,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 2500,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 2500,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 5000,
+          "valueVsMonthlyDiff": 0
+        },
+        {
           "rowNumber": 36,
           "status": "Active",
           "product": "Evalufy",
@@ -2701,41 +2485,14 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 84,
-          "status": "Active",
-          "product": "Evalufy",
-          "csmName": "Maryam",
-          "location": "KSA - EP",
-          "owner": "Jihad",
-          "clientName": "GCCIA - Gulf Cooperation Council Interconnection Authority",
-          "value2026": 2667,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 2667,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 2667,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 148,
+          "rowNumber": 144,
           "status": "Active",
           "product": "Evalufy",
           "csmName": "Hatem",
           "location": "Jordan - Local",
           "owner": "Jihad",
-          "clientName": "Samsung Electronics Levant Jordan LLC",
-          "value2026": 1500,
+          "clientName": "GOPA Infra Regional Company - Middle East.",
+          "value2026": 4000,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
@@ -2746,50 +2503,50 @@ window.DASHBOARD_DATA = {
             "Jun": 0,
             "Jul": 0,
             "Aug": 0,
-            "Sep": 1500,
+            "Sep": 4000,
             "Oct": 0,
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 1500,
+          "monthlyTotal": 4000,
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 145,
+          "rowNumber": 48,
           "status": "Active",
-          "product": "Evalufy",
-          "csmName": "Hatem",
-          "location": "Jordan - Local",
+          "product": "Talentera",
+          "csmName": "Haia",
+          "location": "KSA - Jeddah",
           "owner": "Jihad",
-          "clientName": "Innovation Accounting Solutions and Tax",
-          "value2026": 1300,
+          "clientName": "Aramco Gulf Operations Co. Ltd.",
+          "value2026": 3000,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
-            "Mar": 1300,
+            "Mar": 0,
             "Apr": 0,
             "May": 0,
             "Jun": 0,
             "Jul": 0,
-            "Aug": 0,
+            "Aug": 3000,
             "Sep": 0,
             "Oct": 0,
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 1300,
+          "monthlyTotal": 3000,
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 184,
+          "rowNumber": 182,
           "status": "Active",
           "product": "Evalufy",
           "csmName": "Hatem",
           "location": "Jordan",
           "owner": "Jihad",
-          "clientName": "MS Pharma",
-          "value2026": 1000,
+          "clientName": "Bustami & Saheb Group",
+          "value2026": 3000,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
@@ -2803,9 +2560,36 @@ window.DASHBOARD_DATA = {
             "Sep": 0,
             "Oct": 0,
             "Nov": 0,
-            "Dec": 1000
+            "Dec": 3000
           },
-          "monthlyTotal": 1000,
+          "monthlyTotal": 3000,
+          "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 126,
+          "status": "Active",
+          "product": "Evalufy",
+          "csmName": "Hatem",
+          "location": "Lebanon",
+          "owner": "Jihad",
+          "clientName": "Bromberg and Associates LLC.",
+          "value2026": 1700,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 1700,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 1700,
           "valueVsMonthlyDiff": 0
         }
       ],
@@ -2839,7 +2623,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "rowNumber": 40,
-          "status": "Active",
+          "status": "Lost",
           "product": "Talentera",
           "csmName": "Hatem",
           "location": "Jordan - Local",
@@ -2893,7 +2677,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "rowNumber": 124,
-          "status": "Active",
+          "status": "Lost",
           "product": "Talentera",
           "csmName": "Hatem",
           "location": "Lebanon",
@@ -2920,7 +2704,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "rowNumber": 155,
-          "status": "Active",
+          "status": "Lost",
           "product": "Evalufy",
           "csmName": "Hatem",
           "location": "Lebanon",
@@ -2947,14 +2731,14 @@ window.DASHBOARD_DATA = {
         },
         {
           "rowNumber": 169,
-          "status": "Expected to Be Lost",
+          "status": "Lost From 2025",
           "product": "Talentera",
           "csmName": "Haia",
           "location": "KSA - Jeddah",
           "owner": "Jihad",
           "clientName": "Aal Taher Group / Radwa Food",
           "value2026": 0,
-          "renewalStatus": "Pending Low",
+          "renewalStatus": "Lost",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -2970,33 +2754,6 @@ window.DASHBOARD_DATA = {
             "Dec": 0
           },
           "monthlyTotal": 0,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 186,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Hatem",
-          "location": "Jordan",
-          "owner": "Jihad",
-          "clientName": "Jordan Ice and Aerated Water Company Ltd. (PepsiCo International)",
-          "value2026": 3000,
-          "renewalStatus": "Lost",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 3000
-          },
-          "monthlyTotal": 3000,
           "valueVsMonthlyDiff": 0
         }
       ]
@@ -3014,72 +2771,72 @@ window.DASHBOARD_DATA = {
         "cashing": 0,
         "receivables": 0
       },
-      "totalValue": 1517967,
+      "totalValue": 1565046,
       "bookedYtd": 477536,
-      "cashedYtd": 259170,
-      "receivables": 258585,
+      "cashedYtd": 332380,
+      "receivables": 185375,
       "confirmedRevenue": 517755,
-      "renewed": 450784,
-      "pendingHigh": 517339,
-      "pendingMedium": 133111,
-      "pendingLow": 356219,
-      "lost": 60514,
+      "renewed": 501440,
+      "pendingHigh": 623956,
+      "pendingMedium": 222512,
+      "pendingLow": 217138,
+      "lost": 0,
       "forecasts": {
         "worst": {
-          "revenue": 1035094,
-          "gapToTarget": -599954,
-          "achievementPct": 63.3,
+          "revenue": 1141711,
+          "gapToTarget": -493337,
+          "achievementPct": 69.8,
           "status": "Critical"
         },
         "medium": {
-          "revenue": 1168205,
-          "gapToTarget": -466843,
-          "achievementPct": 71.4,
-          "status": "Critical"
+          "revenue": 1364223,
+          "gapToTarget": -270825,
+          "achievementPct": 83.4,
+          "status": "Watch"
         },
         "best": {
-          "revenue": 1524424,
-          "gapToTarget": -110624,
-          "achievementPct": 93.2,
+          "revenue": 1581361,
+          "gapToTarget": -53687,
+          "achievementPct": 96.7,
           "status": "Watch"
         },
         "outstanding": {
-          "revenue": 1524424,
-          "gapToTarget": -110624,
-          "achievementPct": 93.2,
+          "revenue": 1581361,
+          "gapToTarget": -53687,
+          "achievementPct": 96.7,
           "status": "Watch"
         }
       },
       "calculatedForecasts": {
-        "worst": 1035094,
-        "medium": 1168205,
-        "bestExcludingLost": 1524424,
-        "bestIncludingLost": 1584938
+        "worst": 1141711,
+        "medium": 1364223,
+        "bestExcludingLost": 1581361,
+        "bestIncludingLost": 1581361
       },
       "planComparison": {
         "plan": {
           "owner": "Faizan",
           "target": 1635048,
-          "worst": 1035094,
-          "medium": 1168205,
-          "best": 1584938,
-          "outstanding": 1584938,
+          "worst": 1141711,
+          "medium": 1364223,
+          "best": 1581361,
+          "outstanding": 1581361,
           "booking": 477536,
-          "cashing": 259170
+          "cashing": 332380
         },
         "originalSummaryPlanIncludingAcquisition": {
           "owner": "Faizan",
           "target": 1635048,
-          "worst": 1035094.2943836066,
-          "worstPct": "0.6330666098998969",
-          "medium": 1168205.2943836066,
-          "mediumPct": "0.7144776755077568",
-          "best": 1584938.1543836067,
-          "bestPct": "0.9693526761193596",
-          "outstanding": 1584938.1543836067,
-          "outstandingPct": "0.9693526761193596",
+          "worst": 977037.2943836066,
+          "worstPct": "0.5975587838299589",
+          "medium": 1199549.2943836066,
+          "mediumPct": "0.7336477549182695",
+          "best": 1416687.1543836067,
+          "bestPct": "0.8664498867211279",
+          "outstanding": 1416687.1543836067,
+          "outstandingPct": "0.8664498867211279",
           "booking": 477536.22000000003,
-          "cashing": 259170.10000000003
+          "cashing": 332380.06000000006
         },
         "excludedAcquisition": {
           "target": 610000,
@@ -3093,16 +2850,43 @@ window.DASHBOARD_DATA = {
           "cashing": 0,
           "worst": 0,
           "medium": 0,
-          "bestExcludingLost": -60514,
+          "bestExcludingLost": 0,
           "bestIncludingLost": 0
         },
-        "lostAppearsIncludedInPlanBest": true,
+        "lostAppearsIncludedInPlanBest": false,
         "note": "Retention-only dashboard. Acquisition values are excluded. Best excludes Lost by default; Best + Lost is audit only."
       },
-      "mediumAchievementPct": 71.4,
+      "mediumAchievementPct": 83.4,
       "topAccounts": [
         {
-          "rowNumber": 23,
+          "rowNumber": 10,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Darshna",
+          "location": "Dubai",
+          "owner": "Faizan",
+          "clientName": "Emirates School Establishment",
+          "value2026": 227824,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 80000,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 80000,
+          "valueVsMonthlyDiff": -147824
+        },
+        {
+          "rowNumber": 25,
           "status": "Active",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -3129,7 +2913,7 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 16,
+          "rowNumber": 18,
           "status": "Active",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -3156,61 +2940,7 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 28,
-          "status": "Active",
-          "product": "AfterHire",
-          "csmName": "Darshna",
-          "location": "Dubai",
-          "owner": "Faizan",
-          "clientName": "Emirates School Establishment",
-          "value2026": 84000,
-          "renewalStatus": "Pending Low",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 84000,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 84000,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 10,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Darshna",
-          "location": "Dubai",
-          "owner": "Faizan",
-          "clientName": "Emirates School Establishment",
-          "value2026": 80000,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 227824,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 227824,
-          "valueVsMonthlyDiff": 147824
-        },
-        {
-          "rowNumber": 14,
+          "rowNumber": 16,
           "status": "Active",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -3318,7 +3048,7 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 19,
+          "rowNumber": 21,
           "status": "Active",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -3353,7 +3083,7 @@ window.DASHBOARD_DATA = {
           "owner": "Faizan",
           "clientName": "American University of Kuwait",
           "value2026": 53000,
-          "renewalStatus": "Lost",
+          "renewalStatus": "Pending Medium",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -3380,7 +3110,7 @@ window.DASHBOARD_DATA = {
           "owner": "Faizan",
           "clientName": "Rotana Hotels",
           "value2026": 52401,
-          "renewalStatus": "Pending High",
+          "renewalStatus": "Pending Medium",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -3399,7 +3129,7 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 15,
+          "rowNumber": 17,
           "status": "Active",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -3434,7 +3164,7 @@ window.DASHBOARD_DATA = {
           "owner": "Faizan",
           "clientName": "Abu Dhabi Family Care Authority",
           "value2026": 45251,
-          "renewalStatus": "Pending High",
+          "renewalStatus": "Renewed",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
@@ -3453,7 +3183,34 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 18,
+          "rowNumber": 119,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Hatem",
+          "location": "Kuwait",
+          "owner": "Faizan",
+          "clientName": "Mezzan Holding Co. K.S.C.C",
+          "value2026": 40968,
+          "renewalStatus": "Renewed",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 40968,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 40968,
+          "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 20,
           "status": "Active",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -3477,33 +3234,6 @@ window.DASHBOARD_DATA = {
             "Dec": 0
           },
           "monthlyTotal": 39855,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 30,
-          "status": "Active",
-          "product": "Evalufy",
-          "csmName": "Darshna",
-          "location": "Dubai",
-          "owner": "Faizan",
-          "clientName": "Emirates School Establishment",
-          "value2026": 39000,
-          "renewalStatus": "Pending Low",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 39000,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 39000,
           "valueVsMonthlyDiff": 0
         },
         {
@@ -3534,7 +3264,7 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 26,
+          "rowNumber": 28,
           "status": "Active",
           "product": "AfterHire",
           "csmName": "Darshna",
@@ -3561,31 +3291,31 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 119,
+          "rowNumber": 24,
           "status": "Active",
           "product": "Talentera",
-          "csmName": "Hatem",
-          "location": "Kuwait",
+          "csmName": "Darshna",
+          "location": "Dubai",
           "owner": "Faizan",
-          "clientName": "Mezzan Holding Co. K.S.C.C",
-          "value2026": 35563,
-          "renewalStatus": "Renewed",
+          "clientName": "GRANT THORNTON AUDITING and ACCOUNTING",
+          "value2026": 32850,
+          "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
             "Mar": 0,
             "Apr": 0,
-            "May": 40968,
+            "May": 0,
             "Jun": 0,
             "Jul": 0,
-            "Aug": 0,
+            "Aug": 32850,
             "Sep": 0,
             "Oct": 0,
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 40968,
-          "valueVsMonthlyDiff": 5405
+          "monthlyTotal": 32850,
+          "valueVsMonthlyDiff": 0
         },
         {
           "rowNumber": 129,
@@ -3640,6 +3370,33 @@ window.DASHBOARD_DATA = {
           },
           "monthlyTotal": 28000,
           "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 13,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Darshna",
+          "location": "Dubai",
+          "owner": "Faizan",
+          "clientName": "Future Pipe Industries",
+          "value2026": 28000,
+          "renewalStatus": "Renewed",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 28000,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 28000,
+          "valueVsMonthlyDiff": 0
         }
       ],
       "pendingHighAccounts": [
@@ -3651,13 +3408,13 @@ window.DASHBOARD_DATA = {
           "location": "Dubai",
           "owner": "Faizan",
           "clientName": "Emirates School Establishment",
-          "value2026": 80000,
+          "value2026": 227824,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
             "Mar": 0,
-            "Apr": 227824,
+            "Apr": 80000,
             "May": 0,
             "Jun": 0,
             "Jul": 0,
@@ -3667,11 +3424,11 @@ window.DASHBOARD_DATA = {
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 227824,
-          "valueVsMonthlyDiff": 147824
+          "monthlyTotal": 80000,
+          "valueVsMonthlyDiff": -147824
         },
         {
-          "rowNumber": 14,
+          "rowNumber": 16,
           "status": "Active",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -3725,60 +3482,6 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 2,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Darshna",
-          "location": "Abu Dhabi",
-          "owner": "Faizan",
-          "clientName": "Rotana Hotels",
-          "value2026": 52401,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 52401,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 52401,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 159,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Darshna",
-          "location": "Abu Dhabi",
-          "owner": "Faizan",
-          "clientName": "Abu Dhabi Family Care Authority",
-          "value2026": 45251,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 45251,
-            "Dec": 0
-          },
-          "monthlyTotal": 45251,
-          "valueVsMonthlyDiff": 0
-        },
-        {
           "rowNumber": 162,
           "status": "Active",
           "product": "Talentera",
@@ -3803,6 +3506,33 @@ window.DASHBOARD_DATA = {
             "Dec": 0
           },
           "monthlyTotal": 36651,
+          "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 24,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Darshna",
+          "location": "Dubai",
+          "owner": "Faizan",
+          "clientName": "GRANT THORNTON AUDITING and ACCOUNTING",
+          "value2026": 32850,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 32850,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 32850,
           "valueVsMonthlyDiff": 0
         },
         {
@@ -3860,14 +3590,14 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 140,
+          "rowNumber": 189,
           "status": "Active",
-          "product": "AfterHire",
+          "product": "Talentera",
           "csmName": "Hatem",
           "location": "Qatar",
           "owner": "Faizan",
-          "clientName": "Ali Bin Ali",
-          "value2026": 23633,
+          "clientName": "Amwaj Group",
+          "value2026": 26503,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
@@ -3875,19 +3605,19 @@ window.DASHBOARD_DATA = {
             "Mar": 0,
             "Apr": 0,
             "May": 0,
-            "Jun": 23633,
+            "Jun": 0,
             "Jul": 0,
-            "Aug": 0,
+            "Aug": 26503,
             "Sep": 0,
             "Oct": 0,
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 23633,
+          "monthlyTotal": 26503,
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 29,
+          "rowNumber": 30,
           "status": "Active",
           "product": "AfterHire",
           "csmName": "Darshna",
@@ -3914,7 +3644,34 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 27,
+          "rowNumber": 160,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Darshna",
+          "location": "Dubai",
+          "owner": "Faizan",
+          "clientName": "Al Tamimi & Company Ltd.",
+          "value2026": 20725,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 20725
+          },
+          "monthlyTotal": 20725,
+          "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 29,
           "status": "Active",
           "product": "AfterHire",
           "csmName": "Darshna",
@@ -4022,7 +3779,7 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 17,
+          "rowNumber": 19,
           "status": "Active",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -4155,6 +3912,33 @@ window.DASHBOARD_DATA = {
           },
           "monthlyTotal": 600,
           "valueVsMonthlyDiff": 0
+        },
+        {
+          "rowNumber": 11,
+          "status": "Active",
+          "product": "AfterHire",
+          "csmName": "Darshna",
+          "location": "Dubai",
+          "owner": "Faizan",
+          "clientName": "Emirates School Establishment",
+          "value2026": 0,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 0,
+          "valueVsMonthlyDiff": 0
         }
       ],
       "riskyAccounts": [
@@ -4166,13 +3950,13 @@ window.DASHBOARD_DATA = {
           "location": "Dubai",
           "owner": "Faizan",
           "clientName": "Emirates School Establishment",
-          "value2026": 80000,
+          "value2026": 227824,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
             "Feb": 0,
             "Mar": 0,
-            "Apr": 227824,
+            "Apr": 80000,
             "May": 0,
             "Jun": 0,
             "Jul": 0,
@@ -4182,65 +3966,11 @@ window.DASHBOARD_DATA = {
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 227824,
-          "valueVsMonthlyDiff": 147824
+          "monthlyTotal": 80000,
+          "valueVsMonthlyDiff": -147824
         },
         {
-          "rowNumber": 22,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Darshna",
-          "location": "Dubai",
-          "owner": "Faizan",
-          "clientName": "GRANT THORNTON AUDITING and ACCOUNTING",
-          "value2026": 16000,
-          "renewalStatus": "Pending Medium",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 32850,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 32850,
-          "valueVsMonthlyDiff": 16850
-        },
-        {
-          "rowNumber": 119,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Hatem",
-          "location": "Kuwait",
-          "owner": "Faizan",
-          "clientName": "Mezzan Holding Co. K.S.C.C",
-          "value2026": 35563,
-          "renewalStatus": "Renewed",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 40968,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 40968,
-          "valueVsMonthlyDiff": 5405
-        },
-        {
-          "rowNumber": 13,
+          "rowNumber": 15,
           "status": "Lost From 2025",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -4267,7 +3997,7 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 20,
+          "rowNumber": 22,
           "status": "Lost From 2025",
           "product": "Talentera",
           "csmName": "Darshna",
@@ -4294,8 +4024,8 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 21,
-          "status": "Expected to Be Lost",
+          "rowNumber": 23,
+          "status": "Lost From 2025",
           "product": "Talentera",
           "csmName": "Darshna",
           "location": "Dubai",
@@ -4321,35 +4051,8 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 137,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Hatem",
-          "location": "Kuwait",
-          "owner": "Faizan",
-          "clientName": "American University of Kuwait",
-          "value2026": 53000,
-          "renewalStatus": "Lost",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 53000,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 53000,
-          "valueVsMonthlyDiff": 0
-        },
-        {
           "rowNumber": 154,
-          "status": "Active",
+          "status": "Lost From 2025",
           "product": "Evalufy",
           "csmName": "Hatem",
           "location": "Kuwait",
@@ -4402,33 +4105,6 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 178,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Hatem",
-          "location": "Kuwait",
-          "owner": "Faizan",
-          "clientName": "ACICO Industrial Company",
-          "value2026": 7514,
-          "renewalStatus": "Lost",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 7513.86,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 7514,
-          "valueVsMonthlyDiff": 0
-        },
-        {
           "rowNumber": 180,
           "status": "Lost From 2025",
           "product": "Talentera",
@@ -4468,7 +4144,7 @@ window.DASHBOARD_DATA = {
       "owner": "Faizan",
       "clientName": "Rotana Hotels",
       "value2026": 52401,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -4683,13 +4359,13 @@ window.DASHBOARD_DATA = {
       "location": "Dubai",
       "owner": "Faizan",
       "clientName": "Emirates School Establishment",
-      "value2026": 80000,
+      "value2026": 227824,
       "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
         "Mar": 0,
-        "Apr": 227824,
+        "Apr": 80000,
         "May": 0,
         "Jun": 0,
         "Jul": 0,
@@ -4699,11 +4375,65 @@ window.DASHBOARD_DATA = {
         "Nov": 0,
         "Dec": 0
       },
-      "monthlyTotal": 227824,
-      "valueVsMonthlyDiff": 147824
+      "monthlyTotal": 80000,
+      "valueVsMonthlyDiff": -147824
     },
     {
       "rowNumber": 11,
+      "status": "Active",
+      "product": "AfterHire",
+      "csmName": "Darshna",
+      "location": "Dubai",
+      "owner": "Faizan",
+      "clientName": "Emirates School Establishment",
+      "value2026": 0,
+      "renewalStatus": "Pending High",
+      "monthly": {
+        "Jan": 0,
+        "Feb": 0,
+        "Mar": 0,
+        "Apr": 0,
+        "May": 0,
+        "Jun": 0,
+        "Jul": 0,
+        "Aug": 0,
+        "Sep": 0,
+        "Oct": 0,
+        "Nov": 0,
+        "Dec": 0
+      },
+      "monthlyTotal": 0,
+      "valueVsMonthlyDiff": 0
+    },
+    {
+      "rowNumber": 12,
+      "status": "Active",
+      "product": "Evalufy",
+      "csmName": "Darshna",
+      "location": "Dubai",
+      "owner": "Faizan",
+      "clientName": "Emirates School Establishment",
+      "value2026": 0,
+      "renewalStatus": "Pending High",
+      "monthly": {
+        "Jan": 0,
+        "Feb": 0,
+        "Mar": 0,
+        "Apr": 0,
+        "May": 0,
+        "Jun": 0,
+        "Jul": 0,
+        "Aug": 0,
+        "Sep": 0,
+        "Oct": 0,
+        "Nov": 0,
+        "Dec": 0
+      },
+      "monthlyTotal": 0,
+      "valueVsMonthlyDiff": 0
+    },
+    {
+      "rowNumber": 13,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4730,7 +4460,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 12,
+      "rowNumber": 14,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4757,7 +4487,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 13,
+      "rowNumber": 15,
       "status": "Lost From 2025",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4784,7 +4514,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 14,
+      "rowNumber": 16,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4811,7 +4541,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 15,
+      "rowNumber": 17,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4838,7 +4568,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 16,
+      "rowNumber": 18,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4865,7 +4595,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 17,
+      "rowNumber": 19,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4892,7 +4622,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 18,
+      "rowNumber": 20,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4919,7 +4649,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 19,
+      "rowNumber": 21,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4946,7 +4676,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 20,
+      "rowNumber": 22,
       "status": "Lost From 2025",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -4973,8 +4703,8 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 21,
-      "status": "Expected to Be Lost",
+      "rowNumber": 23,
+      "status": "Lost From 2025",
       "product": "Talentera",
       "csmName": "Darshna",
       "location": "Dubai",
@@ -5000,15 +4730,15 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 22,
+      "rowNumber": 24,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
       "location": "Dubai",
       "owner": "Faizan",
       "clientName": "GRANT THORNTON AUDITING and ACCOUNTING",
-      "value2026": 16000,
-      "renewalStatus": "Pending Medium",
+      "value2026": 32850,
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -5024,10 +4754,10 @@ window.DASHBOARD_DATA = {
         "Dec": 0
       },
       "monthlyTotal": 32850,
-      "valueVsMonthlyDiff": 16850
+      "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 23,
+      "rowNumber": 25,
       "status": "Active",
       "product": "Talentera",
       "csmName": "Darshna",
@@ -5054,7 +4784,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 24,
+      "rowNumber": 26,
       "status": "Active",
       "product": "AfterHire",
       "csmName": "Darshna",
@@ -5081,7 +4811,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 25,
+      "rowNumber": 27,
       "status": "Active",
       "product": "AfterHire",
       "csmName": "Darshna",
@@ -5108,7 +4838,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 26,
+      "rowNumber": 28,
       "status": "Active",
       "product": "AfterHire",
       "csmName": "Darshna",
@@ -5135,7 +4865,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 27,
+      "rowNumber": 29,
       "status": "Active",
       "product": "AfterHire",
       "csmName": "Darshna",
@@ -5162,34 +4892,7 @@ window.DASHBOARD_DATA = {
       "valueVsMonthlyDiff": 0
     },
     {
-      "rowNumber": 28,
-      "status": "Active",
-      "product": "AfterHire",
-      "csmName": "Darshna",
-      "location": "Dubai",
-      "owner": "Faizan",
-      "clientName": "Emirates School Establishment",
-      "value2026": 84000,
-      "renewalStatus": "Pending Low",
-      "monthly": {
-        "Jan": 0,
-        "Feb": 0,
-        "Mar": 84000,
-        "Apr": 0,
-        "May": 0,
-        "Jun": 0,
-        "Jul": 0,
-        "Aug": 0,
-        "Sep": 0,
-        "Oct": 0,
-        "Nov": 0,
-        "Dec": 0
-      },
-      "monthlyTotal": 84000,
-      "valueVsMonthlyDiff": 0
-    },
-    {
-      "rowNumber": 29,
+      "rowNumber": 30,
       "status": "Active",
       "product": "AfterHire",
       "csmName": "Darshna",
@@ -5213,33 +4916,6 @@ window.DASHBOARD_DATA = {
         "Dec": 22000
       },
       "monthlyTotal": 22000,
-      "valueVsMonthlyDiff": 0
-    },
-    {
-      "rowNumber": 30,
-      "status": "Active",
-      "product": "Evalufy",
-      "csmName": "Darshna",
-      "location": "Dubai",
-      "owner": "Faizan",
-      "clientName": "Emirates School Establishment",
-      "value2026": 39000,
-      "renewalStatus": "Pending Low",
-      "monthly": {
-        "Jan": 0,
-        "Feb": 0,
-        "Mar": 39000,
-        "Apr": 0,
-        "May": 0,
-        "Jun": 0,
-        "Jul": 0,
-        "Aug": 0,
-        "Sep": 0,
-        "Oct": 0,
-        "Nov": 0,
-        "Dec": 0
-      },
-      "monthlyTotal": 39000,
       "valueVsMonthlyDiff": 0
     },
     {
@@ -5487,7 +5163,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "rowNumber": 40,
-      "status": "Active",
+      "status": "Lost",
       "product": "Talentera",
       "csmName": "Hatem",
       "location": "Jordan - Local",
@@ -5656,7 +5332,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "JUBAIL ENERGY SERVICES (ARCELOR)",
       "value2026": 78668,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -5710,7 +5386,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Aramco Gulf Operations Co. Ltd.",
       "value2026": 3000,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -5818,7 +5494,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "DARP ( Dyoof Al Rahman Program)",
       "value2026": 38000,
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6061,7 +5737,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Middle East & North Africa Beverages Manufacturing Co. MENA Bev.",
       "value2026": 19200,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6169,7 +5845,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "JEDCO - Jeddah Airports Company",
       "value2026": 33000,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6250,7 +5926,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "JEDCO Jeddah Airports Company",
       "value2026": 10000,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6331,7 +6007,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "JEDCO Jeddah Airports Company",
       "value2026": 5000,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6493,7 +6169,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "King Abdulaziz National Guard Hospital",
       "value2026": 0,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Renewed",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6546,7 +6222,7 @@ window.DASHBOARD_DATA = {
       "location": "KSA - Riyadh",
       "owner": "Fadi",
       "clientName": "Ministry of Energy",
-      "value2026": 177000,
+      "value2026": 265200,
       "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
@@ -6563,7 +6239,7 @@ window.DASHBOARD_DATA = {
         "Dec": 0
       },
       "monthlyTotal": 265200,
-      "valueVsMonthlyDiff": 88200
+      "valueVsMonthlyDiff": 0
     },
     {
       "rowNumber": 80,
@@ -6574,7 +6250,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "National Center for Environmental Compliance",
       "value2026": 23067,
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6594,14 +6270,14 @@ window.DASHBOARD_DATA = {
     },
     {
       "rowNumber": 81,
-      "status": "Active",
+      "status": "Lost",
       "product": "Talentera",
       "csmName": "Maryam",
       "location": "KSA - Riyadh",
       "owner": "Fadi",
       "clientName": "Saudi Food & Drug Authority",
       "value2026": 0,
-      "renewalStatus": "Renewed",
+      "renewalStatus": "Lost",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6628,7 +6304,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "IT Belt Company (CHI- Health Insurance Council)",
       "value2026": 22667,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6655,7 +6331,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "GCCIA - Gulf Cooperation Council Interconnection Authority",
       "value2026": 12000,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6682,7 +6358,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "GCCIA - Gulf Cooperation Council Interconnection Authority",
       "value2026": 2667,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6709,7 +6385,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "Bureau of Experts at the Saudi Council of Ministers(CLSR)",
       "value2026": 20134,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6790,7 +6466,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "360 Human resources",
       "value2026": 4000,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6871,7 +6547,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "360 Human resources",
       "value2026": 1333,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6898,7 +6574,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "Alrajhi Bank",
       "value2026": 73068,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6925,7 +6601,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "Alrajhi Bank",
       "value2026": 26000,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 26000,
         "Feb": 0,
@@ -6945,13 +6621,13 @@ window.DASHBOARD_DATA = {
     },
     {
       "rowNumber": 94,
-      "status": "Expected to Be Lost",
+      "status": "Active",
       "product": "Talentera",
       "csmName": "Sara",
       "location": "KSA - Riyadh",
       "owner": "Fadi",
       "clientName": "Banque Saudi Fransi / Allianz Saudi Fransi",
-      "value2026": 26000,
+      "value2026": 45000,
       "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
@@ -6968,7 +6644,7 @@ window.DASHBOARD_DATA = {
         "Dec": 0
       },
       "monthlyTotal": 45000,
-      "valueVsMonthlyDiff": 19000
+      "valueVsMonthlyDiff": 0
     },
     {
       "rowNumber": 95,
@@ -6979,7 +6655,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "college of excellence",
       "value2026": 20000,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -7032,7 +6708,7 @@ window.DASHBOARD_DATA = {
       "location": "KSA - Riyadh",
       "owner": "Fadi",
       "clientName": "King Khaled Eye Hospital",
-      "value2026": 20000,
+      "value2026": 23067,
       "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
@@ -7049,7 +6725,7 @@ window.DASHBOARD_DATA = {
         "Dec": 0
       },
       "monthlyTotal": 23067,
-      "valueVsMonthlyDiff": 3067
+      "valueVsMonthlyDiff": 0
     },
     {
       "rowNumber": 98,
@@ -7059,7 +6735,7 @@ window.DASHBOARD_DATA = {
       "location": "KSA - Riyadh",
       "owner": "Fadi",
       "clientName": "Management and Development For Human Resources Co (Tanfeeth) (Atmaal)",
-      "value2026": 12000,
+      "value2026": 24671,
       "renewalStatus": "Renewed",
       "monthly": {
         "Jan": 0,
@@ -7076,7 +6752,7 @@ window.DASHBOARD_DATA = {
         "Dec": 4800
       },
       "monthlyTotal": 24671,
-      "valueVsMonthlyDiff": 12671
+      "valueVsMonthlyDiff": 0
     },
     {
       "rowNumber": 99,
@@ -7087,7 +6763,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "Ministry of Defence",
       "value2026": 20000,
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -7194,7 +6870,7 @@ window.DASHBOARD_DATA = {
       "location": "KSA - Riyadh",
       "owner": "Fadi",
       "clientName": "Saudi Capital Market",
-      "value2026": 32000,
+      "value2026": 26600,
       "renewalStatus": "Renewed",
       "monthly": {
         "Jan": 0,
@@ -7211,7 +6887,7 @@ window.DASHBOARD_DATA = {
         "Dec": 0
       },
       "monthlyTotal": 26600,
-      "valueVsMonthlyDiff": -5400
+      "valueVsMonthlyDiff": 0
     },
     {
       "rowNumber": 104,
@@ -7276,7 +6952,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "Saudi Post",
       "value2026": 50667,
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -7303,7 +6979,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "General Authority for statistics",
       "value2026": 0,
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -7323,7 +6999,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "rowNumber": 108,
-      "status": "Expected to Be Lost",
+      "status": "Lost",
       "product": "Talentera",
       "csmName": "Sara",
       "location": "KSA - Riyadh",
@@ -7356,7 +7032,7 @@ window.DASHBOARD_DATA = {
       "location": "KSA - Riyadh",
       "owner": "Fadi",
       "clientName": "Care - National Medical Company",
-      "value2026": 57000,
+      "value2026": 42721,
       "renewalStatus": "Renewed",
       "monthly": {
         "Jan": 0,
@@ -7373,7 +7049,7 @@ window.DASHBOARD_DATA = {
         "Dec": 0
       },
       "monthlyTotal": 42721,
-      "valueVsMonthlyDiff": -14279
+      "valueVsMonthlyDiff": 0
     },
     {
       "rowNumber": 110,
@@ -7492,7 +7168,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "principal buyers",
       "value2026": 63000,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -7626,7 +7302,7 @@ window.DASHBOARD_DATA = {
       "location": "Kuwait",
       "owner": "Faizan",
       "clientName": "Mezzan Holding Co. K.S.C.C",
-      "value2026": 35563,
+      "value2026": 40968,
       "renewalStatus": "Renewed",
       "monthly": {
         "Jan": 0,
@@ -7643,7 +7319,7 @@ window.DASHBOARD_DATA = {
         "Dec": 0
       },
       "monthlyTotal": 40968,
-      "valueVsMonthlyDiff": 5405
+      "valueVsMonthlyDiff": 0
     },
     {
       "rowNumber": 120,
@@ -7755,7 +7431,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "rowNumber": 124,
-      "status": "Active",
+      "status": "Lost",
       "product": "Talentera",
       "csmName": "Hatem",
       "location": "Lebanon",
@@ -7816,7 +7492,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Bromberg and Associates LLC.",
       "value2026": 1700,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -8113,7 +7789,7 @@ window.DASHBOARD_DATA = {
       "owner": "Faizan",
       "clientName": "American University of Kuwait",
       "value2026": 53000,
-      "renewalStatus": "Lost",
+      "renewalStatus": "Pending Medium",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -8194,7 +7870,7 @@ window.DASHBOARD_DATA = {
       "owner": "Faizan",
       "clientName": "Ali Bin Ali",
       "value2026": 23633,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -8302,7 +7978,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "GOPA Infra Regional Company - Middle East.",
       "value2026": 4000,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -8329,7 +8005,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Innovation Accounting Solutions and Tax",
       "value2026": 1300,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -8383,7 +8059,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Jordan Free and Development Zones Group",
       "value2026": 5000,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -8511,14 +8187,14 @@ window.DASHBOARD_DATA = {
     },
     {
       "rowNumber": 152,
-      "status": "Active",
+      "status": "Lost",
       "product": "Evalufy",
       "csmName": "Maryam",
       "location": "KSA - Riyadh",
       "owner": "Fadi",
       "clientName": "Learning Space",
       "value2026": 14934,
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Lost",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -8565,7 +8241,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "rowNumber": 154,
-      "status": "Active",
+      "status": "Lost From 2025",
       "product": "Evalufy",
       "csmName": "Hatem",
       "location": "Kuwait",
@@ -8592,7 +8268,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "rowNumber": 155,
-      "status": "Active",
+      "status": "Lost",
       "product": "Evalufy",
       "csmName": "Hatem",
       "location": "Lebanon",
@@ -8707,7 +8383,7 @@ window.DASHBOARD_DATA = {
       "owner": "Faizan",
       "clientName": "Abu Dhabi Family Care Authority",
       "value2026": 45251,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -8734,7 +8410,7 @@ window.DASHBOARD_DATA = {
       "owner": "Faizan",
       "clientName": "Al Tamimi & Company Ltd.",
       "value2026": 20725,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -8842,7 +8518,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Central Trade and Auto (ctajo)",
       "value2026": 21000,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "monthly": {
         "Jan": 21000,
         "Feb": 0,
@@ -8970,14 +8646,14 @@ window.DASHBOARD_DATA = {
     },
     {
       "rowNumber": 169,
-      "status": "Expected to Be Lost",
+      "status": "Lost From 2025",
       "product": "Talentera",
       "csmName": "Haia",
       "location": "KSA - Jeddah",
       "owner": "Jihad",
       "clientName": "Aal Taher Group / Radwa Food",
       "value2026": 0,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Lost",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -9031,7 +8707,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Saudi Arabian Logistics SAL",
       "value2026": 68000,
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -9058,7 +8734,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "Etihad Jawraa for Telecommunications and Information Technology Lebara",
       "value2026": 13867,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -9220,7 +8896,7 @@ window.DASHBOARD_DATA = {
       "owner": "Faizan",
       "clientName": "ACICO Industrial Company",
       "value2026": 7514,
-      "renewalStatus": "Lost",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -9328,7 +9004,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Bustami & Saheb Group",
       "value2026": 3000,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -9436,7 +9112,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Jordan Ice and Aerated Water Company Ltd. (PepsiCo International)",
       "value2026": 3000,
-      "renewalStatus": "Lost",
+      "renewalStatus": "Pending Low",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -9517,7 +9193,7 @@ window.DASHBOARD_DATA = {
       "owner": "Faizan",
       "clientName": "Amwaj Group",
       "value2026": 26503,
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -9541,7 +9217,15 @@ window.DASHBOARD_DATA = {
       "priority": "High",
       "owner": "Fadi",
       "account": "Ministry of Energy",
-      "value": 177000,
+      "value": 265200,
+      "issue": "High-value Pending High renewal",
+      "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
+    },
+    {
+      "priority": "High",
+      "owner": "Faizan",
+      "account": "Emirates School Establishment",
+      "value": 227824,
       "issue": "High-value Pending High renewal",
       "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
     },
@@ -9550,30 +9234,6 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "account": "Saudi Commission For Health Specialties (SCFHS)",
       "value": 81334,
-      "issue": "High-value Pending High renewal",
-      "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
-    },
-    {
-      "priority": "High",
-      "owner": "Faizan",
-      "account": "Emirates School Establishment",
-      "value": 80000,
-      "issue": "High-value Pending High renewal",
-      "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
-    },
-    {
-      "priority": "High",
-      "owner": "Jihad",
-      "account": "JUBAIL ENERGY SERVICES (ARCELOR)",
-      "value": 78668,
-      "issue": "High-value Pending High renewal",
-      "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
-    },
-    {
-      "priority": "High",
-      "owner": "Fadi",
-      "account": "Alrajhi Bank",
-      "value": 73068,
       "issue": "High-value Pending High renewal",
       "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
     },
@@ -9590,14 +9250,6 @@ window.DASHBOARD_DATA = {
       "owner": "Faizan",
       "account": "Dubai Islamic Bank",
       "value": 66101,
-      "issue": "High-value Pending High renewal",
-      "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
-    },
-    {
-      "priority": "High",
-      "owner": "Fadi",
-      "account": "principal buyers",
-      "value": 63000,
       "issue": "High-value Pending High renewal",
       "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
     },
@@ -9627,9 +9279,9 @@ window.DASHBOARD_DATA = {
     },
     {
       "priority": "High",
-      "owner": "Faizan",
-      "account": "Rotana Hotels",
-      "value": 52401,
+      "owner": "Fadi",
+      "account": "Saudi Post",
+      "value": 50667,
       "issue": "High-value Pending High renewal",
       "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
     },
@@ -9643,9 +9295,9 @@ window.DASHBOARD_DATA = {
     },
     {
       "priority": "High",
-      "owner": "Faizan",
-      "account": "Abu Dhabi Family Care Authority",
-      "value": 45251,
+      "owner": "Fadi",
+      "account": "Banque Saudi Fransi / Allianz Saudi Fransi",
+      "value": 45000,
       "issue": "High-value Pending High renewal",
       "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
     },
@@ -9667,6 +9319,22 @@ window.DASHBOARD_DATA = {
     },
     {
       "priority": "High",
+      "owner": "Jihad",
+      "account": "JEDCO - Jeddah Airports Company",
+      "value": 33000,
+      "issue": "High-value Pending High renewal",
+      "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
+    },
+    {
+      "priority": "High",
+      "owner": "Faizan",
+      "account": "GRANT THORNTON AUDITING and ACCOUNTING",
+      "value": 32850,
+      "issue": "High-value Pending High renewal",
+      "recommendedAction": "Immediate follow-up. Confirm renewal timeline, next step, and expected cashing month."
+    },
+    {
+      "priority": "High",
       "owner": "Faizan",
       "account": "Ali Bin Al GROUP",
       "value": 31900,
@@ -9678,80 +9346,8 @@ window.DASHBOARD_DATA = {
       "owner": "Faizan",
       "account": "Emirates School Establishment",
       "value": 147824,
-      "issue": "2026 Value differs from monthly total by 147824",
+      "issue": "2026 Value differs from monthly total by -147824",
       "recommendedAction": "Reconcile official value vs monthly distribution before management review."
-    },
-    {
-      "priority": "High",
-      "owner": "Fadi",
-      "account": "Ministry of Energy",
-      "value": 88200,
-      "issue": "2026 Value differs from monthly total by 88200",
-      "recommendedAction": "Reconcile official value vs monthly distribution before management review."
-    },
-    {
-      "priority": "High",
-      "owner": "Fadi",
-      "account": "Banque Saudi Fransi / Allianz Saudi Fransi",
-      "value": 19000,
-      "issue": "2026 Value differs from monthly total by 19000",
-      "recommendedAction": "Reconcile official value vs monthly distribution before management review."
-    },
-    {
-      "priority": "High",
-      "owner": "Faizan",
-      "account": "GRANT THORNTON AUDITING and ACCOUNTING",
-      "value": 16850,
-      "issue": "2026 Value differs from monthly total by 16850",
-      "recommendedAction": "Reconcile official value vs monthly distribution before management review."
-    },
-    {
-      "priority": "High",
-      "owner": "Fadi",
-      "account": "Care - National Medical Company",
-      "value": 14279,
-      "issue": "2026 Value differs from monthly total by -14279",
-      "recommendedAction": "Reconcile official value vs monthly distribution before management review."
-    },
-    {
-      "priority": "High",
-      "owner": "Fadi",
-      "account": "Management and Development For Human Resources Co (Tanfeeth) (Atmaal)",
-      "value": 12671,
-      "issue": "2026 Value differs from monthly total by 12671",
-      "recommendedAction": "Reconcile official value vs monthly distribution before management review."
-    },
-    {
-      "priority": "High",
-      "owner": "Faizan",
-      "account": "Mezzan Holding Co. K.S.C.C",
-      "value": 5405,
-      "issue": "2026 Value differs from monthly total by 5405",
-      "recommendedAction": "Reconcile official value vs monthly distribution before management review."
-    },
-    {
-      "priority": "High",
-      "owner": "Fadi",
-      "account": "Saudi Capital Market",
-      "value": 5400,
-      "issue": "2026 Value differs from monthly total by -5400",
-      "recommendedAction": "Reconcile official value vs monthly distribution before management review."
-    },
-    {
-      "priority": "High",
-      "owner": "Fadi",
-      "account": "King Khaled Eye Hospital",
-      "value": 3067,
-      "issue": "2026 Value differs from monthly total by 3067",
-      "recommendedAction": "Reconcile official value vs monthly distribution before management review."
-    },
-    {
-      "priority": "High",
-      "owner": "Faizan",
-      "account": "American University of Kuwait",
-      "value": 53000,
-      "issue": "Lost account still has positive value",
-      "recommendedAction": "Remove from active forecast or move to a separate win-back scenario."
     },
     {
       "priority": "High",
@@ -9779,17 +9375,17 @@ window.DASHBOARD_DATA = {
     },
     {
       "priority": "High",
-      "owner": "Jihad",
-      "account": "Cairo Amman Bank",
-      "value": 9856,
+      "owner": "Fadi",
+      "account": "Learning Space",
+      "value": 14934,
       "issue": "Lost account still has positive value",
       "recommendedAction": "Remove from active forecast or move to a separate win-back scenario."
     },
     {
       "priority": "High",
-      "owner": "Faizan",
-      "account": "ACICO Industrial Company",
-      "value": 7514,
+      "owner": "Jihad",
+      "account": "Cairo Amman Bank",
+      "value": 9856,
       "issue": "Lost account still has positive value",
       "recommendedAction": "Remove from active forecast or move to a separate win-back scenario."
     },
@@ -9806,14 +9402,6 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "account": "AXA Egypt",
       "value": 3100,
-      "issue": "Lost account still has positive value",
-      "recommendedAction": "Remove from active forecast or move to a separate win-back scenario."
-    },
-    {
-      "priority": "High",
-      "owner": "Jihad",
-      "account": "Jordan Ice and Aerated Water Company Ltd. (PepsiCo International)",
-      "value": 3000,
       "issue": "Lost account still has positive value",
       "recommendedAction": "Remove from active forecast or move to a separate win-back scenario."
     },
@@ -9964,8 +9552,8 @@ window.DASHBOARD_DATA = {
     {
       "severity": "critical",
       "title": "Lost accounts still carry 2026 value",
-      "count": 10,
-      "financialImpact": 147342,
+      "count": 8,
+      "financialImpact": 98762,
       "examples": [
         {
           "rowNumber": 32,
@@ -9998,10 +9586,10 @@ window.DASHBOARD_DATA = {
           "value2026": 4500
         },
         {
-          "rowNumber": 137,
-          "owner": "Faizan",
-          "clientName": "American University of Kuwait",
-          "value2026": 53000
+          "rowNumber": 152,
+          "owner": "Fadi",
+          "clientName": "Learning Space",
+          "value2026": 14934
         },
         {
           "rowNumber": 155,
@@ -10014,18 +9602,6 @@ window.DASHBOARD_DATA = {
           "owner": "Fadi",
           "clientName": "Ministry of Municipalities and Housing",
           "value2026": 22400
-        },
-        {
-          "rowNumber": 178,
-          "owner": "Faizan",
-          "clientName": "ACICO Industrial Company",
-          "value2026": 7514
-        },
-        {
-          "rowNumber": 186,
-          "owner": "Jihad",
-          "clientName": "Jordan Ice and Aerated Water Company Ltd. (PepsiCo International)",
-          "value2026": 3000
         }
       ],
       "recommendedFix": "Remove confirmed Lost accounts from positive forecast, or move them to a separate win-back scenario."
@@ -10033,80 +9609,16 @@ window.DASHBOARD_DATA = {
     {
       "severity": "warning",
       "title": "2026 Value does not match monthly total",
-      "count": 9,
-      "financialImpact": 312696,
+      "count": 1,
+      "financialImpact": 147824,
       "examples": [
         {
           "rowNumber": 10,
           "owner": "Faizan",
           "clientName": "Emirates School Establishment",
-          "value2026": 80000,
-          "monthlyTotal": 227824,
-          "difference": 147824
-        },
-        {
-          "rowNumber": 22,
-          "owner": "Faizan",
-          "clientName": "GRANT THORNTON AUDITING and ACCOUNTING",
-          "value2026": 16000,
-          "monthlyTotal": 32850,
-          "difference": 16850
-        },
-        {
-          "rowNumber": 79,
-          "owner": "Fadi",
-          "clientName": "Ministry of Energy",
-          "value2026": 177000,
-          "monthlyTotal": 265200,
-          "difference": 88200
-        },
-        {
-          "rowNumber": 94,
-          "owner": "Fadi",
-          "clientName": "Banque Saudi Fransi / Allianz Saudi Fransi",
-          "value2026": 26000,
-          "monthlyTotal": 45000,
-          "difference": 19000
-        },
-        {
-          "rowNumber": 97,
-          "owner": "Fadi",
-          "clientName": "King Khaled Eye Hospital",
-          "value2026": 20000,
-          "monthlyTotal": 23067,
-          "difference": 3067
-        },
-        {
-          "rowNumber": 98,
-          "owner": "Fadi",
-          "clientName": "Management and Development For Human Resources Co (Tanfeeth) (Atmaal)",
-          "value2026": 12000,
-          "monthlyTotal": 24671,
-          "difference": 12671
-        },
-        {
-          "rowNumber": 103,
-          "owner": "Fadi",
-          "clientName": "Saudi Capital Market",
-          "value2026": 32000,
-          "monthlyTotal": 26600,
-          "difference": -5400
-        },
-        {
-          "rowNumber": 109,
-          "owner": "Fadi",
-          "clientName": "Care - National Medical Company",
-          "value2026": 57000,
-          "monthlyTotal": 42721,
-          "difference": -14279
-        },
-        {
-          "rowNumber": 119,
-          "owner": "Faizan",
-          "clientName": "Mezzan Holding Co. K.S.C.C",
-          "value2026": 35563,
-          "monthlyTotal": 40968,
-          "difference": 5405
+          "value2026": 227824,
+          "monthlyTotal": 80000,
+          "difference": -147824
         }
       ],
       "recommendedFix": "Reconcile official 2026 Value with the Jan-Dec distribution for each affected account."
@@ -10118,7 +9630,7 @@ window.DASHBOARD_DATA = {
       "financialImpact": 0,
       "examples": [
         {
-          "rowNumber": 12,
+          "rowNumber": 14,
           "owner": "Faizan",
           "clientName": "Move One Relocations LLC",
           "product": "Talentera"
@@ -10160,10 +9672,10 @@ window.DASHBOARD_DATA = {
           "product": "Evalufy"
         },
         {
-          "rowNumber": 81,
+          "rowNumber": 77,
           "owner": "Fadi",
-          "clientName": "Saudi Food & Drug Authority",
-          "product": "Talentera"
+          "clientName": "King Abdulaziz National Guard Hospital",
+          "product": "Evalufy"
         },
         {
           "rowNumber": 110,
@@ -10191,44 +9703,7 @@ window.DASHBOARD_DATA = {
         }
       ],
       "recommendedFix": "Confirm whether these are true zero-value renewals or missing values."
-    },
-    {
-      "severity": "warning",
-      "title": "Expected to Be Lost accounts need separate risk handling",
-      "count": 4,
-      "financialImpact": 46000,
-      "examples": [
-        {
-          "rowNumber": 21,
-          "owner": "Faizan",
-          "clientName": "Easa Saleh Al Gurg Group",
-          "value2026": 0,
-          "renewalStatus": "Lost"
-        },
-        {
-          "rowNumber": 94,
-          "owner": "Fadi",
-          "clientName": "Banque Saudi Fransi / Allianz Saudi Fransi",
-          "value2026": 26000,
-          "renewalStatus": "Pending High"
-        },
-        {
-          "rowNumber": 108,
-          "owner": "Fadi",
-          "clientName": "Monsha'at Small and Medium Enterprises Authority",
-          "value2026": 20000,
-          "renewalStatus": "Lost"
-        },
-        {
-          "rowNumber": 169,
-          "owner": "Jihad",
-          "clientName": "Aal Taher Group / Radwa Food",
-          "value2026": 0,
-          "renewalStatus": "Pending Low"
-        }
-      ],
-      "recommendedFix": "Move Expected to Be Lost accounts into a risk register and exclude confirmed lost values from positive forecast."
     }
   ]
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-06-03T14:42:29.702Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-06-16T15:28:28.817Z";
