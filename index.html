@@ -33,14 +33,14 @@
     <header class="topbar">
       <div><h1 id="pageTitle">Retention Command Center</h1><p id="pageSubtitle">Fadi · Jihad · Faizan</p></div>
       <div class="scenario-shell"><span>Scenario</span><div class="scenario-switch" id="scenarioSwitch">
-        <button data-scenario="worst">Worst</button><button data-scenario="medium" class="active">Medium</button><button data-scenario="best">Best</button><button data-scenario="bestPlusLost">Best + Lost</button>
+        <button data-scenario="worst">Worst</button><button data-scenario="medium" class="active">Medium</button><button data-scenario="best">Best</button>
       </div></div>
     </header>
     <section id="riskBanner" class="alert"></section>
     <section id="app" class="app"><div class="loading-state"><div class="spinner"></div><h2>Loading retention data...</h2><p>Waiting for <code>data/live-data.js</code></p></div></section>
   </main>
   <script>
-    (function(){const v=Date.now(),d=document.createElement('script');d.src='./data/live-data.js?v='+v;d.onload=function(){const a=document.createElement('script');a.src='./app.js?v='+v;document.body.appendChild(a)};d.onerror=function(){document.getElementById('app').innerHTML='<div class="empty-state"><h2>Could not load data/live-data.js</h2><p>Run the n8n workflow first.</p></div>'};document.body.appendChild(d)})();
+    (function(){const v=Date.now(),d=document.createElement('script');d.src='./data/live-data.js?v='+v;d.onload=function(){const a=document.createElement('script');a.src='./app.js?v='+v;a.onload=function(){const c=document.createElement('script');c.src='./ui-cleanup.js?v='+v;document.body.appendChild(c)};document.body.appendChild(a)};d.onerror=function(){document.getElementById('app').innerHTML='<div class="empty-state"><h2>Could not load data/live-data.js</h2><p>Run the n8n workflow first.</p></div>'};document.body.appendChild(d)})();
   </script>
 </body>
 </html>
