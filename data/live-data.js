@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-06-16T16:08:07.942Z",
+  "generatedAt": "2026-06-21T09:03:05.728Z",
   "source": {
     "summaryRows": 77,
     "retentionRows": 188,
@@ -11,9 +11,9 @@ window.DASHBOARD_DATA = {
     "note": "Acquisition booking and cashing are excluded. Retention projection values and receivables follow the manager-approved Summary sheet.",
     "totalTarget": 4782548,
     "totalBooking": 1979705,
-    "totalCashing": 980339,
-    "totalReceivables": 1426427,
-    "confirmedRevenue": 2406766,
+    "totalCashing": 995272,
+    "totalReceivables": 1411493,
+    "confirmedRevenue": 2406765,
     "excludedAcquisition": {
       "target": 610000,
       "booking": 162002,
@@ -23,35 +23,35 @@ window.DASHBOARD_DATA = {
     "projectedExpenses": 3600000,
     "scenarios": {
       "worst": {
-        "revenue": 3683101,
-        "gapToTarget": -1099447,
-        "netAfterExpenses": 83101,
-        "achievementPct": 77,
-        "marginPct": 2.3,
+        "revenue": 3713971,
+        "gapToTarget": -1068577,
+        "netAfterExpenses": 113971,
+        "achievementPct": 77.7,
+        "marginPct": 3.1,
         "status": "Critical"
       },
       "medium": {
-        "revenue": 4639242,
-        "gapToTarget": -143306,
-        "netAfterExpenses": 1039242,
-        "achievementPct": 97,
-        "marginPct": 22.4,
+        "revenue": 4670112,
+        "gapToTarget": -112436,
+        "netAfterExpenses": 1070112,
+        "achievementPct": 97.6,
+        "marginPct": 22.9,
         "status": "Watch"
       },
       "best": {
-        "revenue": 5102727,
-        "gapToTarget": 320179,
-        "netAfterExpenses": 1502727,
-        "achievementPct": 106.7,
-        "marginPct": 29.4,
+        "revenue": 5133597,
+        "gapToTarget": 351049,
+        "netAfterExpenses": 1533597,
+        "achievementPct": 107.3,
+        "marginPct": 29.9,
         "status": "Safe"
       },
       "outstanding": {
-        "revenue": 5102727,
-        "gapToTarget": 320179,
-        "netAfterExpenses": 1502727,
-        "achievementPct": 106.7,
-        "marginPct": 29.4,
+        "revenue": 5133597,
+        "gapToTarget": 351049,
+        "netAfterExpenses": 1533597,
+        "achievementPct": 107.3,
+        "marginPct": 29.9,
         "status": "Safe"
       }
     }
@@ -65,8 +65,8 @@ window.DASHBOARD_DATA = {
     "accountsCount": 188,
     "totalValue": 4712548,
     "byStatus": {
-      "renewed": 1641550,
-      "pendingHigh": 1276335,
+      "renewed": 1610679,
+      "pendingHigh": 1307206,
       "pendingMedium": 956141,
       "pendingLow": 463485,
       "lost": 98762
@@ -225,8 +225,8 @@ window.DASHBOARD_DATA = {
         "location": "Jordan - Local",
         "accountsCount": 14,
         "value": 76382,
-        "renewed": 33526,
-        "pendingHigh": 25200,
+        "renewed": 31405,
+        "pendingHigh": 27321,
         "pendingMedium": 6500,
         "pendingLow": 1300,
         "lost": 9856
@@ -265,8 +265,8 @@ window.DASHBOARD_DATA = {
         "location": "Egypt",
         "accountsCount": 6,
         "value": 31850,
-        "renewed": 28750,
-        "pendingHigh": 0,
+        "renewed": 0,
+        "pendingHigh": 28750,
         "pendingMedium": 0,
         "pendingLow": 0,
         "lost": 3100
@@ -309,19 +309,19 @@ window.DASHBOARD_DATA = {
       "cashing": 87918,
       "receivables": 74084
     },
-    "confirmedRevenue": 2406766,
-    "worst": 3683101,
-    "medium": 4639242,
-    "bestExcludingLost": 5102727,
-    "bestIncludingLost": 5201489,
+    "confirmedRevenue": 2406765,
+    "worst": 3713971,
+    "medium": 4670112,
+    "bestExcludingLost": 5133597,
+    "bestIncludingLost": 5232359,
     "plan": {
       "target": 4782548,
-      "worst": 3683101,
-      "medium": 4639242,
-      "best": 5201489,
-      "outstanding": 5201489,
+      "worst": 3713971,
+      "medium": 4670112,
+      "best": 5232359,
+      "outstanding": 5232359,
       "booking": 1979705,
-      "cashing": 980339
+      "cashing": 995272
     },
     "deltas": {
       "target": 0,
@@ -347,9 +347,9 @@ window.DASHBOARD_DATA = {
       },
       "totalValue": 1948650,
       "bookedYtd": 939515,
-      "cashedYtd": 432295,
-      "receivables": 797061,
-      "confirmedRevenue": 1229356,
+      "cashedYtd": 447228,
+      "receivables": 782127,
+      "confirmedRevenue": 1229355,
       "renewed": 619083,
       "pendingHigh": 440442,
       "pendingMedium": 577471,
@@ -357,46 +357,46 @@ window.DASHBOARD_DATA = {
       "lost": 78586,
       "forecasts": {
         "worst": {
-          "revenue": 1669798,
-          "gapToTarget": -278850,
+          "revenue": 1669797,
+          "gapToTarget": -278851,
           "achievementPct": 85.7,
           "status": "Watch"
         },
         "medium": {
-          "revenue": 2247269,
-          "gapToTarget": 298621,
+          "revenue": 2247268,
+          "gapToTarget": 298620,
           "achievementPct": 115.3,
           "status": "Safe"
         },
         "best": {
-          "revenue": 2368736,
-          "gapToTarget": 420088,
+          "revenue": 2368735,
+          "gapToTarget": 420087,
           "achievementPct": 121.6,
           "status": "Safe"
         },
         "outstanding": {
-          "revenue": 2368736,
-          "gapToTarget": 420088,
+          "revenue": 2368735,
+          "gapToTarget": 420087,
           "achievementPct": 121.6,
           "status": "Safe"
         }
       },
       "calculatedForecasts": {
-        "worst": 1669798,
-        "medium": 2247269,
-        "bestExcludingLost": 2368736,
-        "bestIncludingLost": 2447322
+        "worst": 1669797,
+        "medium": 2247268,
+        "bestExcludingLost": 2368735,
+        "bestIncludingLost": 2447321
       },
       "planComparison": {
         "plan": {
           "owner": "Fadi",
           "target": 1948648,
-          "worst": 1669798,
-          "medium": 2247269,
-          "best": 2447322,
-          "outstanding": 2447322,
+          "worst": 1669797,
+          "medium": 2247268,
+          "best": 2447321,
+          "outstanding": 2447321,
           "booking": 939515,
-          "cashing": 432295
+          "cashing": 447228
         },
         "originalSummaryPlanIncludingAcquisition": {
           "owner": "Fadi",
@@ -410,7 +410,7 @@ window.DASHBOARD_DATA = {
           "outstanding": 2510239.29,
           "outstandingPct": "1.2881953487751507",
           "booking": 1051516.15,
-          "cashing": 495212.65
+          "cashing": 510146.17000000004
         },
         "excludedAcquisition": {
           "target": 610000,
@@ -1243,33 +1243,6 @@ window.DASHBOARD_DATA = {
           },
           "monthlyTotal": 0,
           "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 107,
-          "status": "Active",
-          "product": "Talentera",
-          "csmName": "Sara",
-          "location": "KSA - Riyadh",
-          "owner": "Fadi",
-          "clientName": "General Authority for statistics",
-          "value2026": 0,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 0,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
-            "Dec": 0
-          },
-          "monthlyTotal": 0,
-          "valueVsMonthlyDiff": 0
         }
       ],
       "riskyAccounts": [
@@ -1428,65 +1401,65 @@ window.DASHBOARD_DATA = {
       "cashedYtd": 215664,
       "receivables": 443991,
       "confirmedRevenue": 659655,
-      "renewed": 521027,
-      "pendingHigh": 376611,
+      "renewed": 490156,
+      "pendingHigh": 407482,
       "pendingMedium": 156158,
       "pendingLow": 124880,
       "lost": 20176,
       "forecasts": {
         "worst": {
-          "revenue": 1036266,
-          "gapToTarget": -162586,
-          "achievementPct": 86.4,
+          "revenue": 1067137,
+          "gapToTarget": -131715,
+          "achievementPct": 89,
           "status": "Watch"
         },
         "medium": {
-          "revenue": 1192424,
-          "gapToTarget": -6428,
-          "achievementPct": 99.5,
-          "status": "Watch"
+          "revenue": 1223295,
+          "gapToTarget": 24443,
+          "achievementPct": 102,
+          "status": "Safe"
         },
         "best": {
-          "revenue": 1317304,
-          "gapToTarget": 118452,
-          "achievementPct": 109.9,
+          "revenue": 1348175,
+          "gapToTarget": 149323,
+          "achievementPct": 112.5,
           "status": "Safe"
         },
         "outstanding": {
-          "revenue": 1317304,
-          "gapToTarget": 118452,
-          "achievementPct": 109.9,
+          "revenue": 1348175,
+          "gapToTarget": 149323,
+          "achievementPct": 112.5,
           "status": "Safe"
         }
       },
       "calculatedForecasts": {
-        "worst": 1036266,
-        "medium": 1192424,
-        "bestExcludingLost": 1317304,
-        "bestIncludingLost": 1337480
+        "worst": 1067137,
+        "medium": 1223295,
+        "bestExcludingLost": 1348175,
+        "bestIncludingLost": 1368351
       },
       "planComparison": {
         "plan": {
           "owner": "Jihad",
           "target": 1198852,
-          "worst": 1036266,
-          "medium": 1192424,
-          "best": 1337480,
-          "outstanding": 1337480,
+          "worst": 1067137,
+          "medium": 1223295,
+          "best": 1368351,
+          "outstanding": 1368351,
           "booking": 562654,
           "cashing": 215664
         },
         "originalSummaryPlanIncludingAcquisition": {
           "owner": "Jihad",
           "target": 1808852,
-          "worst": 1061266.3773913034,
-          "worstPct": "0.5867071365657905",
-          "medium": 1217424.3773913034,
-          "mediumPct": "0.673037029779829",
-          "best": 1362480.3773913034,
-          "bestPct": "0.7532293285416958",
-          "outstanding": 1362480.3773913034,
-          "outstandingPct": "0.7532293285416958",
+          "worst": 1092137.3773913034,
+          "worstPct": "0.6037737622488205",
+          "medium": 1248295.3773913034,
+          "mediumPct": "0.690103655462859",
+          "best": 1393351.3773913034,
+          "bestPct": "0.7702959542247256",
+          "outstanding": 1393351.3773913034,
+          "outstandingPct": "0.7702959542247256",
           "booking": 612654.4600000001,
           "cashing": 240664.04239130352
         },
@@ -1508,7 +1481,7 @@ window.DASHBOARD_DATA = {
         "lostAppearsIncludedInPlanBest": true,
         "note": "Retention-only dashboard. Acquisition values are excluded. Best excludes Lost by default; Best + Lost is audit only."
       },
-      "mediumAchievementPct": 99.5,
+      "mediumAchievementPct": 102,
       "topAccounts": [
         {
           "rowNumber": 64,
@@ -2296,6 +2269,33 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
+          "rowNumber": 33,
+          "status": "Active",
+          "product": "Talentera",
+          "csmName": "Hatem",
+          "location": "Egypt",
+          "owner": "Jihad",
+          "clientName": "Giza Systems",
+          "value2026": 16550,
+          "renewalStatus": "Pending High",
+          "monthly": {
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 16550,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          "monthlyTotal": 16550,
+          "valueVsMonthlyDiff": 0
+        },
+        {
           "rowNumber": 68,
           "status": "Active",
           "product": "AfterHire",
@@ -2512,14 +2512,14 @@ window.DASHBOARD_DATA = {
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 48,
+          "rowNumber": 34,
           "status": "Active",
-          "product": "Talentera",
-          "csmName": "Haia",
-          "location": "KSA - Jeddah",
+          "product": "Evalufy",
+          "csmName": "Hatem",
+          "location": "Egypt",
           "owner": "Jihad",
-          "clientName": "Aramco Gulf Operations Co. Ltd.",
-          "value2026": 3000,
+          "clientName": "Giza Systems",
+          "value2026": 3750,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
@@ -2529,24 +2529,24 @@ window.DASHBOARD_DATA = {
             "May": 0,
             "Jun": 0,
             "Jul": 0,
-            "Aug": 3000,
-            "Sep": 0,
+            "Aug": 0,
+            "Sep": 3750,
             "Oct": 0,
             "Nov": 0,
             "Dec": 0
           },
-          "monthlyTotal": 3000,
+          "monthlyTotal": 3750,
           "valueVsMonthlyDiff": 0
         },
         {
-          "rowNumber": 182,
+          "rowNumber": 132,
           "status": "Active",
           "product": "Evalufy",
           "csmName": "Hatem",
-          "location": "Jordan",
+          "location": "Egypt",
           "owner": "Jihad",
-          "clientName": "Bustami & Saheb Group",
-          "value2026": 3000,
+          "clientName": "Raya holding Financial investment",
+          "value2026": 3500,
           "renewalStatus": "Pending High",
           "monthly": {
             "Jan": 0,
@@ -2559,37 +2559,10 @@ window.DASHBOARD_DATA = {
             "Aug": 0,
             "Sep": 0,
             "Oct": 0,
-            "Nov": 0,
-            "Dec": 3000
-          },
-          "monthlyTotal": 3000,
-          "valueVsMonthlyDiff": 0
-        },
-        {
-          "rowNumber": 126,
-          "status": "Active",
-          "product": "Evalufy",
-          "csmName": "Hatem",
-          "location": "Lebanon",
-          "owner": "Jihad",
-          "clientName": "Bromberg and Associates LLC.",
-          "value2026": 1700,
-          "renewalStatus": "Pending High",
-          "monthly": {
-            "Jan": 0,
-            "Feb": 0,
-            "Mar": 0,
-            "Apr": 0,
-            "May": 0,
-            "Jun": 0,
-            "Jul": 0,
-            "Aug": 1700,
-            "Sep": 0,
-            "Oct": 0,
-            "Nov": 0,
+            "Nov": 3500,
             "Dec": 0
           },
-          "monthlyTotal": 1700,
+          "monthlyTotal": 3500,
           "valueVsMonthlyDiff": 0
         }
       ],
@@ -4981,7 +4954,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Giza Systems",
       "value2026": 16550,
-      "renewalStatus": "Renewed",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -5008,7 +4981,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Giza Systems",
       "value2026": 3750,
-      "renewalStatus": "Renewed",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -5197,7 +5170,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Cairo Amman Bank",
       "value2026": 2121,
-      "renewalStatus": "Renewed",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -6979,7 +6952,7 @@ window.DASHBOARD_DATA = {
       "owner": "Fadi",
       "clientName": "General Authority for statistics",
       "value2026": 0,
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -7627,7 +7600,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Raya holding Financial investment",
       "value2026": 2400,
-      "renewalStatus": "Renewed",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -7654,7 +7627,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Raya holding Financial investment",
       "value2026": 3500,
-      "renewalStatus": "Renewed",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -7708,7 +7681,7 @@ window.DASHBOARD_DATA = {
       "owner": "Jihad",
       "clientName": "Egypt Kuwait Holding (Valmore)",
       "value2026": 2550,
-      "renewalStatus": "Renewed",
+      "renewalStatus": "Pending High",
       "monthly": {
         "Jan": 0,
         "Feb": 2550,
@@ -9626,7 +9599,7 @@ window.DASHBOARD_DATA = {
     {
       "severity": "warning",
       "title": "Renewed accounts with zero value",
-      "count": 12,
+      "count": 13,
       "financialImpact": 0,
       "examples": [
         {
@@ -9678,6 +9651,12 @@ window.DASHBOARD_DATA = {
           "product": "Evalufy"
         },
         {
+          "rowNumber": 107,
+          "owner": "Fadi",
+          "clientName": "General Authority for statistics",
+          "product": "Talentera"
+        },
+        {
           "rowNumber": 110,
           "owner": "Fadi",
           "clientName": "Ejadah Management Consultancy - Ema Partners (Mustaqbali)",
@@ -9706,4 +9685,4 @@ window.DASHBOARD_DATA = {
     }
   ]
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-06-16T16:08:07.943Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-06-21T09:03:05.731Z";
