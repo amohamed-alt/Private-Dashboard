@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-06-23T22:00:45.916Z",
+  "generatedAt": "2026-06-24T04:00:55.425Z",
   "source": {
     "summaryRows": 77,
     "retentionRows": 188,
@@ -1452,14 +1452,14 @@ window.DASHBOARD_DATA = {
         "originalSummaryPlanIncludingAcquisition": {
           "owner": "Jihad",
           "target": 1808852,
-          "worst": 1217272.2673913036,
-          "worstPct": "0.6729529377700904",
-          "medium": 1373430.2673913036,
-          "mediumPct": "0.759282830984129",
-          "best": 1518486.2673913036,
-          "bestPct": "0.8394751297459956",
-          "outstanding": 1518486.2673913036,
-          "outstandingPct": "0.8394751297459956",
+          "worst": 1217272.2673913033,
+          "worstPct": "0.6729529377700902",
+          "medium": 1373430.2673913033,
+          "mediumPct": "0.7592828309841287",
+          "best": 1518486.2673913033,
+          "bestPct": "0.8394751297459955",
+          "outstanding": 1518486.2673913033,
+          "outstandingPct": "0.8394751297459955",
           "booking": 737789.3500000001,
           "cashing": 240664.04239130352
         },
@@ -9685,4 +9685,4 @@ window.DASHBOARD_DATA = {
     }
   ]
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-06-23T22:00:45.918Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-06-24T04:00:55.428Z";
