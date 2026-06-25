@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-06-25T10:00:45.416Z",
+  "generatedAt": "2026-06-25T16:00:57.123Z",
   "source": {
     "summaryRows": 77,
     "retentionRows": 188,
@@ -9685,4 +9685,4 @@ window.DASHBOARD_DATA = {
     }
   ]
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-06-25T10:00:45.418Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-06-25T16:00:57.125Z";
