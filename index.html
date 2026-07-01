@@ -1,46 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retention Command Center</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <aside class="sidebar">
-    <div class="brand"><div class="brand-mark">R</div><div><strong>Retention Command Center</strong><span>Fadi · Jihad · Faizan</span></div></div>
-    <nav class="nav">
-      <button class="nav-item active" data-tab="overview"><span class="nav-icon">⌂</span><span>Overview</span></button>
-      <button class="nav-item" data-tab="forecast"><span class="nav-icon">↗</span><span>Forecast View</span></button>
-      <button class="nav-item" data-tab="Fadi"><span class="nav-icon">●</span><span>Fadi</span></button>
-      <button class="nav-item" data-tab="Jihad"><span class="nav-icon">●</span><span>Jihad</span></button>
-      <button class="nav-item" data-tab="Faizan"><span class="nav-icon">●</span><span>Faizan</span></button>
-      <button class="nav-item" data-tab="accounts"><span class="nav-icon">▦</span><span>Accounts</span></button>
-      <button class="nav-item" data-tab="actions"><span class="nav-icon">☑</span><span>Action Center</span></button>
-      <button class="nav-item" data-tab="quality"><span class="nav-icon">◎</span><span>Data Quality</span></button>
-      <button class="nav-item" data-tab="compare"><span class="nav-icon">≡</span><span>Summary Audit</span></button>
-    </nav>
-    <div class="sidebar-footer">
-      <div class="footer-row"><span class="footer-dot">◷</span><div><small>Live dashboard</small><strong>Updated by n8n</strong></div></div>
-      <div class="footer-row"><span class="footer-dot">✓</span><div><small>Source</small><strong>Google Sheets</strong></div></div>
-      <div class="footer-meta" id="sidebarMeta">Retention only</div>
-    </div>
-  </aside>
-  <main class="main">
-    <header class="topbar">
-      <div><h1 id="pageTitle">Retention Command Center</h1><p id="pageSubtitle">Fadi · Jihad · Faizan</p></div>
-      <div class="scenario-shell"><span>Scenario</span><div class="scenario-switch" id="scenarioSwitch">
-        <button data-scenario="worst">Worst</button><button data-scenario="medium" class="active">Medium</button><button data-scenario="best">Best</button>
-      </div></div>
-    </header>
-    <section id="riskBanner" class="alert"></section>
-    <section id="app" class="app"><div class="loading-state"><div class="spinner"></div><h2>Loading retention data...</h2><p>Waiting for <code>data/live-data.js</code></p></div></section>
-  </main>
-  <script>
-    (function(){const v=Date.now(),d=document.createElement('script');d.src='./data/live-data.js?v='+v;d.onload=function(){const a=document.createElement('script');a.src='./app.js?v='+v;a.onload=function(){const c=document.createElement('script');c.src='./ui-cleanup.js?v='+v;document.body.appendChild(c)};document.body.appendChild(a)};d.onerror=function(){document.getElementById('app').innerHTML='<div class="empty-state"><h2>Could not load data/live-data.js</h2><p>Run the n8n workflow first.</p></div>'};document.body.appendChild(d)})();
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#315c52" />
+    <title>Retention Command Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="./data/live-data.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
