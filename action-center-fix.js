@@ -10,6 +10,20 @@
 
   const text = (node) => String(node?.textContent || '').trim();
   const normalized = (value) => String(value || '').trim().toLowerCase();
+  const canonicalStatus = (value) => STATUS_OPTIONS.find((status) => normalized(status) === normalized(value)) || String(value || '').trim();
+
+  const dashboardData = window.DASHBOARD_DATA;
+  if (dashboardData) {
+    dashboardData.filters = dashboardData.filters || {};
+    dashboardData.filters.actionStatuses = [...new Set([
+      ...STATUS_OPTIONS,
+      ...(dashboardData.filters.actionStatuses || []).map(canonicalStatus),
+    ].filter(Boolean))];
+    dashboardData.actions = (dashboardData.actions || []).map((action) => ({
+      ...action,
+      actionStatus: canonicalStatus(action.actionStatus),
+    }));
+  }
 
   function dispatchChange(select, value) {
     const setter = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value')?.set;
@@ -70,7 +84,7 @@
 
       const pill = document.createElement('span');
       pill.className = `action-status-pill ${STATUS_CLASSES[normalized(value)] || 'other'}`;
-      pill.textContent = value;
+      pill.textContent = canonicalStatus(value);
       cell.append(pill);
     });
   }
