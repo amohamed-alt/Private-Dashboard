@@ -7,10 +7,14 @@
  *
  * Output:
  * - public/data/live-data.js for the React dashboard
+ *
+ * Deduplication rule:
+ * - one account per normalized Client + Product + Year
  */
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const RETENTION_TEAM = ["Fadi", "Jihad", "Faizan"];
+const DASHBOARD_YEAR = 2026;
 
 const OWNER_ALIASES = {
   fadi: "Fadi",
@@ -22,6 +26,15 @@ const OWNER_ALIASES = {
 
 function cleanText(value) {
   return String(value ?? "").trim();
+}
+
+function normalizeIdentity(value) {
+  return cleanText(value)
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function normalizeOwner(value) {
@@ -127,7 +140,7 @@ function parseDueDate(value) {
   const dayMonth = raw.match(/^(\d{1,2})-(\d{1,2})$/);
   if (dayMonth) {
     const [, day, month] = dayMonth;
-    return `2026-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    return `${DASHBOARD_YEAR}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
   }
 
   return null;
@@ -138,6 +151,119 @@ function resolveActionOwner(ownerRaw, rm, csm) {
   if (raw.toLowerCase() === "rm") return rm;
   if (raw.toLowerCase() === "csm") return csm;
   return raw;
+}
+
+function accountDedupKey(account) {
+  const client = normalizeIdentity(account.clientName);
+  const product = normalizeIdentity(account.product) || "no-product";
+  return client ? `${client}|${product}|${DASHBOARD_YEAR}` : `row|${account.id}`;
+}
+
+function accountCompleteness(account) {
+  return [
+    account.renewalStatus,
+    account.rm,
+    account.csm,
+    account.location,
+    account.product,
+    account.updatedValue,
+    account.originalValue,
+    account.notes,
+    ...(account.renewalSchedule || []),
+  ].filter(Boolean).length;
+}
+
+function pickText(preferred, fallback, field) {
+  return cleanText(preferred?.[field]) || cleanText(fallback?.[field]);
+}
+
+function pickMoney(preferred, fallback, field) {
+  const preferredValue = Number(preferred?.[field] || 0);
+  if (preferredValue !== 0) return preferredValue;
+  return Number(fallback?.[field] || 0);
+}
+
+function mergeNotes(...values) {
+  return [...new Set(values.map(cleanText).filter(Boolean))].join(" · ");
+}
+
+function mergeRenewalSchedules(...schedules) {
+  const byMonth = new Map();
+  schedules.flat().filter(Boolean).forEach((event) => {
+    const month = cleanText(event.month);
+    if (!month) return;
+    const year = Number(event.year || DASHBOARD_YEAR);
+    const key = `${year}|${month.toLowerCase()}`;
+    const current = byMonth.get(key);
+    if (!current || Math.abs(Number(event.amount || 0)) > Math.abs(Number(current.amount || 0))) {
+      byMonth.set(key, {
+        ...event,
+        month,
+        year,
+        amount: Number(event.amount || 0),
+      });
+    }
+  });
+  return [...byMonth.values()].sort((a, b) => Number(a.monthNumber || 0) - Number(b.monthNumber || 0));
+}
+
+function deduplicateAccounts(mappedAccounts) {
+  const groups = new Map();
+  const canonicalIdByRawId = {};
+
+  for (const sourceAccount of mappedAccounts) {
+    const key = accountDedupKey(sourceAccount);
+
+    if (!groups.has(key)) {
+      groups.set(key, {
+        ...sourceAccount,
+        sourceIds: [sourceAccount.id],
+        renewalSchedule: mergeRenewalSchedules(sourceAccount.renewalSchedule || []),
+      });
+    } else {
+      const current = groups.get(key);
+      const incomingWins = accountCompleteness(sourceAccount) > accountCompleteness(current)
+        || (accountCompleteness(sourceAccount) === accountCompleteness(current)
+          && Number(sourceAccount.rowNumber || 0) > Number(current.rowNumber || 0));
+      const preferred = incomingWins ? sourceAccount : current;
+      const fallback = incomingWins ? current : sourceAccount;
+      const renewalSchedule = mergeRenewalSchedules(current.renewalSchedule || [], sourceAccount.renewalSchedule || []);
+
+      groups.set(key, {
+        ...current,
+        ...preferred,
+        id: current.id,
+        rowNumber: Math.min(Number(current.rowNumber || Infinity), Number(sourceAccount.rowNumber || Infinity)),
+        clientName: pickText(preferred, fallback, "clientName"),
+        product: pickText(preferred, fallback, "product"),
+        rm: pickText(preferred, fallback, "rm"),
+        csm: pickText(preferred, fallback, "csm"),
+        location: pickText(preferred, fallback, "location"),
+        status: pickText(preferred, fallback, "status"),
+        renewalStatus: pickText(preferred, fallback, "renewalStatus"),
+        renewalStatusRaw: pickText(preferred, fallback, "renewalStatusRaw"),
+        originalValue: pickMoney(preferred, fallback, "originalValue"),
+        originalValueRaw: pickText(preferred, fallback, "originalValueRaw"),
+        updatedValue: pickMoney(preferred, fallback, "updatedValue"),
+        updatedValueRaw: pickText(preferred, fallback, "updatedValueRaw"),
+        difference: pickMoney(preferred, fallback, "difference"),
+        differenceRaw: pickText(preferred, fallback, "differenceRaw"),
+        notes: mergeNotes(current.notes, sourceAccount.notes),
+        renewalSchedule,
+        renewalMonths: renewalSchedule.map((event) => event.month),
+        monthlyTotal: renewalSchedule.reduce((total, event) => total + Number(event.amount || 0), 0),
+        sourceIds: [...new Set([...(current.sourceIds || []), sourceAccount.id])],
+      });
+    }
+  }
+
+  const accounts = [...groups.values()];
+  const canonicalByKey = Object.fromEntries(accounts.map((account) => [accountDedupKey(account), account]));
+  mappedAccounts.forEach((account) => {
+    canonicalIdByRawId[account.id] = canonicalByKey[accountDedupKey(account)]?.id || account.id;
+  });
+
+  return { accounts, canonicalIdByRawId };
 }
 
 function buildEntityStats(accounts, field) {
@@ -226,7 +352,7 @@ function parseManagementForecast(summaryRows) {
 
 const management = parseManagementForecast(summaryRowsRaw);
 
-const accounts = retentionRowsRaw.map((row, index) => {
+const mappedAccounts = retentionRowsRaw.map((row, index) => {
   const rm = normalizeOwner(findColumnValue(row, ["RM 2026", "RM"]));
   const csm = cleanText(findColumnValue(row, ["CSM Name", "CSM"]));
   const updatedValueRaw = cleanText(findColumnValue(row, ["Updated 2026 Value", "Updated 2026 Value "]));
@@ -235,7 +361,7 @@ const accounts = retentionRowsRaw.map((row, index) => {
     .map((month, monthIndex) => ({
       month,
       monthNumber: monthIndex + 1,
-      year: 2026,
+      year: DASHBOARD_YEAR,
       amount: parseMoney(findColumnValue(row, [month])),
     }))
     .filter((event) => event.amount !== 0);
@@ -264,39 +390,52 @@ const accounts = retentionRowsRaw.map((row, index) => {
   };
 });
 
+const { accounts, canonicalIdByRawId } = deduplicateAccounts(mappedAccounts);
 const accountById = Object.fromEntries(accounts.map((account) => [account.id, account]));
 
-const actions = retentionRowsRaw
-  .map((row, index) => {
-    const action = cleanText(findColumnValue(row, ["Action"]));
-    if (!action) return null;
+const actionsByKey = new Map();
+retentionRowsRaw.forEach((row, index) => {
+  const action = cleanText(findColumnValue(row, ["Action"]));
+  if (!action) return;
 
-    const accountId = `ret-${index + 2}`;
-    const account = accountById[accountId];
-    const ownerRaw = cleanText(findColumnValue(row, ["Owner"]));
-    const dueDateRaw = cleanText(findColumnValue(row, ["Due Date"]));
+  const rawAccountId = `ret-${index + 2}`;
+  const accountId = canonicalIdByRawId[rawAccountId] || rawAccountId;
+  const account = accountById[accountId];
+  const ownerRaw = cleanText(findColumnValue(row, ["Owner"]));
+  const dueDateRaw = cleanText(findColumnValue(row, ["Due Date"]));
+  const actionStatus = cleanText(findColumnValue(row, ["Action Status"]));
 
-    return {
-      id: `action-${index + 2}`,
-      accountId,
-      clientName: account?.clientName || "",
-      action,
-      ownerRaw,
-      owner: resolveActionOwner(ownerRaw, account?.rm || "", account?.csm || ""),
-      dueDateRaw,
-      dueDate: parseDueDate(dueDateRaw),
-      actionStatus: cleanText(findColumnValue(row, ["Action Status"])),
-      notes: account?.notes || "",
-      rm: account?.rm || "",
-      csm: account?.csm || "",
-      product: account?.product || "",
-      location: account?.location || "",
-      renewalStatus: account?.renewalStatus || "",
-      updatedValue: account?.updatedValue || 0,
-      renewalSchedule: account?.renewalSchedule || [],
-    };
-  })
-  .filter(Boolean);
+  const actionRecord = {
+    id: `action-${index + 2}`,
+    accountId,
+    clientName: account?.clientName || "",
+    action,
+    ownerRaw,
+    owner: resolveActionOwner(ownerRaw, account?.rm || "", account?.csm || ""),
+    dueDateRaw,
+    dueDate: parseDueDate(dueDateRaw),
+    actionStatus,
+    notes: account?.notes || "",
+    rm: account?.rm || "",
+    csm: account?.csm || "",
+    product: account?.product || "",
+    location: account?.location || "",
+    renewalStatus: account?.renewalStatus || "",
+    updatedValue: account?.updatedValue || 0,
+    renewalSchedule: account?.renewalSchedule || [],
+  };
+
+  const actionKey = [
+    accountId,
+    normalizeIdentity(action),
+    normalizeIdentity(actionRecord.owner),
+    dueDateRaw,
+    normalizeIdentity(actionStatus),
+  ].join("|");
+
+  if (!actionsByKey.has(actionKey)) actionsByKey.set(actionKey, actionRecord);
+});
+const actions = [...actionsByKey.values()];
 
 const dashboardData = {
   generatedAt: new Date().toISOString(),
@@ -304,6 +443,7 @@ const dashboardData = {
     summary: "Target, Worst, Medium and Best only from Summary",
     retention: "All operational details from Retention",
     refreshType: "n8n Google Sheets scheduled sync",
+    deduplicationKey: "normalized client + product + year",
   },
   management,
   accounts,
@@ -319,6 +459,13 @@ const dashboardData = {
     renewalMonths: MONTHS,
     actionOwners: uniqueSorted(actions.map((action) => action.owner)),
     actionStatuses: uniqueSorted(actions.map((action) => action.actionStatus)),
+  },
+  deduplication: {
+    key: "normalized client + product + year",
+    year: DASHBOARD_YEAR,
+    sourceAccounts: mappedAccounts.length,
+    uniqueAccounts: accounts.length,
+    removedDuplicates: mappedAccounts.length - accounts.length,
   },
 };
 
@@ -337,7 +484,9 @@ return [
       commitMessage: `Update React retention dashboard data - ${new Date().toISOString()}`,
       generatedFileContent,
       summary: {
+        sourceAccounts: mappedAccounts.length,
         accounts: accounts.length,
+        removedDuplicates: mappedAccounts.length - accounts.length,
         actions: actions.length,
         rms: Object.keys(dashboardData.rms).length,
         csms: Object.keys(dashboardData.csms).length,
