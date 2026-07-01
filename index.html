@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#315c52" />
   <title>Retention Command Center</title>
-  <link rel="stylesheet" href="./style-browser.css?v=4" />
+  <link rel="stylesheet" href="./style-browser.css?v=5" />
+  <link rel="stylesheet" href="./style-fixes.css?v=5" />
   <style>
     html,body,#root{min-height:100%;margin:0}
     .boot{min-height:100vh;display:grid;place-items:center;background:#f5f2ea;color:#284b42;font-family:Inter,Segoe UI,Arial,sans-serif}
@@ -41,7 +42,7 @@
       if (document.querySelector('.boot')) showBootError('The dashboard module did not start. Please refresh once after 10 seconds.');
     }, 10000);
   </script>
-  <script src="./public/data/live-data.js?v=4"></script>
-  <script type="module" src="./app-browser.js?v=4"></script>
+  <script src="./public/data/live-data.js?v=5"></script>
+  <script type="module" src="./app-browser.js?v=5"></script>
 </body>
 </html>
