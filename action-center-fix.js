@@ -1,5 +1,15 @@
 (() => {
-  const text = (node) => String(node?.textContent || '').trim().toLowerCase();
+  const STATUS_OPTIONS = ['Done', 'Postponed', 'Cancelled', 'To Do', 'N/A'];
+  const STATUS_CLASSES = {
+    done: 'done',
+    postponed: 'postponed',
+    cancelled: 'cancelled',
+    'to do': 'todo',
+    'n/a': 'na',
+  };
+
+  const text = (node) => String(node?.textContent || '').trim();
+  const normalized = (value) => String(value || '').trim().toLowerCase();
 
   function dispatchChange(select, value) {
     const setter = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value')?.set;
@@ -8,40 +18,80 @@
     select.dispatchEvent(new Event('change', { bubbles: true }));
   }
 
-  function removeStatusColumn(panel) {
+  function ensureStatusOptions(filterBar) {
+    const statusField = [...filterBar.querySelectorAll('.select')].find(
+      (field) => normalized(text(field.querySelector('span'))) === 'action status',
+    );
+    if (!statusField) return;
+
+    const select = statusField.querySelector('select');
+    if (!select) return;
+
+    const existing = new Set([...select.options].map((option) => normalized(option.value || option.textContent)));
+    STATUS_OPTIONS.forEach((status) => {
+      if (existing.has(normalized(status))) return;
+      const option = document.createElement('option');
+      option.value = status;
+      option.textContent = status;
+      select.append(option);
+    });
+  }
+
+  function enhanceStatusCells(panel) {
     const table = panel.querySelector('table');
     if (!table) return;
+
     table.classList.add('actions-table');
     const headers = [...table.querySelectorAll('thead th')];
-    const statusIndex = headers.findIndex((header) => ['status', 'action status'].includes(text(header)));
+    const statusIndex = headers.findIndex((header) => {
+      const label = normalized(text(header));
+      return label === 'status' || label === 'action status';
+    });
     if (statusIndex < 0) return;
-    headers[statusIndex].remove();
-    table.querySelectorAll('tbody tr').forEach((row) => row.children[statusIndex]?.remove());
+
+    const header = headers[statusIndex];
+    if (normalized(text(header)) === 'status') header.textContent = 'Action Status';
+
+    table.querySelectorAll('tbody tr').forEach((row) => {
+      const cell = row.children[statusIndex];
+      if (!cell || cell.dataset.statusEnhanced === 'true') return;
+
+      const value = text(cell);
+      cell.dataset.statusEnhanced = 'true';
+      cell.textContent = '';
+
+      if (!value || value === '—') {
+        const empty = document.createElement('span');
+        empty.className = 'action-status-empty';
+        empty.textContent = '—';
+        cell.append(empty);
+        return;
+      }
+
+      const pill = document.createElement('span');
+      pill.className = `action-status-pill ${STATUS_CLASSES[normalized(value)] || 'other'}`;
+      pill.textContent = value;
+      cell.append(pill);
+    });
   }
 
   function patchActionCenter() {
     document.querySelectorAll('.panel').forEach((panel) => {
-      const title = text(panel.querySelector('h2'));
-      if (title === 'actions' || title === 'action center') removeStatusColumn(panel);
+      const title = normalized(text(panel.querySelector('h2')));
+      if (title === 'actions' || title === 'action center') enhanceStatusCells(panel);
     });
 
-    const pageTitle = [...document.querySelectorAll('h1')].find((node) => text(node) === 'action center');
+    const pageTitle = [...document.querySelectorAll('h1')].find(
+      (node) => normalized(text(node)) === 'action center',
+    );
     if (!pageTitle) return;
 
     const pageSubtitle = pageTitle.parentElement?.querySelector('p');
-    if (pageSubtitle) pageSubtitle.textContent = 'Actions, owners and due-date tracking from Retention';
+    if (pageSubtitle) pageSubtitle.textContent = 'Actions, owners, due dates and action statuses from Retention';
 
     const filterBar = document.querySelector('.action-filters');
     if (filterBar) {
-      [...filterBar.querySelectorAll('.select')].forEach((field) => {
-        const label = text(field.querySelector('span'));
-        if (label === 'action status') field.remove();
-        if (label === 'due timing') {
-          [...field.querySelectorAll('option')].forEach((option) => {
-            if (text(option) === 'completed') option.remove();
-          });
-        }
-      });
+      ensureStatusOptions(filterBar);
 
       if (!filterBar.querySelector('.action-filter-title')) {
         const title = document.createElement('strong');
@@ -62,13 +112,16 @@
       }
     }
 
-    const actionPanel = [...document.querySelectorAll('.panel')].find((panel) => text(panel.querySelector('h2')) === 'action center');
+    const actionPanel = [...document.querySelectorAll('.panel')].find(
+      (panel) => normalized(text(panel.querySelector('h2'))) === 'action center',
+    );
     const subtitle = actionPanel?.querySelector('.panel-head p');
-    if (subtitle) subtitle.textContent = 'Action, Owner and Due Date come from Retention. No Action Status field is used.';
+    if (subtitle) subtitle.textContent = 'Action Status supports Done, Postponed, Cancelled, To Do and N/A.';
 
     document.querySelectorAll('.kpi-grid.four .kpi span').forEach((label) => {
-      if (text(label) === 'actions') label.textContent = 'Total Actions';
-      if (text(label) === 'no due date') label.textContent = 'Missing Due Date';
+      const current = normalized(text(label));
+      if (current === 'actions') label.textContent = 'Total Actions';
+      if (current === 'no due date') label.textContent = 'Missing Due Date';
     });
   }
 
@@ -82,7 +135,10 @@
     });
   };
 
-  new MutationObserver(schedulePatch).observe(document.documentElement, { childList: true, subtree: true });
+  new MutationObserver(schedulePatch).observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+  });
   window.addEventListener('load', schedulePatch);
   schedulePatch();
 })();
