@@ -8,7 +8,23 @@
     select.dispatchEvent(new Event('change', { bubbles: true }));
   }
 
+  function removeStatusColumn(panel) {
+    const table = panel.querySelector('table');
+    if (!table) return;
+    table.classList.add('actions-table');
+    const headers = [...table.querySelectorAll('thead th')];
+    const statusIndex = headers.findIndex((header) => ['status', 'action status'].includes(text(header)));
+    if (statusIndex < 0) return;
+    headers[statusIndex].remove();
+    table.querySelectorAll('tbody tr').forEach((row) => row.children[statusIndex]?.remove());
+  }
+
   function patchActionCenter() {
+    document.querySelectorAll('.panel').forEach((panel) => {
+      const title = text(panel.querySelector('h2'));
+      if (title === 'actions' || title === 'action center') removeStatusColumn(panel);
+    });
+
     const pageTitle = [...document.querySelectorAll('h1')].find((node) => text(node) === 'action center');
     if (!pageTitle) return;
 
@@ -47,24 +63,10 @@
     }
 
     const actionPanel = [...document.querySelectorAll('.panel')].find((panel) => text(panel.querySelector('h2')) === 'action center');
-    if (actionPanel) {
-      const subtitle = actionPanel.querySelector('.panel-head p');
-      if (subtitle) subtitle.textContent = 'Action, Owner and Due Date come from Retention. No Action Status field is used.';
+    const subtitle = actionPanel?.querySelector('.panel-head p');
+    if (subtitle) subtitle.textContent = 'Action, Owner and Due Date come from Retention. No Action Status field is used.';
 
-      const table = actionPanel.querySelector('table');
-      if (table) {
-        table.classList.add('actions-table');
-        const headers = [...table.querySelectorAll('thead th')];
-        const statusIndex = headers.findIndex((header) => ['status', 'action status'].includes(text(header)));
-        if (statusIndex >= 0) {
-          headers[statusIndex].remove();
-          table.querySelectorAll('tbody tr').forEach((row) => row.children[statusIndex]?.remove());
-        }
-      }
-    }
-
-    const kpiLabels = [...document.querySelectorAll('.kpi-grid.four .kpi span')];
-    kpiLabels.forEach((label) => {
+    document.querySelectorAll('.kpi-grid.four .kpi span').forEach((label) => {
       if (text(label) === 'actions') label.textContent = 'Total Actions';
       if (text(label) === 'no due date') label.textContent = 'Missing Due Date';
     });
