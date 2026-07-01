@@ -12,6 +12,51 @@
   const normalized = (value) => String(value || '').trim().toLowerCase();
   const canonicalStatus = (value) => STATUS_OPTIONS.find((status) => normalized(status) === normalized(value)) || String(value || '').trim();
 
+  function toIsoDate(year, month, day) {
+    const date = new Date(Number(year), Number(month) - 1, Number(day));
+    if (
+      Number.isNaN(date.getTime()) ||
+      date.getFullYear() !== Number(year) ||
+      date.getMonth() !== Number(month) - 1 ||
+      date.getDate() !== Number(day)
+    ) return null;
+    return `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+  }
+
+  function parseDueDate(value) {
+    if (value === null || value === undefined || value === '') return null;
+
+    if (typeof value === 'number' || /^\d+(\.\d+)?$/.test(String(value).trim())) {
+      const serial = Number(value);
+      if (serial > 20000 && serial < 100000) {
+        const date = new Date(Date.UTC(1899, 11, 30) + Math.floor(serial) * 86400000);
+        return toIsoDate(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());
+      }
+    }
+
+    const raw = String(value).trim();
+    const iso = raw.match(/^(\d{4})-(\d{1,2})-(\d{1,2})(?:[T\s].*)?$/);
+    if (iso) return toIsoDate(iso[1], iso[2], iso[3]);
+
+    const slash = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
+    if (slash) {
+      const year = slash[3].length === 2 ? Number(`20${slash[3]}`) : Number(slash[3]);
+      return toIsoDate(year, slash[1], slash[2]);
+    }
+
+    const dash = raw.match(/^(\d{1,2})-(\d{1,2})-(\d{2,4})$/);
+    if (dash) {
+      const year = dash[3].length === 2 ? Number(`20${dash[3]}`) : Number(dash[3]);
+      return toIsoDate(year, dash[2], dash[1]);
+    }
+
+    const parsed = new Date(raw);
+    if (!Number.isNaN(parsed.getTime())) {
+      return toIsoDate(parsed.getFullYear(), parsed.getMonth() + 1, parsed.getDate());
+    }
+    return null;
+  }
+
   const dashboardData = window.DASHBOARD_DATA;
   if (dashboardData) {
     dashboardData.filters = dashboardData.filters || {};
@@ -22,6 +67,7 @@
     dashboardData.actions = (dashboardData.actions || []).map((action) => ({
       ...action,
       actionStatus: canonicalStatus(action.actionStatus),
+      dueDate: action.dueDate || parseDueDate(action.dueDateRaw),
     }));
   }
 
