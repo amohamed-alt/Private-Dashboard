@@ -1,10 +1,9 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-07-01T16:38:12.422Z",
+  "generatedAt": "2026-07-05T10:06:34.275Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
-    "refreshType": "n8n Google Sheets scheduled sync",
-    "mirroredBatchCorrection": "Not required"
+    "refreshType": "n8n Google Sheets scheduled sync"
   },
   "management": {
     "team": {
@@ -8669,15 +8668,6 @@ window.DASHBOARD_DATA = {
       "lost": 0
     }
   },
-  "mirroredBatch": {
-    "detected": false,
-    "sourceAccounts": 189,
-    "retainedAccounts": 189,
-    "removedAccounts": 0,
-    "recognizedTotal": 4437876,
-    "unclassifiedTotal": 4437876,
-    "removedValue": 0
-  },
   "filters": {
     "rms": [
       "Fadi",
@@ -8745,4 +8735,4 @@ window.DASHBOARD_DATA = {
     "actionStatuses": []
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-07-01T16:38:12.427Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-07-05T10:06:34.280Z";
