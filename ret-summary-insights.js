@@ -6,7 +6,7 @@
     if (value === null || value === undefined || value === '') return '—';
     const number = Number(value);
     if (!Number.isFinite(number)) return '—';
-    const normalized = Math.abs(number) <= 1 ? number * 100 : number;
+    const normalized = Math.abs(number) <= 5 ? number * 100 : number;
     return `${normalized.toFixed(1)}%`;
   };
   const norm = (value) => String(value || '').trim().toLowerCase();
@@ -57,28 +57,40 @@
     return fallbackSummary();
   }
 
-  const currentPage = () => norm(document.querySelector('h1')?.textContent || '');
+  const currentTitle = () => String(document.querySelector('h1')?.textContent || '').trim();
+  const currentPage = () => norm(currentTitle());
+
+  function pageKind() {
+    const page = currentPage();
+    if (page === 'retention command center') return 'overview';
+    if (page === 'management forecast') return 'forecast';
+    if (page.includes('· rm performance')) return 'rm';
+    return '';
+  }
+
   function currentRmName() {
-    const title = document.querySelector('h1')?.textContent || '';
-    const match = title.match(/^(.+?)\s*·\s*RM\s*Performance/i);
+    const match = currentTitle().match(/^(.+?)\s*·\s*RM\s*Performance/i);
     return match ? match[1].trim() : null;
   }
+
   const valueOrPending = (value, fallback = false) => fallback && (value === null || value === undefined) ? 'Pending n8n' : money(value);
   const card = (label, value, sub = '', tone = '') => `<article class="ret-summary-card ${tone}"><span>${esc(label)}</span><strong>${esc(value)}</strong>${sub ? `<small>${esc(sub)}</small>` : ''}</article>`;
+  const header = (title, sub, badge) => `<div class="ret-summary-header"><div><h2 class="ret-summary-title">${esc(title)}</h2><p class="ret-summary-sub">${esc(sub)}</p></div>${badge ? `<div class="ret-summary-badge">${esc(badge)}</div>` : ''}</div>`;
 
-  function topTotalCards(s) {
+  function topTotalCards(s, compact = false) {
     const total = s.topTotal || {};
     const pending = s.fallback || total.fallback;
-    return `<div class="ret-summary-grid">
-      ${card('RET Target', valueOrPending(total.retTarget), pending ? 'Fallback from current forecast · run n8n for exact Summary values' : 'From Summary · Ret Target', 'info')}
-      ${card('Booked (Ret)', valueOrPending(total.bookedRet, pending), pending ? 'Run updated n8n code to load exact Booked Ret' : `Achievement ${pct(total.achievement?.bookingRet)}`, 'good')}
-      ${card('Cashed (Ret)', valueOrPending(total.cashedRet, pending), pending ? 'Run updated n8n code to load exact Cashed Ret' : `Achievement ${pct(total.achievement?.cashingRet)}`, 'good')}
-      ${card('Receivables', valueOrPending(total.receivables, pending), 'Booked - cashed + last year load', 'warn')}
-      ${card('Total Projection · Worst', money(s.projectionTotal?.totalProjection?.worst), 'RET projection')}
-      ${card('Total Projection · Med', money(s.projectionTotal?.totalProjection?.medium), 'RET projection')}
-      ${card('Total Projection · Best', money(s.projectionTotal?.totalProjection?.best), 'RET projection')}
-      ${card('YTD + Prospective', valueOrPending(total.ytdProspective?.totalCashing, pending), pending ? 'Run n8n for exact YTD + prospective' : `Rate ${pct(total.ytdProspective?.percent)}`, 'info')}
-    </div>`;
+    const cards = [
+      card('RET Target', valueOrPending(total.retTarget), pending ? 'Fallback from current forecast · run n8n for exact Summary values' : 'From Summary · Ret Target', 'info'),
+      card('Booked (Ret)', valueOrPending(total.bookedRet, pending), pending ? 'Run updated n8n code to load exact Booked Ret' : `Achievement ${pct(total.achievement?.bookingRet)}`, 'good'),
+      card('Cashed (Ret)', valueOrPending(total.cashedRet, pending), pending ? 'Run updated n8n code to load exact Cashed Ret' : `Achievement ${pct(total.achievement?.cashingRet)}`, 'good'),
+      card('Receivables', valueOrPending(total.receivables, pending), 'Booked - cashed + last year load', 'warn'),
+      card('Total Projection · Worst', money(s.projectionTotal?.totalProjection?.worst), 'RET projection'),
+      card('Total Projection · Med', money(s.projectionTotal?.totalProjection?.medium), 'RET projection'),
+      card('Total Projection · Best', money(s.projectionTotal?.totalProjection?.best), 'RET projection'),
+      card('YTD + Prospective', valueOrPending(total.ytdProspective?.totalCashing, pending), pending ? 'Run n8n for exact YTD + prospective' : `Rate ${pct(total.ytdProspective?.percent)}`, 'info'),
+    ];
+    return `<div class="ret-summary-grid">${(compact ? cards.slice(0, 4) : cards).join('')}</div>`;
   }
 
   function projectionTable(rows) {
@@ -95,11 +107,14 @@
     return `<div class="ret-summary-panel"><h3>Closing Year RET Forecast</h3><p>Worst / Medium / Best / Outstanding versus RET target.</p><div class="ret-table-wrap"><table class="ret-table"><thead><tr><th>RM</th><th class="num">Target</th><th class="num">Worst</th><th class="center">%</th><th class="num">Med</th><th class="center">%</th><th class="num">Best</th><th class="center">%</th><th class="num">Booking</th><th class="num">Cashing</th></tr></thead><tbody>${rows.map((row) => `<tr><td><strong>${esc(row.name)}</strong></td><td class="num">${money(row.target)}</td><td class="num">${money(row.worst?.value)}</td><td class="center">${pct(row.worst?.vsTarget)}</td><td class="num">${money(row.medium?.value)}</td><td class="center">${pct(row.medium?.vsTarget)}</td><td class="num">${money(row.best?.value)}</td><td class="center">${pct(row.best?.vsTarget)}</td><td class="num">${money(row.actual?.booking)}</td><td class="num">${money(row.actual?.cashing)}</td></tr>`).join('')}</tbody></table></div></div>`;
   }
 
-  function teamSection() {
+  function teamSection(kind) {
     const s = summary();
-    const topRows = (s.topRows || []).filter((row) => row.name !== 'Total' && (RET_TEAM.includes(row.name) || row.retTarget || row.bookedRet || row.cashedRet));
+    const topRows = (s.topRows || []).filter((row) => row.name !== 'Total' && (row.retTarget || row.bookedRet || row.cashedRet || row.receivables || RET_TEAM.includes(row.name)));
     const projectionRows = (s.projectionRows || []).filter((row) => row.name !== 'Total');
-    return `<section class="ret-summary-section" data-ret-summary="team" data-ret-summary-key="team:${DATA.generatedAt || ''}:${s.fallback ? 'fallback' : 'exact'}">${topTotalCards(s)}<div class="ret-summary-tables"><div class="ret-summary-panel"><h3>RET Performance by Rep</h3><p>Target, booked, cashed, receivables and YTD prospective from Summary.</p>${performanceTable(topRows, s.fallback)}</div><div class="ret-summary-panel"><h3>Retention Projection by RM</h3><p>Lost, pending buckets and total projection scenarios.</p>${projectionTable(projectionRows)}</div></div><div style="height:14px"></div>${closingTable(s.closingYear)}</section>`;
+    const compact = kind === 'overview';
+    const title = kind === 'forecast' ? 'RET Forecast Layer' : 'RET Executive Snapshot';
+    const sub = kind === 'forecast' ? 'Summary sheet RET target, actuals, receivables and projection logic.' : 'High-signal RET numbers only. Calendar, accounts and actions stay clean.';
+    return `<section class="ret-summary-section ret-${kind}" data-ret-summary="team" data-ret-summary-key="${kind}:${DATA.generatedAt || ''}:${s.fallback ? 'fallback' : 'exact'}">${header(title, sub, 'Live from Summary')}${topTotalCards(s, compact)}<div class="ret-summary-tables"><div class="ret-summary-panel"><h3>RET Performance by Rep</h3><p>Target, booked, cashed, receivables and YTD prospective from Summary.</p>${performanceTable(topRows, s.fallback)}</div><div class="ret-summary-panel"><h3>Retention Projection by RM</h3><p>Lost, pending buckets and total projection scenarios.</p>${projectionTable(projectionRows)}</div></div>${kind === 'forecast' ? `<div style="height:14px"></div>${closingTable(s.closingYear)}` : ''}</section>`;
   }
 
   function rmSection(name) {
@@ -108,20 +123,19 @@
     const projection = (s.projectionRows || []).find((row) => row.name === name) || s.byName?.[name]?.projection || {};
     const closing = (s.closingYear?.reps || []).find((row) => row.name === name) || s.byName?.[name]?.closing || {};
     const pending = s.fallback;
-    return `<section class="ret-summary-section" data-ret-summary="rm" data-ret-summary-key="rm:${name}:${DATA.generatedAt || ''}:${s.fallback ? 'fallback' : 'exact'}"><div class="ret-summary-rm">${card(`${name} · RET Target`, valueOrPending(top.retTarget || closing.target), 'Summary target', 'info')}${card(`${name} · Booked Ret`, valueOrPending(top.bookedRet || closing.actual?.booking, pending), `Booking achievement ${pct(top.achievement?.bookingRet)}`, 'good')}${card(`${name} · Cashed Ret`, valueOrPending(top.cashedRet || closing.actual?.cashing, pending), `Cashing achievement ${pct(top.achievement?.cashingRet)}`, 'good')}${card(`${name} · Receivables`, valueOrPending(top.receivables, pending), 'Booked - cashed + last year load', 'warn')}${card(`${name} · Pending High`, money(projection.pendingHigh), 'Likely renewal bucket')}${card(`${name} · Best Projection`, money(projection.totalProjection?.best || closing.best?.value), `Vs target ${pct(closing.best?.vsTarget)}`, 'info')}</div></section>`;
-  }
-
-  function shouldRender() {
-    const page = currentPage();
-    return page === 'retention command center' || page === 'management forecast' || page.includes('· rm performance');
+    return `<section class="ret-summary-section ret-rm" data-ret-summary="rm" data-ret-summary-key="rm:${name}:${DATA.generatedAt || ''}:${s.fallback ? 'fallback' : 'exact'}">${header(`${name} RET Snapshot`, 'Only this RM Summary numbers, not the full company block.', 'RM view')}<div class="ret-summary-rm">${card('RET Target', valueOrPending(top.retTarget || closing.target), 'Summary target', 'info')}${card('Booked Ret', valueOrPending(top.bookedRet || closing.actual?.booking, pending), `Booking achievement ${pct(top.achievement?.bookingRet)}`, 'good')}${card('Cashed Ret', valueOrPending(top.cashedRet || closing.actual?.cashing, pending), `Cashing achievement ${pct(top.achievement?.cashingRet)}`, 'good')}${card('Receivables', valueOrPending(top.receivables, pending), 'Booked - cashed + last year load', 'warn')}${card('Pending High', money(projection.pendingHigh), 'Likely renewal bucket')}${card('Best Projection', money(projection.totalProjection?.best || closing.best?.value), `Vs target ${pct(closing.best?.vsTarget)}`, 'info')}</div></section>`;
   }
 
   function render() {
-    if (!shouldRender()) return;
     const main = document.querySelector('main');
     if (!main) return;
-    const rm = currentRmName();
-    const html = rm ? rmSection(rm) : teamSection();
+    const kind = pageKind();
+    if (!kind) {
+      main.querySelectorAll('[data-ret-summary]').forEach((node) => node.remove());
+      return;
+    }
+    const rm = kind === 'rm' ? currentRmName() : null;
+    const html = rm ? rmSection(rm) : teamSection(kind);
     const key = (html.match(/data-ret-summary-key="([^"]+)"/) || [])[1] || '';
     const existing = main.querySelector('[data-ret-summary]');
     if (existing && existing.dataset.retSummaryKey === key) return;
