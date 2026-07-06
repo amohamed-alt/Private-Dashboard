@@ -1,11 +1,9 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-07-06T06:52:36.037Z",
+  "generatedAt": "2026-07-06T10:00:42.332Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
-    "refreshType": "n8n Google Sheets scheduled sync",
-    "totalRowCorrection": "Applied: removed manual total/subtotal rows",
-    "mirroredBatchCorrection": "Not required"
+    "refreshType": "n8n Google Sheets scheduled sync"
   },
   "management": {
     "team": {
@@ -69,10 +67,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 52401,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "aski for 6 month extension",
-      "sourceIds": [
-        "ret-2"
-      ]
+      "notes": "aski for 6 month extension"
     },
     {
       "id": "ret-3",
@@ -103,10 +98,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 6750,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-3"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-4",
@@ -137,10 +129,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 14000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-4"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-5",
@@ -171,10 +160,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 45000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-5"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-6",
@@ -205,10 +191,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 24725,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-6"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-7",
@@ -239,10 +222,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 28000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-7"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-8",
@@ -273,10 +253,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 64279,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-8"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-9",
@@ -307,10 +284,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 66101,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-9"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-10",
@@ -341,10 +315,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 80000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-10"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-11",
@@ -366,10 +337,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-11"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-12",
@@ -391,10 +359,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-12"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-13",
@@ -425,10 +390,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 28000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed",
-      "sourceIds": [
-        "ret-13"
-      ]
+      "notes": "renewed"
     },
     {
       "id": "ret-14",
@@ -450,10 +412,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "next year",
-      "sourceIds": [
-        "ret-14"
-      ]
+      "notes": "next year"
     },
     {
       "id": "ret-15",
@@ -475,10 +434,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost",
-      "sourceIds": [
-        "ret-15"
-      ]
+      "notes": "lost"
     },
     {
       "id": "ret-16",
@@ -509,10 +465,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 69002,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "%100 he will renew with the same value",
-      "sourceIds": [
-        "ret-16"
-      ]
+      "notes": "%100 he will renew with the same value"
     },
     {
       "id": "ret-17",
@@ -543,10 +496,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 48793,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "net year",
-      "sourceIds": [
-        "ret-17"
-      ]
+      "notes": "net year"
     },
     {
       "id": "ret-18",
@@ -577,10 +527,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 108920,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "2 year deal",
-      "sourceIds": [
-        "ret-18"
-      ]
+      "notes": "2 year deal"
     },
     {
       "id": "ret-19",
@@ -611,10 +558,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-19"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-20",
@@ -645,10 +589,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 39855,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-20"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-21",
@@ -679,10 +620,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 60002,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "need to call for renewal discussion",
-      "sourceIds": [
-        "ret-21"
-      ]
+      "notes": "need to call for renewal discussion"
     },
     {
       "id": "ret-22",
@@ -704,10 +642,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost",
-      "sourceIds": [
-        "ret-22"
-      ]
+      "notes": "lost"
     },
     {
       "id": "ret-23",
@@ -729,10 +664,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost",
-      "sourceIds": [
-        "ret-23"
-      ]
+      "notes": "lost"
     },
     {
       "id": "ret-24",
@@ -763,10 +695,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 32850,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost this will be loat renewal",
-      "sourceIds": [
-        "ret-24"
-      ]
+      "notes": "lost this will be loat renewal"
     },
     {
       "id": "ret-25",
@@ -797,10 +726,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 135153,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed",
-      "sourceIds": [
-        "ret-25"
-      ]
+      "notes": "renewed"
     },
     {
       "id": "ret-26",
@@ -831,10 +757,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 12000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed",
-      "sourceIds": [
-        "ret-26"
-      ]
+      "notes": "renewed"
     },
     {
       "id": "ret-27",
@@ -865,10 +788,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 14996,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "need to call for renewal discussion",
-      "sourceIds": [
-        "ret-27"
-      ]
+      "notes": "need to call for renewal discussion"
     },
     {
       "id": "ret-28",
@@ -899,10 +819,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 36282,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-28"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-29",
@@ -933,10 +850,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-29"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-30",
@@ -967,10 +881,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 22000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-30"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-31",
@@ -992,10 +903,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Renewed",
-      "sourceIds": [
-        "ret-31"
-      ]
+      "notes": "Renewed"
     },
     {
       "id": "ret-32",
@@ -1026,10 +934,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3100,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-32"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-33",
@@ -1060,10 +965,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 16550,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-33"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-34",
@@ -1094,10 +996,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3750,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-34"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-35",
@@ -1128,10 +1027,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 22710,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-35"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-36",
@@ -1162,10 +1058,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-36"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-37",
@@ -1196,10 +1089,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7700,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-37"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-38",
@@ -1230,10 +1120,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1805,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-38"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-39",
@@ -1264,10 +1151,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-39"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-40",
@@ -1298,10 +1182,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 9856,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-40"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-41",
@@ -1332,10 +1213,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2121,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-41"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-42",
@@ -1366,10 +1244,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 8000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-42"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-43",
@@ -1391,10 +1266,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-43"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-44",
@@ -1425,10 +1297,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "He told us he will not renew",
-      "sourceIds": [
-        "ret-44"
-      ]
+      "notes": "He told us he will not renew"
     },
     {
       "id": "ret-45",
@@ -1459,10 +1328,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 9580,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "He told us he will not renew",
-      "sourceIds": [
-        "ret-45"
-      ]
+      "notes": "He told us he will not renew"
     },
     {
       "id": "ret-46",
@@ -1493,10 +1359,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 78668,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-46"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-47",
@@ -1527,10 +1390,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 57901,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-47"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-48",
@@ -1561,10 +1421,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-48"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-49",
@@ -1586,10 +1443,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-49"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-50",
@@ -1611,10 +1465,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-50"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-51",
@@ -1645,10 +1496,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 56000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-51"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-52",
@@ -1679,10 +1527,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 38000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "They have problem with ministry of Finance",
-      "sourceIds": [
-        "ret-52"
-      ]
+      "notes": "They have problem with ministry of Finance"
     },
     {
       "id": "ret-53",
@@ -1713,10 +1558,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 27500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-53"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-54",
@@ -1747,10 +1589,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-54"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-55",
@@ -1781,10 +1620,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 75000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-55"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-56",
@@ -1815,10 +1651,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 50000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-56"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-57",
@@ -1849,10 +1682,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 35000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-57"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-58",
@@ -1883,10 +1713,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 53001,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-58"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-59",
@@ -1917,10 +1744,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 9262,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-59"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-60",
@@ -1951,10 +1775,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-60"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-61",
@@ -1985,10 +1806,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 19200,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-61"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-62",
@@ -2010,10 +1828,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-62"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-63",
@@ -2044,10 +1859,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-63"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-64",
@@ -2078,10 +1890,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 113400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-64"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-65",
@@ -2112,10 +1921,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 33000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-65"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-66",
@@ -2146,10 +1952,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 33600,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-66"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-67",
@@ -2171,10 +1974,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-67"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-68",
@@ -2205,10 +2005,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-68"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-69",
@@ -2239,10 +2036,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 18400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-69"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-70",
@@ -2264,10 +2058,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-70"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-71",
@@ -2298,10 +2089,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-71"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-72",
@@ -2332,10 +2120,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 65334,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "I will push to received in October",
-      "sourceIds": [
-        "ret-72"
-      ]
+      "notes": "I will push to received in October"
     },
     {
       "id": "ret-73",
@@ -2366,10 +2151,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-73"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-74",
@@ -2400,10 +2182,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 39066,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-74"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-75",
@@ -2434,10 +2213,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-75"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-76",
@@ -2468,10 +2244,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 282240,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-76"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-77",
@@ -2493,10 +2266,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-77"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-78",
@@ -2527,10 +2297,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 8115,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-78"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-79",
@@ -2561,10 +2328,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 265200,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Renewed the value is 176,822",
-      "sourceIds": [
-        "ret-79"
-      ]
+      "notes": "Renewed the value is 176,822"
     },
     {
       "id": "ret-80",
@@ -2595,10 +2359,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23067,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost they will use the system of the Ministry of Enviroment",
-      "sourceIds": [
-        "ret-80"
-      ]
+      "notes": "lost they will use the system of the Ministry of Enviroment"
     },
     {
       "id": "ret-81",
@@ -2620,10 +2381,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Lost",
-      "sourceIds": [
-        "ret-81"
-      ]
+      "notes": "Lost"
     },
     {
       "id": "ret-82",
@@ -2654,10 +2412,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 22667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Asked them many times but they prefer online meetings",
-      "sourceIds": [
-        "ret-82"
-      ]
+      "notes": "Asked them many times but they prefer online meetings"
     },
     {
       "id": "ret-83",
@@ -2688,10 +2443,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 12000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-83"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-84",
@@ -2722,10 +2474,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-84"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-85",
@@ -2756,10 +2505,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20134,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "We need to be sure Mariam fix all the pending items",
-      "sourceIds": [
-        "ret-85"
-      ]
+      "notes": "We need to be sure Mariam fix all the pending items"
     },
     {
       "id": "ret-86",
@@ -2790,10 +2536,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23066,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Jadart-Lost he wants morefree months we alreday give him one month",
-      "sourceIds": [
-        "ret-86"
-      ]
+      "notes": "Jadart-Lost he wants morefree months we alreday give him one month"
     },
     {
       "id": "ret-87",
@@ -2824,10 +2567,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 21333,
       "differenceRaw": "",
       "difference": 0,
-      "notes": "Its not coming delivery note singed on March so this year thier is no booking",
-      "sourceIds": [
-        "ret-87"
-      ]
+      "notes": "Its not coming delivery note singed on March so this year thier is no booking"
     },
     {
       "id": "ret-88",
@@ -2858,10 +2598,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-88"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-89",
@@ -2892,10 +2629,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 26667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "follow up on the renewal",
-      "sourceIds": [
-        "ret-89"
-      ]
+      "notes": "follow up on the renewal"
     },
     {
       "id": "ret-90",
@@ -2917,10 +2651,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-90"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-91",
@@ -2951,10 +2682,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1333,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-91"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-92",
@@ -2985,10 +2713,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 73068,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Finish Sama requiments",
-      "sourceIds": [
-        "ret-92"
-      ]
+      "notes": "Finish Sama requiments"
     },
     {
       "id": "ret-93",
@@ -3019,10 +2744,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 26000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Finish Sama requiments",
-      "sourceIds": [
-        "ret-93"
-      ]
+      "notes": "Finish Sama requiments"
     },
     {
       "id": "ret-94",
@@ -3053,10 +2775,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 45000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "The renewal amount is 27k they are going with Oracle",
-      "sourceIds": [
-        "ret-94"
-      ]
+      "notes": "The renewal amount is 27k they are going with Oracle"
     },
     {
       "id": "ret-95",
@@ -3087,10 +2806,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-95"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-96",
@@ -3121,10 +2837,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-96"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-97",
@@ -3155,10 +2868,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23067,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Reducethe the amount 18,666",
-      "sourceIds": [
-        "ret-97"
-      ]
+      "notes": "Reducethe the amount 18,666"
     },
     {
       "id": "ret-98",
@@ -3203,10 +2913,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 24671,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-98"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-99",
@@ -3237,10 +2944,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-99"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-100",
@@ -3271,10 +2975,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 34667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Every year they have problem in the renewal because all the regions has Oracle only them using Talentera",
-      "sourceIds": [
-        "ret-100"
-      ]
+      "notes": "Every year they have problem in the renewal because all the regions has Oracle only them using Talentera"
     },
     {
       "id": "ret-101",
@@ -3305,10 +3006,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23200,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-101"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-102",
@@ -3339,10 +3037,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 21252,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-102"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-103",
@@ -3373,10 +3068,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 26600,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-103"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-104",
@@ -3407,10 +3099,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 81334,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Jadrat Risk but they are happy",
-      "sourceIds": [
-        "ret-104"
-      ]
+      "notes": "Jadrat Risk but they are happy"
     },
     {
       "id": "ret-105",
@@ -3441,10 +3130,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 32000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Finish Sama requiments",
-      "sourceIds": [
-        "ret-105"
-      ]
+      "notes": "Finish Sama requiments"
     },
     {
       "id": "ret-106",
@@ -3475,10 +3161,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 50667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-106"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-107",
@@ -3500,10 +3183,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-107"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-108",
@@ -3534,10 +3214,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-108"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-109",
@@ -3568,10 +3245,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 42721,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-109"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-110",
@@ -3593,10 +3267,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-110"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-111",
@@ -3627,10 +3298,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 57307,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "sahred renewal proposal",
-      "sourceIds": [
-        "ret-111"
-      ]
+      "notes": "sahred renewal proposal"
     },
     {
       "id": "ret-112",
@@ -3661,10 +3329,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 81501,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Finish Sama requiments",
-      "sourceIds": [
-        "ret-112"
-      ]
+      "notes": "Finish Sama requiments"
     },
     {
       "id": "ret-113",
@@ -3695,10 +3360,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-113"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-114",
@@ -3729,10 +3391,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 63000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-114"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-115",
@@ -3763,10 +3422,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 40001,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-115"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-116",
@@ -3797,10 +3453,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 31000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-116"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-117",
@@ -3831,10 +3484,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 12233,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-117"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-118",
@@ -3865,10 +3515,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 11330,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed",
-      "sourceIds": [
-        "ret-118"
-      ]
+      "notes": "renewed"
     },
     {
       "id": "ret-119",
@@ -3899,10 +3546,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 40968,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed",
-      "sourceIds": [
-        "ret-119"
-      ]
+      "notes": "renewed"
     },
     {
       "id": "ret-120",
@@ -3933,10 +3577,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 6250,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect",
-      "sourceIds": [
-        "ret-120"
-      ]
+      "notes": "connect"
     },
     {
       "id": "ret-121",
@@ -3967,10 +3608,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5709,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "paid",
-      "sourceIds": [
-        "ret-121"
-      ]
+      "notes": "paid"
     },
     {
       "id": "ret-122",
@@ -4001,10 +3639,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1800,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-122"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-123",
@@ -4035,10 +3670,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-123"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-124",
@@ -4069,10 +3701,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-124"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-125",
@@ -4103,10 +3732,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-125"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-126",
@@ -4137,10 +3763,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1700,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-126"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-127",
@@ -4171,10 +3794,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7820,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-127"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-128",
@@ -4205,10 +3825,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 12960,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed",
-      "sourceIds": [
-        "ret-128"
-      ]
+      "notes": "renewed"
     },
     {
       "id": "ret-129",
@@ -4239,10 +3856,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 31900,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect",
-      "sourceIds": [
-        "ret-129"
-      ]
+      "notes": "connect"
     },
     {
       "id": "ret-130",
@@ -4273,10 +3887,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-130"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-131",
@@ -4307,10 +3918,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-131"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-132",
@@ -4341,10 +3949,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-132"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-133",
@@ -4375,10 +3980,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 13000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Sor the Pedning issue Ghadeer Al-Omari",
-      "sourceIds": [
-        "ret-133"
-      ]
+      "notes": "Sor the Pedning issue Ghadeer Al-Omari"
     },
     {
       "id": "ret-134",
@@ -4409,10 +4011,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2550,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-134"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-135",
@@ -4443,10 +4042,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 15000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "miving to Darwin box need to meet and persue",
-      "sourceIds": [
-        "ret-135"
-      ]
+      "notes": "miving to Darwin box need to meet and persue"
     },
     {
       "id": "ret-136",
@@ -4477,10 +4073,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 9400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "push them to use the system",
-      "sourceIds": [
-        "ret-136"
-      ]
+      "notes": "push them to use the system"
     },
     {
       "id": "ret-137",
@@ -4511,10 +4104,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 53000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-137"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-138",
@@ -4545,10 +4135,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 68493,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "bassam to spek and sort for payment",
-      "sourceIds": [
-        "ret-138"
-      ]
+      "notes": "bassam to spek and sort for payment"
     },
     {
       "id": "ret-139",
@@ -4579,10 +4166,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7201,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed",
-      "sourceIds": [
-        "ret-139"
-      ]
+      "notes": "renewed"
     },
     {
       "id": "ret-140",
@@ -4613,10 +4197,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23633,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect",
-      "sourceIds": [
-        "ret-140"
-      ]
+      "notes": "connect"
     },
     {
       "id": "ret-141",
@@ -4647,10 +4228,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "early renewal",
-      "sourceIds": [
-        "ret-141"
-      ]
+      "notes": "early renewal"
     },
     {
       "id": "ret-142",
@@ -4681,10 +4259,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3350,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect",
-      "sourceIds": [
-        "ret-142"
-      ]
+      "notes": "connect"
     },
     {
       "id": "ret-143",
@@ -4715,10 +4290,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 600,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-143"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-144",
@@ -4749,10 +4321,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-144"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-145",
@@ -4783,10 +4352,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1300,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "He has a finance problem he wants to pay throw Visa, but we dont have",
-      "sourceIds": [
-        "ret-145"
-      ]
+      "notes": "He has a finance problem he wants to pay throw Visa, but we dont have"
     },
     {
       "id": "ret-146",
@@ -4817,10 +4383,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-146"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-147",
@@ -4858,10 +4421,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-147"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-148",
@@ -4892,10 +4452,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-148"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-149",
@@ -4926,10 +4483,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4533,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-149"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-150",
@@ -4951,10 +4505,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-150"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-151",
@@ -4985,10 +4536,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5333,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-151"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-152",
@@ -5019,10 +4567,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 14934,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "They dont have a new projects so they hold the package",
-      "sourceIds": [
-        "ret-152"
-      ]
+      "notes": "They dont have a new projects so they hold the package"
     },
     {
       "id": "ret-153",
@@ -5053,10 +4598,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 8000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-153"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-154",
@@ -5078,10 +4620,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost",
-      "sourceIds": [
-        "ret-154"
-      ]
+      "notes": "lost"
     },
     {
       "id": "ret-155",
@@ -5112,10 +4651,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2720,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-155"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-156",
@@ -5146,10 +4682,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "visit",
-      "sourceIds": [
-        "ret-156"
-      ]
+      "notes": "visit"
     },
     {
       "id": "ret-157",
@@ -5180,10 +4713,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 600,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed",
-      "sourceIds": [
-        "ret-157"
-      ]
+      "notes": "renewed"
     },
     {
       "id": "ret-158",
@@ -5214,10 +4744,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3300,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect",
-      "sourceIds": [
-        "ret-158"
-      ]
+      "notes": "connect"
     },
     {
       "id": "ret-159",
@@ -5248,10 +4775,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 45251,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect",
-      "sourceIds": [
-        "ret-159"
-      ]
+      "notes": "connect"
     },
     {
       "id": "ret-160",
@@ -5282,10 +4806,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20725,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "send invoice for December for 20207",
-      "sourceIds": [
-        "ret-160"
-      ]
+      "notes": "send invoice for December for 20207"
     },
     {
       "id": "ret-161",
@@ -5316,10 +4837,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 6200,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-161"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-162",
@@ -5350,10 +4868,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 36651,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-162"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-163",
@@ -5375,10 +4890,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-163"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-164",
@@ -5409,10 +4921,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 21000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-164"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-165",
@@ -5443,10 +4952,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-165"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-166",
@@ -5477,10 +4983,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 24000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-166"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-167",
@@ -5511,10 +5014,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 36000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-167"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-168",
@@ -5536,10 +5036,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-168"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-169",
@@ -5561,10 +5058,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-169"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-170",
@@ -5586,10 +5080,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-170"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-171",
@@ -5620,10 +5111,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 68000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "They are not happy with the customer support(TAM)",
-      "sourceIds": [
-        "ret-171"
-      ]
+      "notes": "They are not happy with the customer support(TAM)"
     },
     {
       "id": "ret-172",
@@ -5654,10 +5142,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 13867,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Because they want lower price",
-      "sourceIds": [
-        "ret-172"
-      ]
+      "notes": "Because they want lower price"
     },
     {
       "id": "ret-173",
@@ -5688,10 +5173,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 14934,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-173"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-174",
@@ -5722,10 +5204,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 48001,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-174"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-175",
@@ -5756,10 +5235,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 21467,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-175"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-176",
@@ -5790,10 +5266,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 25334,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-176"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-177",
@@ -5824,10 +5297,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 22400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-177"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-178",
@@ -5858,10 +5328,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7514,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-178"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-179",
@@ -5892,10 +5359,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5100,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "send the invoice",
-      "sourceIds": [
-        "ret-179"
-      ]
+      "notes": "send the invoice"
     },
     {
       "id": "ret-180",
@@ -5917,10 +5381,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-180"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-181",
@@ -5951,10 +5412,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-181"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-182",
@@ -5985,10 +5443,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-182"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-183",
@@ -6019,10 +5474,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-183"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-184",
@@ -6053,10 +5505,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-184"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-185",
@@ -6087,10 +5536,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 8000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-185"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-186",
@@ -6121,10 +5567,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-186"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-187",
@@ -6155,10 +5598,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 37000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-187"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-188",
@@ -6189,10 +5629,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 75601,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "",
-      "sourceIds": [
-        "ret-188"
-      ]
+      "notes": ""
     },
     {
       "id": "ret-189",
@@ -6223,10 +5660,29 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 26503,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "send the invoice",
-      "sourceIds": [
-        "ret-189"
-      ]
+      "notes": "send the invoice"
+    },
+    {
+      "id": "ret-190",
+      "rowNumber": 190,
+      "status": "",
+      "product": "",
+      "csm": "",
+      "location": "",
+      "rm": "",
+      "clientName": "",
+      "originalValueRaw": "4712549",
+      "originalValue": 4712549,
+      "updatedValueRaw": "4437875.86",
+      "updatedValue": 4437876,
+      "renewalStatusRaw": "",
+      "renewalStatus": "",
+      "renewalSchedule": [],
+      "renewalMonths": [],
+      "monthlyTotal": 0,
+      "differenceRaw": "",
+      "difference": 0,
+      "notes": "send the invoice"
     }
   ],
   "actions": [
@@ -9138,6 +8594,16 @@ window.DASHBOARD_DATA = {
       "pendingMedium": 577471,
       "pendingLow": 121467,
       "lost": 78586
+    },
+    "Unassigned": {
+      "name": "Unassigned",
+      "accountsCount": 1,
+      "updatedValue": 4437876,
+      "renewed": 0,
+      "pendingHigh": 0,
+      "pendingMedium": 0,
+      "pendingLow": 0,
+      "lost": 0
     }
   },
   "csms": {
@@ -9190,18 +8656,17 @@ window.DASHBOARD_DATA = {
       "pendingMedium": 435003,
       "pendingLow": 44399,
       "lost": 63652
+    },
+    "Unassigned": {
+      "name": "Unassigned",
+      "accountsCount": 1,
+      "updatedValue": 4437876,
+      "renewed": 0,
+      "pendingHigh": 0,
+      "pendingMedium": 0,
+      "pendingLow": 0,
+      "lost": 0
     }
-  },
-  "corrections": {
-    "sourceRows": 189,
-    "mappedAccounts": 189,
-    "removedTotalRows": 1,
-    "removedTotalRowValue": 4437876,
-    "dedupedAccounts": 188,
-    "mirroredBatchDetected": false,
-    "removedMirroredAccounts": 0,
-    "removedMirroredValue": 0,
-    "finalAccounts": 188
   },
   "filters": {
     "rms": [
@@ -9270,4 +8735,4 @@ window.DASHBOARD_DATA = {
     "actionStatuses": []
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-07-06T06:52:36.042Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-07-06T10:00:42.334Z";
