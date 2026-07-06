@@ -2,7 +2,13 @@
   const DATA = window.DASHBOARD_DATA || {};
   const RET_TEAM = ['Jihad', 'Fadi', 'Faizan'];
   const money = (value) => `$${Math.round(Number(value || 0)).toLocaleString()}`;
-  const pct = (value) => value === null || value === undefined || value === '' ? '—' : `${Number(value).toFixed(1)}%`;
+  const pct = (value) => {
+    if (value === null || value === undefined || value === '') return '—';
+    const number = Number(value);
+    if (!Number.isFinite(number)) return '—';
+    const normalized = Math.abs(number) <= 1 ? number * 100 : number;
+    return `${normalized.toFixed(1)}%`;
+  };
   const norm = (value) => String(value || '').trim().toLowerCase();
   const esc = (value) => String(value ?? '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[char]);
   const num = (value) => Number(value || 0) || 0;
@@ -80,7 +86,7 @@
   }
 
   function performanceTable(rows, pending) {
-    return `<div class="ret-table-wrap"><table class="ret-table"><thead><tr><th>RM</th><th class="num">RET Target</th><th class="num">Booked Ret</th><th class="num">Cashed Ret</th><th class="num">Receivables</th><th class="center">Booking %</th><th class="center">Cashing %</th><th class="num">YTD + Prospective</th></tr></thead><tbody>${rows.map((row) => `<tr><td><strong>${esc(row.name)}</strong></td><td class="num">${money(row.retTarget)}</td><td class="num">${valueOrPending(row.bookedRet, pending)}</td><td class="num">${valueOrPending(row.cashedRet, pending)}</td><td class="num">${valueOrPending(row.receivables, pending)}</td><td class="center"><span class="ret-pill ${num(row.achievement?.bookingRet) >= 50 ? 'green' : 'amber'}">${pct(row.achievement?.bookingRet)}</span></td><td class="center"><span class="ret-pill ${num(row.achievement?.cashingRet) >= 25 ? 'green' : 'amber'}">${pct(row.achievement?.cashingRet)}</span></td><td class="num">${valueOrPending(row.ytdProspective?.totalCashing, pending)}</td></tr>`).join('')}</tbody></table></div>`;
+    return `<div class="ret-table-wrap"><table class="ret-table"><thead><tr><th>RM</th><th class="num">RET Target</th><th class="num">Booked Ret</th><th class="num">Cashed Ret</th><th class="num">Receivables</th><th class="center">Booking %</th><th class="center">Cashing %</th><th class="num">YTD + Prospective</th></tr></thead><tbody>${rows.map((row) => `<tr><td><strong>${esc(row.name)}</strong></td><td class="num">${money(row.retTarget)}</td><td class="num">${valueOrPending(row.bookedRet, pending)}</td><td class="num">${valueOrPending(row.cashedRet, pending)}</td><td class="num">${valueOrPending(row.receivables, pending)}</td><td class="center"><span class="ret-pill ${num(row.achievement?.bookingRet) >= 0.5 ? 'green' : 'amber'}">${pct(row.achievement?.bookingRet)}</span></td><td class="center"><span class="ret-pill ${num(row.achievement?.cashingRet) >= 0.25 ? 'green' : 'amber'}">${pct(row.achievement?.cashingRet)}</span></td><td class="num">${valueOrPending(row.ytdProspective?.totalCashing, pending)}</td></tr>`).join('')}</tbody></table></div>`;
   }
 
   function closingTable(closing) {
