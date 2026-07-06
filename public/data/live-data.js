@@ -1,9 +1,11 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-07-06T10:00:42.332Z",
+  "generatedAt": "2026-07-06T11:17:45.112Z",
   "source": {
-    "summary": "Target, Worst, Medium and Best only from Summary",
+    "summary": "Target, Worst, Medium, Best and RET performance/projection from Summary",
     "retention": "All operational details from Retention",
-    "refreshType": "n8n Google Sheets scheduled sync"
+    "refreshType": "n8n Google Sheets scheduled sync",
+    "totalRowCorrection": "Applied: removed manual total/subtotal rows",
+    "mirroredBatchCorrection": "Not required"
   },
   "management": {
     "team": {
@@ -37,6 +39,968 @@ window.DASHBOARD_DATA = {
       }
     }
   },
+  "summaryRet": {
+    "generatedFrom": "Summary sheet",
+    "topRows": [
+      {
+        "name": "Ursula",
+        "isTotal": false,
+        "acqTarget": 450000,
+        "retTarget": 0,
+        "totalTarget": 450000,
+        "bookedRet": 1800,
+        "bookingAcq": 44805,
+        "cashedRet": 104924,
+        "cashedAcq": 60182,
+        "totalBooking": 46605,
+        "totalCashing": 165106,
+        "receivables": 94810,
+        "achievement": {
+          "bookingRet": null,
+          "bookingAcq": null,
+          "cashingRet": null,
+          "cashingAcq": null,
+          "booking": null,
+          "cashing": null
+        },
+        "ytdProspective": {
+          "totalCashing": 259916,
+          "percent": 0.5775911965886381
+        }
+      },
+      {
+        "name": "Zain",
+        "isTotal": false,
+        "acqTarget": 450000,
+        "retTarget": 0,
+        "totalTarget": 450000,
+        "bookedRet": 0,
+        "bookingAcq": 0,
+        "cashedRet": 0,
+        "cashedAcq": 0,
+        "totalBooking": 0,
+        "totalCashing": 0,
+        "receivables": 35094,
+        "achievement": {
+          "bookingRet": null,
+          "bookingAcq": null,
+          "cashingRet": null,
+          "cashingAcq": null,
+          "booking": null,
+          "cashing": null
+        },
+        "ytdProspective": {
+          "totalCashing": 35094,
+          "percent": 0.07798615555555555
+        }
+      },
+      {
+        "name": "Jihad",
+        "isTotal": false,
+        "acqTarget": 610000,
+        "retTarget": 1198852,
+        "totalTarget": 1808852,
+        "bookedRet": 660218,
+        "bookingAcq": 175136,
+        "cashedRet": 215664,
+        "cashedAcq": 25000,
+        "totalBooking": 835353,
+        "totalCashing": 240664,
+        "receivables": 666690,
+        "achievement": {
+          "bookingRet": 0.5507082692442438,
+          "bookingAcq": 0.2871074098360656,
+          "cashingRet": 0.17989186938112756,
+          "cashingAcq": 0.04098412295081967,
+          "booking": 0.46181402900845403,
+          "cashing": 0.13304794554297616
+        },
+        "ytdProspective": {
+          "totalCashing": 907354,
+          "percent": 0.5016187877124848
+        }
+      },
+      {
+        "name": "Fadi",
+        "isTotal": false,
+        "acqTarget": 0,
+        "retTarget": 1948648,
+        "totalTarget": 1948648,
+        "bookedRet": 1116317,
+        "bookingAcq": 112001,
+        "cashedRet": 490429,
+        "cashedAcq": 62918,
+        "totalBooking": 1228318,
+        "totalCashing": 553347,
+        "receivables": 915729,
+        "achievement": {
+          "bookingRet": 0.5728674239780607,
+          "bookingAcq": null,
+          "cashingRet": 0.25167648030839845,
+          "cashingAcq": null,
+          "booking": null,
+          "cashing": null
+        },
+        "ytdProspective": {
+          "totalCashing": 1469076,
+          "percent": null
+        }
+      },
+      {
+        "name": "Faizan",
+        "isTotal": false,
+        "acqTarget": 0,
+        "retTarget": 1635048,
+        "totalTarget": 1635048,
+        "bookedRet": 553073,
+        "bookingAcq": 0,
+        "cashedRet": 332380,
+        "cashedAcq": 0,
+        "totalBooking": 553073,
+        "totalCashing": 332380,
+        "receivables": 260912,
+        "achievement": {
+          "bookingRet": 0.3382611641982376,
+          "bookingAcq": null,
+          "cashingRet": 0.20328458858700177,
+          "cashingAcq": null,
+          "booking": null,
+          "cashing": null
+        },
+        "ytdProspective": {
+          "totalCashing": 593292,
+          "percent": null
+        }
+      },
+      {
+        "name": "Bandar",
+        "isTotal": false,
+        "acqTarget": 0,
+        "retTarget": 0,
+        "totalTarget": 0,
+        "bookedRet": -203803,
+        "bookingAcq": 0,
+        "cashedRet": 179325,
+        "cashedAcq": 62957,
+        "totalBooking": -203803,
+        "totalCashing": 242282,
+        "receivables": 205893,
+        "achievement": {
+          "bookingRet": null,
+          "bookingAcq": null,
+          "cashingRet": null,
+          "cashingAcq": null,
+          "booking": null,
+          "cashing": null
+        },
+        "ytdProspective": {
+          "totalCashing": 448175,
+          "percent": null
+        }
+      },
+      {
+        "name": "Total",
+        "isTotal": true,
+        "acqTarget": 2720000,
+        "retTarget": 4782548,
+        "totalTarget": 7502548,
+        "bookedRet": 2127605,
+        "bookingAcq": 331942,
+        "cashedRet": 1322722,
+        "cashedAcq": 211057,
+        "totalBooking": 2459548,
+        "totalCashing": 1533779,
+        "receivables": 2179128,
+        "achievement": {
+          "bookingRet": 0.44486857424117865,
+          "bookingAcq": 0.12203757352941177,
+          "cashingRet": 0.2765726611403176,
+          "cashingAcq": 0.07759449448529411,
+          "booking": 0.3278282938009861,
+          "cashing": 0.20443442046506113
+        },
+        "ytdProspective": {
+          "totalCashing": 3712907,
+          "percent": 0.4948861693706987
+        }
+      }
+    ],
+    "topTotal": {
+      "name": "Total",
+      "isTotal": true,
+      "acqTarget": 2720000,
+      "retTarget": 4782548,
+      "totalTarget": 7502548,
+      "bookedRet": 2127605,
+      "bookingAcq": 331942,
+      "cashedRet": 1322722,
+      "cashedAcq": 211057,
+      "totalBooking": 2459548,
+      "totalCashing": 1533779,
+      "receivables": 2179128,
+      "achievement": {
+        "bookingRet": 0.44486857424117865,
+        "bookingAcq": 0.12203757352941177,
+        "cashingRet": 0.2765726611403176,
+        "cashingAcq": 0.07759449448529411,
+        "booking": 0.3278282938009861,
+        "cashing": 0.20443442046506113
+      },
+      "ytdProspective": {
+        "totalCashing": 3712907,
+        "percent": 0.4948861693706987
+      }
+    },
+    "projectionRows": [
+      {
+        "name": "Jihad",
+        "isTotal": false,
+        "lost": 20176,
+        "pendingHigh": 407482,
+        "pendingLow": 124880,
+        "pendingMedium": 156158,
+        "late": 0,
+        "totalProjection": {
+          "worst": 407482,
+          "medium": 563640,
+          "best": 708696,
+          "outstanding": 708696
+        }
+      },
+      {
+        "name": "Fadi",
+        "isTotal": false,
+        "lost": 78586,
+        "pendingHigh": 440442,
+        "pendingLow": 121467,
+        "pendingMedium": 577471,
+        "late": 0,
+        "totalProjection": {
+          "worst": 440442,
+          "medium": 1017913,
+          "best": 1217966,
+          "outstanding": 1217966
+        }
+      },
+      {
+        "name": "Faizan",
+        "isTotal": false,
+        "lost": 0,
+        "pendingHigh": 459282,
+        "pendingLow": 217138,
+        "pendingMedium": 222512,
+        "late": 0,
+        "totalProjection": {
+          "worst": 459282,
+          "medium": 681794,
+          "best": 898932,
+          "outstanding": 898932
+        }
+      },
+      {
+        "name": "Total",
+        "isTotal": true,
+        "lost": 98762,
+        "pendingHigh": 1307206,
+        "pendingLow": 463485,
+        "pendingMedium": 956141,
+        "late": 0,
+        "totalProjection": {
+          "worst": 1553863,
+          "medium": 2796766,
+          "best": 3645775,
+          "outstanding": 4009029
+        }
+      }
+    ],
+    "projectionTotal": {
+      "name": "Total",
+      "isTotal": true,
+      "lost": 98762,
+      "pendingHigh": 1307206,
+      "pendingLow": 463485,
+      "pendingMedium": 956141,
+      "late": 0,
+      "totalProjection": {
+        "worst": 1553863,
+        "medium": 2796766,
+        "best": 3645775,
+        "outstanding": 4009029
+      }
+    },
+    "closingYear": {
+      "reps": [
+        {
+          "name": "Jihad",
+          "target": 1808852,
+          "worst": {
+            "value": 1314836,
+            "vsTarget": 0.7268898436087107
+          },
+          "medium": {
+            "value": 1470994,
+            "vsTarget": 0.8132197368227492
+          },
+          "best": {
+            "value": 1616050,
+            "vsTarget": 0.8934120355846158
+          },
+          "outstanding": {
+            "value": 1616050,
+            "vsTarget": 0.8934120355846158
+          },
+          "actual": {
+            "booking": 835353,
+            "cashing": 240664
+          }
+        },
+        {
+          "name": "Fadi",
+          "target": 1948648,
+          "worst": {
+            "value": 1909518,
+            "vsTarget": 0.9799191542033245
+          },
+          "medium": {
+            "value": 2486989,
+            "vsTarget": 1.276263594040586
+          },
+          "best": {
+            "value": 2687042,
+            "vsTarget": 1.3789260553984095
+          },
+          "outstanding": {
+            "value": 2687042,
+            "vsTarget": 1.3789260553984095
+          },
+          "actual": {
+            "booking": 1228318,
+            "cashing": 553347
+          }
+        },
+        {
+          "name": "Faizan",
+          "target": 1635048,
+          "worst": {
+            "value": 1052574,
+            "vsTarget": 0.6437574397715582
+          },
+          "medium": {
+            "value": 1275086,
+            "vsTarget": 0.7798464108598687
+          },
+          "best": {
+            "value": 1492224,
+            "vsTarget": 0.9126485426627272
+          },
+          "outstanding": {
+            "value": 1492224,
+            "vsTarget": 0.9126485426627272
+          },
+          "actual": {
+            "booking": 553073,
+            "cashing": 332380
+          }
+        }
+      ],
+      "total": {
+        "name": "Total",
+        "target": 5867500,
+        "worst": {
+          "value": 4818595,
+          "vsTarget": 0.821234693862769
+        },
+        "medium": {
+          "value": 6061498,
+          "vsTarget": 1.033063086193404
+        },
+        "best": {
+          "value": 6910507,
+          "vsTarget": 1.1777599676591048
+        },
+        "outstanding": {
+          "value": 7273761,
+          "vsTarget": 1.2396694657417635
+        },
+        "actual": {
+          "booking": 2459548,
+          "cashing": 1533779
+        }
+      },
+      "delta": [
+        {
+          "name": "Projected Expenses",
+          "target": 3773275,
+          "worst": {
+            "value": 1045320,
+            "vsTarget": 0.27703243634238095
+          },
+          "medium": {
+            "value": 2288223,
+            "vsTarget": 0.606428807399354
+          },
+          "best": {
+            "value": 3137232,
+            "vsTarget": 0.831434658284858
+          },
+          "outstanding": {
+            "value": 3500486,
+            "vsTarget": 0.9277048691759272
+          },
+          "actual": {
+            "booking": -1313727,
+            "cashing": -2239496
+          }
+        },
+        {
+          "name": "Projected Expenses and Support Allocation - 2025",
+          "target": 4661275,
+          "worst": {
+            "value": 157320,
+            "vsTarget": 0.033750329306852206
+          },
+          "medium": {
+            "value": 1400223,
+            "vsTarget": 0.300394775729773
+          },
+          "best": {
+            "value": 2249232,
+            "vsTarget": 0.4825357032656939
+          },
+          "outstanding": {
+            "value": 2612486,
+            "vsTarget": 0.5604658790223269
+          },
+          "actual": {
+            "booking": -2201727,
+            "cashing": -3127496
+          }
+        },
+        {
+          "name": "Booking in 2025",
+          "target": 4439838,
+          "worst": {
+            "value": 378757,
+            "vsTarget": 0.08530864554963435
+          },
+          "medium": {
+            "value": 1621660,
+            "vsTarget": 0.36525198852746377
+          },
+          "best": {
+            "value": 2470669,
+            "vsTarget": 0.5564771980959209
+          },
+          "outstanding": {
+            "value": 2833923,
+            "vsTarget": 0.6382941427682264
+          },
+          "actual": {
+            "booking": -1980290,
+            "cashing": -2906059
+          }
+        },
+        {
+          "name": "Cashing in 2025",
+          "target": 4113486,
+          "worst": {
+            "value": 705109,
+            "vsTarget": 0.17141387286593354
+          },
+          "medium": {
+            "value": 1948012,
+            "vsTarget": 0.47356710542829067
+          },
+          "best": {
+            "value": 2797021,
+            "vsTarget": 0.6799635662403609
+          },
+          "outstanding": {
+            "value": 3160275,
+            "vsTarget": 0.7682716290367335
+          },
+          "actual": {
+            "booking": -1653938,
+            "cashing": -2579707
+          }
+        },
+        {
+          "name": "S.1 - Outstanding (20%)",
+          "target": 0,
+          "worst": {
+            "value": 3,
+            "vsTarget": 4
+          },
+          "medium": {
+            "value": 4,
+            "vsTarget": 4.84
+          },
+          "best": {
+            "value": 5,
+            "vsTarget": 5.856400000000001
+          },
+          "outstanding": {
+            "value": 27,
+            "vsTarget": null
+          },
+          "actual": {
+            "booking": 0,
+            "cashing": 0
+          }
+        },
+        {
+          "name": "Evalufy",
+          "target": 0,
+          "worst": {
+            "value": 0,
+            "vsTarget": null
+          },
+          "medium": {
+            "value": 0,
+            "vsTarget": null
+          },
+          "best": {
+            "value": 0,
+            "vsTarget": null
+          },
+          "outstanding": {
+            "value": 0,
+            "vsTarget": null
+          },
+          "actual": {
+            "booking": 0,
+            "cashing": 0
+          }
+        },
+        {
+          "name": "#SQLs",
+          "target": 0,
+          "worst": {
+            "value": 7,
+            "vsTarget": 7.7
+          },
+          "medium": {
+            "value": 8,
+            "vsTarget": 9.317
+          },
+          "best": {
+            "value": 10,
+            "vsTarget": 11.273570000000001
+          },
+          "outstanding": {
+            "value": 54,
+            "vsTarget": null
+          },
+          "actual": {
+            "booking": 0,
+            "cashing": 0
+          }
+        },
+        {
+          "name": "#Opportunities",
+          "target": 0,
+          "worst": {
+            "value": 4,
+            "vsTarget": 4.62
+          },
+          "medium": {
+            "value": 5,
+            "vsTarget": 5.5902
+          },
+          "best": {
+            "value": 6,
+            "vsTarget": 6.7641420000000005
+          },
+          "outstanding": {
+            "value": 32,
+            "vsTarget": null
+          },
+          "actual": {
+            "booking": 0,
+            "cashing": 0
+          }
+        },
+        {
+          "name": "#avg. Basket size",
+          "target": 0,
+          "worst": {
+            "value": 5000,
+            "vsTarget": 5000
+          },
+          "medium": {
+            "value": 5000,
+            "vsTarget": 5000
+          },
+          "best": {
+            "value": 5000,
+            "vsTarget": 5000
+          },
+          "outstanding": {
+            "value": 0,
+            "vsTarget": null
+          },
+          "actual": {
+            "booking": 0,
+            "cashing": 0
+          }
+        },
+        {
+          "name": "#Created Pipeline",
+          "target": 0,
+          "worst": {
+            "value": 21000,
+            "vsTarget": 23100
+          },
+          "medium": {
+            "value": 25410,
+            "vsTarget": 27951
+          },
+          "best": {
+            "value": 30746,
+            "vsTarget": 33820.71
+          },
+          "outstanding": {
+            "value": 162028,
+            "vsTarget": null
+          },
+          "actual": {
+            "booking": 0,
+            "cashing": 0
+          }
+        }
+      ]
+    },
+    "byName": {
+      "Ursula": {
+        "top": {
+          "name": "Ursula",
+          "isTotal": false,
+          "acqTarget": 450000,
+          "retTarget": 0,
+          "totalTarget": 450000,
+          "bookedRet": 1800,
+          "bookingAcq": 44805,
+          "cashedRet": 104924,
+          "cashedAcq": 60182,
+          "totalBooking": 46605,
+          "totalCashing": 165106,
+          "receivables": 94810,
+          "achievement": {
+            "bookingRet": null,
+            "bookingAcq": null,
+            "cashingRet": null,
+            "cashingAcq": null,
+            "booking": null,
+            "cashing": null
+          },
+          "ytdProspective": {
+            "totalCashing": 259916,
+            "percent": 0.5775911965886381
+          }
+        }
+      },
+      "Zain": {
+        "top": {
+          "name": "Zain",
+          "isTotal": false,
+          "acqTarget": 450000,
+          "retTarget": 0,
+          "totalTarget": 450000,
+          "bookedRet": 0,
+          "bookingAcq": 0,
+          "cashedRet": 0,
+          "cashedAcq": 0,
+          "totalBooking": 0,
+          "totalCashing": 0,
+          "receivables": 35094,
+          "achievement": {
+            "bookingRet": null,
+            "bookingAcq": null,
+            "cashingRet": null,
+            "cashingAcq": null,
+            "booking": null,
+            "cashing": null
+          },
+          "ytdProspective": {
+            "totalCashing": 35094,
+            "percent": 0.07798615555555555
+          }
+        }
+      },
+      "Jihad": {
+        "top": {
+          "name": "Jihad",
+          "isTotal": false,
+          "acqTarget": 610000,
+          "retTarget": 1198852,
+          "totalTarget": 1808852,
+          "bookedRet": 660218,
+          "bookingAcq": 175136,
+          "cashedRet": 215664,
+          "cashedAcq": 25000,
+          "totalBooking": 835353,
+          "totalCashing": 240664,
+          "receivables": 666690,
+          "achievement": {
+            "bookingRet": 0.5507082692442438,
+            "bookingAcq": 0.2871074098360656,
+            "cashingRet": 0.17989186938112756,
+            "cashingAcq": 0.04098412295081967,
+            "booking": 0.46181402900845403,
+            "cashing": 0.13304794554297616
+          },
+          "ytdProspective": {
+            "totalCashing": 907354,
+            "percent": 0.5016187877124848
+          }
+        },
+        "projection": {
+          "name": "Jihad",
+          "isTotal": false,
+          "lost": 20176,
+          "pendingHigh": 407482,
+          "pendingLow": 124880,
+          "pendingMedium": 156158,
+          "late": 0,
+          "totalProjection": {
+            "worst": 407482,
+            "medium": 563640,
+            "best": 708696,
+            "outstanding": 708696
+          }
+        },
+        "closing": {
+          "name": "Jihad",
+          "target": 1808852,
+          "worst": {
+            "value": 1314836,
+            "vsTarget": 0.7268898436087107
+          },
+          "medium": {
+            "value": 1470994,
+            "vsTarget": 0.8132197368227492
+          },
+          "best": {
+            "value": 1616050,
+            "vsTarget": 0.8934120355846158
+          },
+          "outstanding": {
+            "value": 1616050,
+            "vsTarget": 0.8934120355846158
+          },
+          "actual": {
+            "booking": 835353,
+            "cashing": 240664
+          }
+        }
+      },
+      "Fadi": {
+        "top": {
+          "name": "Fadi",
+          "isTotal": false,
+          "acqTarget": 0,
+          "retTarget": 1948648,
+          "totalTarget": 1948648,
+          "bookedRet": 1116317,
+          "bookingAcq": 112001,
+          "cashedRet": 490429,
+          "cashedAcq": 62918,
+          "totalBooking": 1228318,
+          "totalCashing": 553347,
+          "receivables": 915729,
+          "achievement": {
+            "bookingRet": 0.5728674239780607,
+            "bookingAcq": null,
+            "cashingRet": 0.25167648030839845,
+            "cashingAcq": null,
+            "booking": null,
+            "cashing": null
+          },
+          "ytdProspective": {
+            "totalCashing": 1469076,
+            "percent": null
+          }
+        },
+        "projection": {
+          "name": "Fadi",
+          "isTotal": false,
+          "lost": 78586,
+          "pendingHigh": 440442,
+          "pendingLow": 121467,
+          "pendingMedium": 577471,
+          "late": 0,
+          "totalProjection": {
+            "worst": 440442,
+            "medium": 1017913,
+            "best": 1217966,
+            "outstanding": 1217966
+          }
+        },
+        "closing": {
+          "name": "Fadi",
+          "target": 1948648,
+          "worst": {
+            "value": 1909518,
+            "vsTarget": 0.9799191542033245
+          },
+          "medium": {
+            "value": 2486989,
+            "vsTarget": 1.276263594040586
+          },
+          "best": {
+            "value": 2687042,
+            "vsTarget": 1.3789260553984095
+          },
+          "outstanding": {
+            "value": 2687042,
+            "vsTarget": 1.3789260553984095
+          },
+          "actual": {
+            "booking": 1228318,
+            "cashing": 553347
+          }
+        }
+      },
+      "Faizan": {
+        "top": {
+          "name": "Faizan",
+          "isTotal": false,
+          "acqTarget": 0,
+          "retTarget": 1635048,
+          "totalTarget": 1635048,
+          "bookedRet": 553073,
+          "bookingAcq": 0,
+          "cashedRet": 332380,
+          "cashedAcq": 0,
+          "totalBooking": 553073,
+          "totalCashing": 332380,
+          "receivables": 260912,
+          "achievement": {
+            "bookingRet": 0.3382611641982376,
+            "bookingAcq": null,
+            "cashingRet": 0.20328458858700177,
+            "cashingAcq": null,
+            "booking": null,
+            "cashing": null
+          },
+          "ytdProspective": {
+            "totalCashing": 593292,
+            "percent": null
+          }
+        },
+        "projection": {
+          "name": "Faizan",
+          "isTotal": false,
+          "lost": 0,
+          "pendingHigh": 459282,
+          "pendingLow": 217138,
+          "pendingMedium": 222512,
+          "late": 0,
+          "totalProjection": {
+            "worst": 459282,
+            "medium": 681794,
+            "best": 898932,
+            "outstanding": 898932
+          }
+        },
+        "closing": {
+          "name": "Faizan",
+          "target": 1635048,
+          "worst": {
+            "value": 1052574,
+            "vsTarget": 0.6437574397715582
+          },
+          "medium": {
+            "value": 1275086,
+            "vsTarget": 0.7798464108598687
+          },
+          "best": {
+            "value": 1492224,
+            "vsTarget": 0.9126485426627272
+          },
+          "outstanding": {
+            "value": 1492224,
+            "vsTarget": 0.9126485426627272
+          },
+          "actual": {
+            "booking": 553073,
+            "cashing": 332380
+          }
+        }
+      },
+      "Bandar": {
+        "top": {
+          "name": "Bandar",
+          "isTotal": false,
+          "acqTarget": 0,
+          "retTarget": 0,
+          "totalTarget": 0,
+          "bookedRet": -203803,
+          "bookingAcq": 0,
+          "cashedRet": 179325,
+          "cashedAcq": 62957,
+          "totalBooking": -203803,
+          "totalCashing": 242282,
+          "receivables": 205893,
+          "achievement": {
+            "bookingRet": null,
+            "bookingAcq": null,
+            "cashingRet": null,
+            "cashingAcq": null,
+            "booking": null,
+            "cashing": null
+          },
+          "ytdProspective": {
+            "totalCashing": 448175,
+            "percent": null
+          }
+        }
+      },
+      "Total": {
+        "top": {
+          "name": "Total",
+          "isTotal": true,
+          "acqTarget": 2720000,
+          "retTarget": 4782548,
+          "totalTarget": 7502548,
+          "bookedRet": 2127605,
+          "bookingAcq": 331942,
+          "cashedRet": 1322722,
+          "cashedAcq": 211057,
+          "totalBooking": 2459548,
+          "totalCashing": 1533779,
+          "receivables": 2179128,
+          "achievement": {
+            "bookingRet": 0.44486857424117865,
+            "bookingAcq": 0.12203757352941177,
+            "cashingRet": 0.2765726611403176,
+            "cashingAcq": 0.07759449448529411,
+            "booking": 0.3278282938009861,
+            "cashing": 0.20443442046506113
+          },
+          "ytdProspective": {
+            "totalCashing": 3712907,
+            "percent": 0.4948861693706987
+          }
+        },
+        "projection": {
+          "name": "Total",
+          "isTotal": true,
+          "lost": 98762,
+          "pendingHigh": 1307206,
+          "pendingLow": 463485,
+          "pendingMedium": 956141,
+          "late": 0,
+          "totalProjection": {
+            "worst": 1553863,
+            "medium": 2796766,
+            "best": 3645775,
+            "outstanding": 4009029
+          }
+        }
+      }
+    }
+  },
   "accounts": [
     {
       "id": "ret-2",
@@ -67,7 +1031,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 52401,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "aski for 6 month extension"
+      "notes": "aski for 6 month extension",
+      "sourceIds": [
+        "ret-2"
+      ]
     },
     {
       "id": "ret-3",
@@ -98,7 +1065,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 6750,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-3"
+      ]
     },
     {
       "id": "ret-4",
@@ -129,7 +1099,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 14000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-4"
+      ]
     },
     {
       "id": "ret-5",
@@ -160,7 +1133,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 45000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-5"
+      ]
     },
     {
       "id": "ret-6",
@@ -191,7 +1167,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 24725,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-6"
+      ]
     },
     {
       "id": "ret-7",
@@ -222,7 +1201,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 28000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-7"
+      ]
     },
     {
       "id": "ret-8",
@@ -253,7 +1235,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 64279,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-8"
+      ]
     },
     {
       "id": "ret-9",
@@ -284,7 +1269,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 66101,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-9"
+      ]
     },
     {
       "id": "ret-10",
@@ -315,7 +1303,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 80000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-10"
+      ]
     },
     {
       "id": "ret-11",
@@ -337,7 +1328,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-11"
+      ]
     },
     {
       "id": "ret-12",
@@ -359,7 +1353,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-12"
+      ]
     },
     {
       "id": "ret-13",
@@ -390,7 +1387,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 28000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed"
+      "notes": "renewed",
+      "sourceIds": [
+        "ret-13"
+      ]
     },
     {
       "id": "ret-14",
@@ -412,7 +1412,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "next year"
+      "notes": "next year",
+      "sourceIds": [
+        "ret-14"
+      ]
     },
     {
       "id": "ret-15",
@@ -434,7 +1437,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost"
+      "notes": "lost",
+      "sourceIds": [
+        "ret-15"
+      ]
     },
     {
       "id": "ret-16",
@@ -465,7 +1471,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 69002,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "%100 he will renew with the same value"
+      "notes": "%100 he will renew with the same value",
+      "sourceIds": [
+        "ret-16"
+      ]
     },
     {
       "id": "ret-17",
@@ -496,7 +1505,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 48793,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "net year"
+      "notes": "net year",
+      "sourceIds": [
+        "ret-17"
+      ]
     },
     {
       "id": "ret-18",
@@ -527,7 +1539,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 108920,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "2 year deal"
+      "notes": "2 year deal",
+      "sourceIds": [
+        "ret-18"
+      ]
     },
     {
       "id": "ret-19",
@@ -558,7 +1573,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-19"
+      ]
     },
     {
       "id": "ret-20",
@@ -589,7 +1607,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 39855,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-20"
+      ]
     },
     {
       "id": "ret-21",
@@ -620,7 +1641,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 60002,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "need to call for renewal discussion"
+      "notes": "need to call for renewal discussion",
+      "sourceIds": [
+        "ret-21"
+      ]
     },
     {
       "id": "ret-22",
@@ -642,7 +1666,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost"
+      "notes": "lost",
+      "sourceIds": [
+        "ret-22"
+      ]
     },
     {
       "id": "ret-23",
@@ -664,7 +1691,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost"
+      "notes": "lost",
+      "sourceIds": [
+        "ret-23"
+      ]
     },
     {
       "id": "ret-24",
@@ -695,7 +1725,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 32850,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost this will be loat renewal"
+      "notes": "lost this will be loat renewal",
+      "sourceIds": [
+        "ret-24"
+      ]
     },
     {
       "id": "ret-25",
@@ -726,7 +1759,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 135153,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed"
+      "notes": "renewed",
+      "sourceIds": [
+        "ret-25"
+      ]
     },
     {
       "id": "ret-26",
@@ -757,7 +1793,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 12000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed"
+      "notes": "renewed",
+      "sourceIds": [
+        "ret-26"
+      ]
     },
     {
       "id": "ret-27",
@@ -788,7 +1827,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 14996,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "need to call for renewal discussion"
+      "notes": "need to call for renewal discussion",
+      "sourceIds": [
+        "ret-27"
+      ]
     },
     {
       "id": "ret-28",
@@ -819,7 +1861,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 36282,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-28"
+      ]
     },
     {
       "id": "ret-29",
@@ -850,7 +1895,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-29"
+      ]
     },
     {
       "id": "ret-30",
@@ -881,7 +1929,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 22000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-30"
+      ]
     },
     {
       "id": "ret-31",
@@ -903,7 +1954,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Renewed"
+      "notes": "Renewed",
+      "sourceIds": [
+        "ret-31"
+      ]
     },
     {
       "id": "ret-32",
@@ -934,7 +1988,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3100,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-32"
+      ]
     },
     {
       "id": "ret-33",
@@ -965,7 +2022,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 16550,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-33"
+      ]
     },
     {
       "id": "ret-34",
@@ -996,7 +2056,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3750,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-34"
+      ]
     },
     {
       "id": "ret-35",
@@ -1027,7 +2090,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 22710,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-35"
+      ]
     },
     {
       "id": "ret-36",
@@ -1058,7 +2124,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-36"
+      ]
     },
     {
       "id": "ret-37",
@@ -1089,7 +2158,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7700,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-37"
+      ]
     },
     {
       "id": "ret-38",
@@ -1120,7 +2192,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1805,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-38"
+      ]
     },
     {
       "id": "ret-39",
@@ -1151,7 +2226,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-39"
+      ]
     },
     {
       "id": "ret-40",
@@ -1182,7 +2260,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 9856,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-40"
+      ]
     },
     {
       "id": "ret-41",
@@ -1213,7 +2294,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2121,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-41"
+      ]
     },
     {
       "id": "ret-42",
@@ -1244,7 +2328,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 8000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-42"
+      ]
     },
     {
       "id": "ret-43",
@@ -1266,7 +2353,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-43"
+      ]
     },
     {
       "id": "ret-44",
@@ -1297,7 +2387,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "He told us he will not renew"
+      "notes": "He told us he will not renew",
+      "sourceIds": [
+        "ret-44"
+      ]
     },
     {
       "id": "ret-45",
@@ -1328,7 +2421,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 9580,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "He told us he will not renew"
+      "notes": "He told us he will not renew",
+      "sourceIds": [
+        "ret-45"
+      ]
     },
     {
       "id": "ret-46",
@@ -1359,7 +2455,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 78668,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-46"
+      ]
     },
     {
       "id": "ret-47",
@@ -1390,7 +2489,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 57901,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-47"
+      ]
     },
     {
       "id": "ret-48",
@@ -1421,7 +2523,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-48"
+      ]
     },
     {
       "id": "ret-49",
@@ -1443,7 +2548,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-49"
+      ]
     },
     {
       "id": "ret-50",
@@ -1465,7 +2573,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-50"
+      ]
     },
     {
       "id": "ret-51",
@@ -1496,7 +2607,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 56000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-51"
+      ]
     },
     {
       "id": "ret-52",
@@ -1527,7 +2641,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 38000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "They have problem with ministry of Finance"
+      "notes": "They have problem with ministry of Finance",
+      "sourceIds": [
+        "ret-52"
+      ]
     },
     {
       "id": "ret-53",
@@ -1558,7 +2675,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 27500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-53"
+      ]
     },
     {
       "id": "ret-54",
@@ -1589,7 +2709,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-54"
+      ]
     },
     {
       "id": "ret-55",
@@ -1620,7 +2743,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 75000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-55"
+      ]
     },
     {
       "id": "ret-56",
@@ -1651,7 +2777,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 50000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-56"
+      ]
     },
     {
       "id": "ret-57",
@@ -1682,7 +2811,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 35000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-57"
+      ]
     },
     {
       "id": "ret-58",
@@ -1713,7 +2845,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 53001,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-58"
+      ]
     },
     {
       "id": "ret-59",
@@ -1744,7 +2879,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 9262,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-59"
+      ]
     },
     {
       "id": "ret-60",
@@ -1775,7 +2913,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-60"
+      ]
     },
     {
       "id": "ret-61",
@@ -1806,7 +2947,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 19200,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-61"
+      ]
     },
     {
       "id": "ret-62",
@@ -1828,7 +2972,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-62"
+      ]
     },
     {
       "id": "ret-63",
@@ -1859,7 +3006,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-63"
+      ]
     },
     {
       "id": "ret-64",
@@ -1890,7 +3040,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 113400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-64"
+      ]
     },
     {
       "id": "ret-65",
@@ -1921,7 +3074,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 33000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-65"
+      ]
     },
     {
       "id": "ret-66",
@@ -1952,7 +3108,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 33600,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-66"
+      ]
     },
     {
       "id": "ret-67",
@@ -1974,7 +3133,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-67"
+      ]
     },
     {
       "id": "ret-68",
@@ -2005,7 +3167,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-68"
+      ]
     },
     {
       "id": "ret-69",
@@ -2036,7 +3201,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 18400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-69"
+      ]
     },
     {
       "id": "ret-70",
@@ -2058,7 +3226,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-70"
+      ]
     },
     {
       "id": "ret-71",
@@ -2089,7 +3260,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-71"
+      ]
     },
     {
       "id": "ret-72",
@@ -2120,7 +3294,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 65334,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "I will push to received in October"
+      "notes": "I will push to received in October",
+      "sourceIds": [
+        "ret-72"
+      ]
     },
     {
       "id": "ret-73",
@@ -2151,7 +3328,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-73"
+      ]
     },
     {
       "id": "ret-74",
@@ -2182,7 +3362,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 39066,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-74"
+      ]
     },
     {
       "id": "ret-75",
@@ -2213,7 +3396,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-75"
+      ]
     },
     {
       "id": "ret-76",
@@ -2244,7 +3430,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 282240,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-76"
+      ]
     },
     {
       "id": "ret-77",
@@ -2266,7 +3455,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-77"
+      ]
     },
     {
       "id": "ret-78",
@@ -2297,7 +3489,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 8115,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-78"
+      ]
     },
     {
       "id": "ret-79",
@@ -2328,7 +3523,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 265200,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Renewed the value is 176,822"
+      "notes": "Renewed the value is 176,822",
+      "sourceIds": [
+        "ret-79"
+      ]
     },
     {
       "id": "ret-80",
@@ -2359,7 +3557,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23067,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost they will use the system of the Ministry of Enviroment"
+      "notes": "lost they will use the system of the Ministry of Enviroment",
+      "sourceIds": [
+        "ret-80"
+      ]
     },
     {
       "id": "ret-81",
@@ -2381,7 +3582,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Lost"
+      "notes": "Lost",
+      "sourceIds": [
+        "ret-81"
+      ]
     },
     {
       "id": "ret-82",
@@ -2412,7 +3616,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 22667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Asked them many times but they prefer online meetings"
+      "notes": "Asked them many times but they prefer online meetings",
+      "sourceIds": [
+        "ret-82"
+      ]
     },
     {
       "id": "ret-83",
@@ -2443,7 +3650,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 12000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-83"
+      ]
     },
     {
       "id": "ret-84",
@@ -2474,7 +3684,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-84"
+      ]
     },
     {
       "id": "ret-85",
@@ -2505,7 +3718,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20134,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "We need to be sure Mariam fix all the pending items"
+      "notes": "We need to be sure Mariam fix all the pending items",
+      "sourceIds": [
+        "ret-85"
+      ]
     },
     {
       "id": "ret-86",
@@ -2536,7 +3752,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23066,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Jadart-Lost he wants morefree months we alreday give him one month"
+      "notes": "Jadart-Lost he wants morefree months we alreday give him one month",
+      "sourceIds": [
+        "ret-86"
+      ]
     },
     {
       "id": "ret-87",
@@ -2567,7 +3786,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 21333,
       "differenceRaw": "",
       "difference": 0,
-      "notes": "Its not coming delivery note singed on March so this year thier is no booking"
+      "notes": "Its not coming delivery note singed on March so this year thier is no booking",
+      "sourceIds": [
+        "ret-87"
+      ]
     },
     {
       "id": "ret-88",
@@ -2598,7 +3820,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-88"
+      ]
     },
     {
       "id": "ret-89",
@@ -2629,7 +3854,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 26667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "follow up on the renewal"
+      "notes": "follow up on the renewal",
+      "sourceIds": [
+        "ret-89"
+      ]
     },
     {
       "id": "ret-90",
@@ -2651,7 +3879,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-90"
+      ]
     },
     {
       "id": "ret-91",
@@ -2682,7 +3913,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1333,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-91"
+      ]
     },
     {
       "id": "ret-92",
@@ -2713,7 +3947,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 73068,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Finish Sama requiments"
+      "notes": "Finish Sama requiments",
+      "sourceIds": [
+        "ret-92"
+      ]
     },
     {
       "id": "ret-93",
@@ -2744,7 +3981,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 26000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Finish Sama requiments"
+      "notes": "Finish Sama requiments",
+      "sourceIds": [
+        "ret-93"
+      ]
     },
     {
       "id": "ret-94",
@@ -2775,7 +4015,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 45000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "The renewal amount is 27k they are going with Oracle"
+      "notes": "The renewal amount is 27k they are going with Oracle",
+      "sourceIds": [
+        "ret-94"
+      ]
     },
     {
       "id": "ret-95",
@@ -2806,7 +4049,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-95"
+      ]
     },
     {
       "id": "ret-96",
@@ -2837,7 +4083,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-96"
+      ]
     },
     {
       "id": "ret-97",
@@ -2868,7 +4117,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23067,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Reducethe the amount 18,666"
+      "notes": "Reducethe the amount 18,666",
+      "sourceIds": [
+        "ret-97"
+      ]
     },
     {
       "id": "ret-98",
@@ -2913,7 +4165,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 24671,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-98"
+      ]
     },
     {
       "id": "ret-99",
@@ -2944,7 +4199,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-99"
+      ]
     },
     {
       "id": "ret-100",
@@ -2975,7 +4233,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 34667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Every year they have problem in the renewal because all the regions has Oracle only them using Talentera"
+      "notes": "Every year they have problem in the renewal because all the regions has Oracle only them using Talentera",
+      "sourceIds": [
+        "ret-100"
+      ]
     },
     {
       "id": "ret-101",
@@ -3006,7 +4267,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23200,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-101"
+      ]
     },
     {
       "id": "ret-102",
@@ -3037,7 +4301,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 21252,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-102"
+      ]
     },
     {
       "id": "ret-103",
@@ -3068,7 +4335,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 26600,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-103"
+      ]
     },
     {
       "id": "ret-104",
@@ -3099,7 +4369,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 81334,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Jadrat Risk but they are happy"
+      "notes": "Jadrat Risk but they are happy",
+      "sourceIds": [
+        "ret-104"
+      ]
     },
     {
       "id": "ret-105",
@@ -3130,7 +4403,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 32000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Finish Sama requiments"
+      "notes": "Finish Sama requiments",
+      "sourceIds": [
+        "ret-105"
+      ]
     },
     {
       "id": "ret-106",
@@ -3161,7 +4437,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 50667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-106"
+      ]
     },
     {
       "id": "ret-107",
@@ -3183,7 +4462,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-107"
+      ]
     },
     {
       "id": "ret-108",
@@ -3214,7 +4496,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-108"
+      ]
     },
     {
       "id": "ret-109",
@@ -3245,7 +4530,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 42721,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-109"
+      ]
     },
     {
       "id": "ret-110",
@@ -3267,7 +4555,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-110"
+      ]
     },
     {
       "id": "ret-111",
@@ -3298,7 +4589,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 57307,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "sahred renewal proposal"
+      "notes": "sahred renewal proposal",
+      "sourceIds": [
+        "ret-111"
+      ]
     },
     {
       "id": "ret-112",
@@ -3329,7 +4623,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 81501,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Finish Sama requiments"
+      "notes": "Finish Sama requiments",
+      "sourceIds": [
+        "ret-112"
+      ]
     },
     {
       "id": "ret-113",
@@ -3360,7 +4657,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 10667,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-113"
+      ]
     },
     {
       "id": "ret-114",
@@ -3391,7 +4691,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 63000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-114"
+      ]
     },
     {
       "id": "ret-115",
@@ -3422,7 +4725,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 40001,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-115"
+      ]
     },
     {
       "id": "ret-116",
@@ -3453,7 +4759,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 31000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-116"
+      ]
     },
     {
       "id": "ret-117",
@@ -3484,7 +4793,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 12233,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-117"
+      ]
     },
     {
       "id": "ret-118",
@@ -3515,7 +4827,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 11330,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed"
+      "notes": "renewed",
+      "sourceIds": [
+        "ret-118"
+      ]
     },
     {
       "id": "ret-119",
@@ -3546,7 +4861,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 40968,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed"
+      "notes": "renewed",
+      "sourceIds": [
+        "ret-119"
+      ]
     },
     {
       "id": "ret-120",
@@ -3577,7 +4895,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 6250,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect"
+      "notes": "connect",
+      "sourceIds": [
+        "ret-120"
+      ]
     },
     {
       "id": "ret-121",
@@ -3608,7 +4929,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5709,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "paid"
+      "notes": "paid",
+      "sourceIds": [
+        "ret-121"
+      ]
     },
     {
       "id": "ret-122",
@@ -3639,7 +4963,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1800,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-122"
+      ]
     },
     {
       "id": "ret-123",
@@ -3670,7 +4997,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-123"
+      ]
     },
     {
       "id": "ret-124",
@@ -3701,7 +5031,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-124"
+      ]
     },
     {
       "id": "ret-125",
@@ -3732,7 +5065,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-125"
+      ]
     },
     {
       "id": "ret-126",
@@ -3763,7 +5099,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1700,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-126"
+      ]
     },
     {
       "id": "ret-127",
@@ -3794,7 +5133,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7820,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-127"
+      ]
     },
     {
       "id": "ret-128",
@@ -3825,7 +5167,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 12960,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed"
+      "notes": "renewed",
+      "sourceIds": [
+        "ret-128"
+      ]
     },
     {
       "id": "ret-129",
@@ -3856,7 +5201,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 31900,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect"
+      "notes": "connect",
+      "sourceIds": [
+        "ret-129"
+      ]
     },
     {
       "id": "ret-130",
@@ -3887,7 +5235,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-130"
+      ]
     },
     {
       "id": "ret-131",
@@ -3918,7 +5269,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-131"
+      ]
     },
     {
       "id": "ret-132",
@@ -3949,7 +5303,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-132"
+      ]
     },
     {
       "id": "ret-133",
@@ -3980,7 +5337,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 13000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Sor the Pedning issue Ghadeer Al-Omari"
+      "notes": "Sor the Pedning issue Ghadeer Al-Omari",
+      "sourceIds": [
+        "ret-133"
+      ]
     },
     {
       "id": "ret-134",
@@ -4011,7 +5371,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2550,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-134"
+      ]
     },
     {
       "id": "ret-135",
@@ -4042,7 +5405,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 15000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "miving to Darwin box need to meet and persue"
+      "notes": "miving to Darwin box need to meet and persue",
+      "sourceIds": [
+        "ret-135"
+      ]
     },
     {
       "id": "ret-136",
@@ -4073,7 +5439,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 9400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "push them to use the system"
+      "notes": "push them to use the system",
+      "sourceIds": [
+        "ret-136"
+      ]
     },
     {
       "id": "ret-137",
@@ -4104,7 +5473,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 53000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-137"
+      ]
     },
     {
       "id": "ret-138",
@@ -4135,7 +5507,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 68493,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "bassam to spek and sort for payment"
+      "notes": "bassam to spek and sort for payment",
+      "sourceIds": [
+        "ret-138"
+      ]
     },
     {
       "id": "ret-139",
@@ -4166,7 +5541,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7201,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed"
+      "notes": "renewed",
+      "sourceIds": [
+        "ret-139"
+      ]
     },
     {
       "id": "ret-140",
@@ -4197,7 +5575,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 23633,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect"
+      "notes": "connect",
+      "sourceIds": [
+        "ret-140"
+      ]
     },
     {
       "id": "ret-141",
@@ -4228,7 +5609,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "early renewal"
+      "notes": "early renewal",
+      "sourceIds": [
+        "ret-141"
+      ]
     },
     {
       "id": "ret-142",
@@ -4259,7 +5643,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3350,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect"
+      "notes": "connect",
+      "sourceIds": [
+        "ret-142"
+      ]
     },
     {
       "id": "ret-143",
@@ -4290,7 +5677,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 600,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-143"
+      ]
     },
     {
       "id": "ret-144",
@@ -4321,7 +5711,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-144"
+      ]
     },
     {
       "id": "ret-145",
@@ -4352,7 +5745,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1300,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "He has a finance problem he wants to pay throw Visa, but we dont have"
+      "notes": "He has a finance problem he wants to pay throw Visa, but we dont have",
+      "sourceIds": [
+        "ret-145"
+      ]
     },
     {
       "id": "ret-146",
@@ -4383,7 +5779,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-146"
+      ]
     },
     {
       "id": "ret-147",
@@ -4421,7 +5820,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-147"
+      ]
     },
     {
       "id": "ret-148",
@@ -4452,7 +5854,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-148"
+      ]
     },
     {
       "id": "ret-149",
@@ -4483,7 +5888,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4533,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-149"
+      ]
     },
     {
       "id": "ret-150",
@@ -4505,7 +5913,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-150"
+      ]
     },
     {
       "id": "ret-151",
@@ -4536,7 +5947,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5333,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-151"
+      ]
     },
     {
       "id": "ret-152",
@@ -4567,7 +5981,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 14934,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "They dont have a new projects so they hold the package"
+      "notes": "They dont have a new projects so they hold the package",
+      "sourceIds": [
+        "ret-152"
+      ]
     },
     {
       "id": "ret-153",
@@ -4598,7 +6015,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 8000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-153"
+      ]
     },
     {
       "id": "ret-154",
@@ -4620,7 +6040,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "lost"
+      "notes": "lost",
+      "sourceIds": [
+        "ret-154"
+      ]
     },
     {
       "id": "ret-155",
@@ -4651,7 +6074,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 2720,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-155"
+      ]
     },
     {
       "id": "ret-156",
@@ -4682,7 +6108,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "visit"
+      "notes": "visit",
+      "sourceIds": [
+        "ret-156"
+      ]
     },
     {
       "id": "ret-157",
@@ -4713,7 +6142,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 600,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "renewed"
+      "notes": "renewed",
+      "sourceIds": [
+        "ret-157"
+      ]
     },
     {
       "id": "ret-158",
@@ -4744,7 +6176,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3300,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect"
+      "notes": "connect",
+      "sourceIds": [
+        "ret-158"
+      ]
     },
     {
       "id": "ret-159",
@@ -4775,7 +6210,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 45251,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "connect"
+      "notes": "connect",
+      "sourceIds": [
+        "ret-159"
+      ]
     },
     {
       "id": "ret-160",
@@ -4806,7 +6244,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 20725,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "send invoice for December for 20207"
+      "notes": "send invoice for December for 20207",
+      "sourceIds": [
+        "ret-160"
+      ]
     },
     {
       "id": "ret-161",
@@ -4837,7 +6278,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 6200,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-161"
+      ]
     },
     {
       "id": "ret-162",
@@ -4868,7 +6312,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 36651,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-162"
+      ]
     },
     {
       "id": "ret-163",
@@ -4890,7 +6337,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-163"
+      ]
     },
     {
       "id": "ret-164",
@@ -4921,7 +6371,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 21000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-164"
+      ]
     },
     {
       "id": "ret-165",
@@ -4952,7 +6405,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3500,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-165"
+      ]
     },
     {
       "id": "ret-166",
@@ -4983,7 +6439,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 24000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-166"
+      ]
     },
     {
       "id": "ret-167",
@@ -5014,7 +6473,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 36000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-167"
+      ]
     },
     {
       "id": "ret-168",
@@ -5036,7 +6498,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-168"
+      ]
     },
     {
       "id": "ret-169",
@@ -5058,7 +6523,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-169"
+      ]
     },
     {
       "id": "ret-170",
@@ -5080,7 +6548,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-170"
+      ]
     },
     {
       "id": "ret-171",
@@ -5111,7 +6582,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 68000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "They are not happy with the customer support(TAM)"
+      "notes": "They are not happy with the customer support(TAM)",
+      "sourceIds": [
+        "ret-171"
+      ]
     },
     {
       "id": "ret-172",
@@ -5142,7 +6616,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 13867,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "Because they want lower price"
+      "notes": "Because they want lower price",
+      "sourceIds": [
+        "ret-172"
+      ]
     },
     {
       "id": "ret-173",
@@ -5173,7 +6650,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 14934,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-173"
+      ]
     },
     {
       "id": "ret-174",
@@ -5204,7 +6684,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 48001,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-174"
+      ]
     },
     {
       "id": "ret-175",
@@ -5235,7 +6718,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 21467,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-175"
+      ]
     },
     {
       "id": "ret-176",
@@ -5266,7 +6752,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 25334,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-176"
+      ]
     },
     {
       "id": "ret-177",
@@ -5297,7 +6786,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 22400,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-177"
+      ]
     },
     {
       "id": "ret-178",
@@ -5328,7 +6820,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7514,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-178"
+      ]
     },
     {
       "id": "ret-179",
@@ -5359,7 +6854,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 5100,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "send the invoice"
+      "notes": "send the invoice",
+      "sourceIds": [
+        "ret-179"
+      ]
     },
     {
       "id": "ret-180",
@@ -5381,7 +6879,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 0,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-180"
+      ]
     },
     {
       "id": "ret-181",
@@ -5412,7 +6913,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 4000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-181"
+      ]
     },
     {
       "id": "ret-182",
@@ -5443,7 +6947,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-182"
+      ]
     },
     {
       "id": "ret-183",
@@ -5474,7 +6981,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-183"
+      ]
     },
     {
       "id": "ret-184",
@@ -5505,7 +7015,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 1000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-184"
+      ]
     },
     {
       "id": "ret-185",
@@ -5536,7 +7049,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 8000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-185"
+      ]
     },
     {
       "id": "ret-186",
@@ -5567,7 +7083,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 3000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-186"
+      ]
     },
     {
       "id": "ret-187",
@@ -5598,7 +7117,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 37000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-187"
+      ]
     },
     {
       "id": "ret-188",
@@ -5629,7 +7151,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 75601,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "",
+      "sourceIds": [
+        "ret-188"
+      ]
     },
     {
       "id": "ret-189",
@@ -5660,29 +7185,10 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 26503,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "send the invoice"
-    },
-    {
-      "id": "ret-190",
-      "rowNumber": 190,
-      "status": "",
-      "product": "",
-      "csm": "",
-      "location": "",
-      "rm": "",
-      "clientName": "",
-      "originalValueRaw": "4712549",
-      "originalValue": 4712549,
-      "updatedValueRaw": "4437875.86",
-      "updatedValue": 4437876,
-      "renewalStatusRaw": "",
-      "renewalStatus": "",
-      "renewalSchedule": [],
-      "renewalMonths": [],
-      "monthlyTotal": 0,
-      "differenceRaw": "",
-      "difference": 0,
-      "notes": "send the invoice"
+      "notes": "send the invoice",
+      "sourceIds": [
+        "ret-189"
+      ]
     }
   ],
   "actions": [
@@ -8594,16 +10100,6 @@ window.DASHBOARD_DATA = {
       "pendingMedium": 577471,
       "pendingLow": 121467,
       "lost": 78586
-    },
-    "Unassigned": {
-      "name": "Unassigned",
-      "accountsCount": 1,
-      "updatedValue": 4437876,
-      "renewed": 0,
-      "pendingHigh": 0,
-      "pendingMedium": 0,
-      "pendingLow": 0,
-      "lost": 0
     }
   },
   "csms": {
@@ -8656,17 +10152,18 @@ window.DASHBOARD_DATA = {
       "pendingMedium": 435003,
       "pendingLow": 44399,
       "lost": 63652
-    },
-    "Unassigned": {
-      "name": "Unassigned",
-      "accountsCount": 1,
-      "updatedValue": 4437876,
-      "renewed": 0,
-      "pendingHigh": 0,
-      "pendingMedium": 0,
-      "pendingLow": 0,
-      "lost": 0
     }
+  },
+  "corrections": {
+    "sourceRows": 189,
+    "mappedAccounts": 189,
+    "removedTotalRows": 1,
+    "removedTotalRowValue": 4437876,
+    "dedupedAccounts": 188,
+    "mirroredBatchDetected": false,
+    "removedMirroredAccounts": 0,
+    "removedMirroredValue": 0,
+    "finalAccounts": 188
   },
   "filters": {
     "rms": [
@@ -8735,4 +10232,4 @@ window.DASHBOARD_DATA = {
     "actionStatuses": []
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-07-06T10:00:42.334Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-07-06T11:17:45.118Z";
