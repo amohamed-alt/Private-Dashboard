@@ -86,10 +86,214 @@ function parseMoney(value) {
   return Math.round(negative ? -number : number);
 }
 
+function parsePercent(value) {
+  if (value === null || value === undefined || value === "") return null;
+  if (typeof value === "number") return Number.isFinite(value) ? value : null;
+  const text = String(value).trim();
+  if (!text || text.includes("#DIV/0!") || text.includes("#VALUE!") || text.includes("#REF!")) return null;
+  const number = Number(text.replace(/%/g, "").replace(/,/g, ""));
+  return Number.isFinite(number) ? number : null;
+}
+
 function rowValues(row) {
   return Object.entries(row)
     .filter(([key]) => key !== "row_number" && key !== "__rowNum__")
     .map(([, value]) => value);
+}
+
+function rowHasAny(values, needles) {
+  const joined = values.map(cleanText).join(" | ").toLowerCase();
+  return needles.some((needle) => joined.includes(String(needle).toLowerCase()));
+}
+
+function findSummaryRows(summaryRows) {
+  return summaryRows.map((row) => rowValues(row).map(cleanText));
+}
+
+function parseTopRetRows(summaryRows) {
+  const rows = findSummaryRows(summaryRows);
+  const headerIndex = rows.findIndex((values) => rowHasAny(values, ["Booked (Ret)"]) && rowHasAny(values, ["Cashed (Ret)"]));
+  if (headerIndex < 0) return [];
+
+  const results = [];
+  for (let index = headerIndex + 1; index < rows.length; index += 1) {
+    const values = rows[index];
+    const name = normalizeOwner(values[0]);
+    const key = cleanText(values[0]).toLowerCase();
+
+    if (!name) continue;
+    if (key === "total" || key === "total ") {
+      results.push({
+        name: "Total",
+        isTotal: true,
+        acqTarget: parseMoney(values[1]),
+        retTarget: parseMoney(values[2]),
+        totalTarget: parseMoney(values[3]),
+        bookedRet: parseMoney(values[4]),
+        bookingAcq: parseMoney(values[5]),
+        cashedRet: parseMoney(values[6]),
+        cashedAcq: parseMoney(values[7]),
+        totalBooking: parseMoney(values[8]),
+        totalCashing: parseMoney(values[9]),
+        receivables: parseMoney(values[10]),
+        achievement: {
+          bookingRet: parsePercent(values[11]),
+          bookingAcq: parsePercent(values[12]),
+          cashingRet: parsePercent(values[13]),
+          cashingAcq: parsePercent(values[14]),
+          booking: parsePercent(values[15]),
+          cashing: parsePercent(values[16]),
+        },
+        ytdProspective: {
+          totalCashing: parseMoney(values[17]),
+          percent: parsePercent(values[18]),
+        },
+      });
+      break;
+    }
+
+    if (rowHasAny(values, ["Retention Projection", "Acquisition Projection"])) break;
+    if (parseMoney(values[2]) === 0 && parseMoney(values[4]) === 0 && parseMoney(values[6]) === 0 && parseMoney(values[10]) === 0 && !RETENTION_TEAM.includes(name)) continue;
+
+    results.push({
+      name,
+      isTotal: false,
+      acqTarget: parseMoney(values[1]),
+      retTarget: parseMoney(values[2]),
+      totalTarget: parseMoney(values[3]),
+      bookedRet: parseMoney(values[4]),
+      bookingAcq: parseMoney(values[5]),
+      cashedRet: parseMoney(values[6]),
+      cashedAcq: parseMoney(values[7]),
+      totalBooking: parseMoney(values[8]),
+      totalCashing: parseMoney(values[9]),
+      receivables: parseMoney(values[10]),
+      achievement: {
+        bookingRet: parsePercent(values[11]),
+        bookingAcq: parsePercent(values[12]),
+        cashingRet: parsePercent(values[13]),
+        cashingAcq: parsePercent(values[14]),
+        booking: parsePercent(values[15]),
+        cashing: parsePercent(values[16]),
+      },
+      ytdProspective: {
+        totalCashing: parseMoney(values[17]),
+        percent: parsePercent(values[18]),
+      },
+    });
+  }
+
+  return results;
+}
+
+function parseRetentionProjectionRows(summaryRows) {
+  const rows = findSummaryRows(summaryRows);
+  const headerIndex = rows.findIndex((values) => {
+    const first = cleanText(values[0]).toLowerCase();
+    return first.includes("rm name") && rowHasAny(values, ["Pending- High to renew", "Late in renewal"]);
+  });
+  if (headerIndex < 0) return [];
+
+  const results = [];
+  for (let index = headerIndex + 1; index < rows.length; index += 1) {
+    const values = rows[index];
+    const rawName = cleanText(values[0]);
+    const key = rawName.toLowerCase();
+    if (!rawName) continue;
+    if (key.includes("property of closing")) break;
+
+    const name = key === "total" ? "Total" : normalizeOwner(rawName);
+    const row = {
+      name,
+      isTotal: key === "total",
+      lost: parseMoney(values[1]),
+      pendingHigh: parseMoney(values[2]),
+      pendingLow: parseMoney(values[3]),
+      pendingMedium: parseMoney(values[4]),
+      late: parseMoney(values[5]),
+      totalProjection: {
+        worst: parseMoney(values[14]),
+        medium: parseMoney(values[15]),
+        best: parseMoney(values[16]),
+        outstanding: parseMoney(values[17]),
+      },
+    };
+
+    if (row.isTotal || RETENTION_TEAM.includes(name)) results.push(row);
+  }
+
+  return results;
+}
+
+function parseClosingYearRows(summaryRows) {
+  const rows = findSummaryRows(summaryRows);
+  const headerIndex = rows.findIndex((values) => cleanText(values[0]).toLowerCase() === "property of closing the year");
+  if (headerIndex < 0) return { reps: [], total: null, delta: [] };
+
+  const reps = [];
+  const delta = [];
+  let total = null;
+  let insideDelta = false;
+
+  for (let index = headerIndex + 2; index < rows.length; index += 1) {
+    const values = rows[index];
+    const rawName = cleanText(values[0]);
+    if (!rawName) continue;
+    const key = rawName.toLowerCase();
+
+    if (key === "delta") {
+      insideDelta = true;
+      continue;
+    }
+
+    const row = {
+      name: key === "total" || key === "total " ? "Total" : normalizeOwner(rawName),
+      target: parseMoney(values[1]),
+      worst: { value: parseMoney(values[2]), vsTarget: parsePercent(values[3]) },
+      medium: { value: parseMoney(values[4]), vsTarget: parsePercent(values[5]) },
+      best: { value: parseMoney(values[6]), vsTarget: parsePercent(values[7]) },
+      outstanding: { value: parseMoney(values[8]), vsTarget: parsePercent(values[9]) },
+      actual: {
+        booking: parseMoney(values[10]),
+        cashing: parseMoney(values[11]),
+      },
+    };
+
+    if (insideDelta) {
+      delta.push(row);
+      continue;
+    }
+
+    if (row.name === "Total") {
+      total = row;
+      continue;
+    }
+
+    if (RETENTION_TEAM.includes(row.name)) reps.push(row);
+  }
+
+  return { reps, total, delta };
+}
+
+function parseSummaryRetInsights(summaryRows) {
+  const topRows = parseTopRetRows(summaryRows);
+  const projectionRows = parseRetentionProjectionRows(summaryRows);
+  const closingYear = parseClosingYearRows(summaryRows);
+
+  const byName = {};
+  for (const row of topRows) byName[row.name] = { ...(byName[row.name] || {}), top: row };
+  for (const row of projectionRows) byName[row.name] = { ...(byName[row.name] || {}), projection: row };
+  for (const row of closingYear.reps) byName[row.name] = { ...(byName[row.name] || {}), closing: row };
+
+  return {
+    generatedFrom: "Summary sheet",
+    topRows,
+    topTotal: topRows.find((row) => row.isTotal) || null,
+    projectionRows,
+    projectionTotal: projectionRows.find((row) => row.isTotal) || null,
+    closingYear,
+    byName,
+  };
 }
 
 function normalizeColumnName(value) {
@@ -365,6 +569,7 @@ function isManualTotalAccount(account) {
 }
 
 const management = parseManagementForecast(summaryRowsRaw);
+const summaryRet = parseSummaryRetInsights(summaryRowsRaw);
 
 const mappedAccounts = retentionRowsRaw
   .map((row, index) => {
@@ -482,13 +687,14 @@ const actions = [...actionsByKey.values()];
 const dashboardData = {
   generatedAt: new Date().toISOString(),
   source: {
-    summary: "Target, Worst, Medium and Best only from Summary",
+    summary: "Target, Worst, Medium, Best and RET performance/projection from Summary",
     retention: "All operational details from Retention",
     refreshType: "n8n Google Sheets scheduled sync",
     totalRowCorrection: removedTotalRows ? "Applied: removed manual total/subtotal rows" : "Not required",
     mirroredBatchCorrection: mirroredBatchDetected ? "Applied: removed duplicated unclassified batch" : "Not required",
   },
   management,
+  summaryRet,
   accounts,
   actions,
   rms: buildEntityStats(accounts, "rm"),
@@ -548,6 +754,10 @@ return [
         managementWorst: management.team.worst,
         managementMedium: management.team.medium,
         managementBest: management.team.best,
+        retTarget: summaryRet.topTotal?.retTarget || 0,
+        retBooked: summaryRet.topTotal?.bookedRet || 0,
+        retCashed: summaryRet.topTotal?.cashedRet || 0,
+        retReceivables: summaryRet.topTotal?.receivables || 0,
       },
     },
   },
