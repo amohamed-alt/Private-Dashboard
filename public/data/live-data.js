@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-07-15T10:00:51.096Z",
+  "generatedAt": "2026-07-15T16:00:51.575Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -9,17 +9,17 @@ window.DASHBOARD_DATA = {
     "team": {
       "rm": "Team",
       "target": 5392548,
-      "worst": 4328191,
-      "medium": 5284333,
-      "best": 5846580
+      "worst": 4270290,
+      "medium": 5206432,
+      "best": 5768679
     },
     "rms": {
       "Jihad": {
         "rm": "Jihad",
         "target": 1808852,
-        "worst": 1349610,
-        "medium": 1505768,
-        "best": 1650824
+        "worst": 1291709,
+        "medium": 1427867,
+        "best": 1572923
       },
       "Fadi": {
         "rm": "Fadi",
@@ -1374,8 +1374,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 57901,
       "updatedValueRaw": "57901",
       "updatedValue": 57901,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jun",
@@ -1573,8 +1573,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 20000,
       "updatedValueRaw": "20000",
       "updatedValue": 20000,
-      "renewalStatusRaw": "Pending - Medium",
-      "renewalStatus": "Pending Medium",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jun",
@@ -5046,7 +5046,7 @@ window.DASHBOARD_DATA = {
       "csm": "Haia",
       "location": "KSA - Jeddah",
       "rm": "Jihad",
-      "clientName": "Aal Taher Group / Radwa Food",
+      "clientName": "yasr",
       "originalValueRaw": "0",
       "originalValue": 0,
       "updatedValueRaw": "0",
@@ -6531,7 +6531,7 @@ window.DASHBOARD_DATA = {
       "csm": "Haia",
       "product": "Talentera",
       "location": "KSA - Jeddah",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 57901,
       "renewalSchedule": [
         {
@@ -6661,7 +6661,7 @@ window.DASHBOARD_DATA = {
       "csm": "Haia",
       "product": "Talentera",
       "location": "KSA - Jeddah",
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Renewed",
       "updatedValue": 20000,
       "renewalSchedule": [
         {
@@ -8579,9 +8579,9 @@ window.DASHBOARD_DATA = {
       "name": "Jihad",
       "accountsCount": 74,
       "updatedValue": 1198852,
-      "renewed": 490156,
-      "pendingHigh": 407482,
-      "pendingMedium": 156158,
+      "renewed": 568057,
+      "pendingHigh": 349581,
+      "pendingMedium": 136158,
       "pendingLow": 124880,
       "lost": 20176
     },
@@ -8631,9 +8631,9 @@ window.DASHBOARD_DATA = {
       "name": "Haia",
       "accountsCount": 36,
       "updatedValue": 919512,
-      "renewed": 396931,
-      "pendingHigh": 319001,
-      "pendingMedium": 83000,
+      "renewed": 474832,
+      "pendingHigh": 261100,
+      "pendingMedium": 63000,
       "pendingLow": 120580,
       "lost": 0
     },
@@ -8735,4 +8735,4 @@ window.DASHBOARD_DATA = {
     "actionStatuses": []
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-07-15T10:00:51.099Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-07-15T16:00:51.578Z";
