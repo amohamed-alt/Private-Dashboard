@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-07-23T10:00:53.004Z",
+  "generatedAt": "2026-07-23T16:00:51.717Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -9,17 +9,17 @@ window.DASHBOARD_DATA = {
     "team": {
       "rm": "Team",
       "target": 5392548,
-      "worst": 4044564,
-      "medium": 4960705,
-      "best": 5578951
+      "worst": 4041064,
+      "medium": 4957205,
+      "best": 5575451
     },
     "rms": {
       "Jihad": {
         "rm": "Jihad",
         "target": 1808852,
-        "worst": 1228010,
-        "medium": 1364168,
-        "best": 1565224
+        "worst": 1224510,
+        "medium": 1360668,
+        "best": 1561724
       },
       "Fadi": {
         "rm": "Fadi",
@@ -1133,8 +1133,8 @@ window.DASHBOARD_DATA = {
       "clientName": "Jordan Bromine Company",
       "originalValueRaw": "7000",
       "originalValue": 7000,
-      "updatedValueRaw": "7000",
-      "updatedValue": 7000,
+      "updatedValueRaw": "3500",
+      "updatedValue": 3500,
       "renewalStatusRaw": "Pending - High",
       "renewalStatus": "Pending High",
       "renewalSchedule": [
@@ -1151,7 +1151,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 7000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": ""
+      "notes": "Decreased from 1 year to 6 months already submitted"
     },
     {
       "id": "ret-40",
@@ -1480,8 +1480,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 56000,
       "updatedValueRaw": "56000",
       "updatedValue": 56000,
-      "renewalStatusRaw": "Pending - Low",
-      "renewalStatus": "Pending Low",
+      "renewalStatusRaw": "Lost",
+      "renewalStatus": "Lost",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -1527,7 +1527,7 @@ window.DASHBOARD_DATA = {
       "monthlyTotal": 38000,
       "differenceRaw": "0",
       "difference": 0,
-      "notes": "They have problem with ministry of Finance"
+      "notes": "Will coe back on Dec 2026"
     },
     {
       "id": "ret-53",
@@ -5673,8 +5673,8 @@ window.DASHBOARD_DATA = {
       "clientName": "",
       "originalValueRaw": "4712549",
       "originalValue": 4712549,
-      "updatedValueRaw": "4437875.86",
-      "updatedValue": 4437876,
+      "updatedValueRaw": "4434375.86",
+      "updatedValue": 4434376,
       "renewalStatusRaw": "",
       "renewalStatus": "",
       "renewalSchedule": [],
@@ -6416,19 +6416,19 @@ window.DASHBOARD_DATA = {
       "id": "action-39",
       "accountId": "ret-39",
       "clientName": "Jordan Bromine Company",
-      "action": "Executive Call",
+      "action": "Conduct Early Renewal Meeting",
       "ownerRaw": "RM",
       "owner": "Jihad",
-      "dueDateRaw": "",
+      "dueDateRaw": "Done",
       "dueDate": null,
-      "actionStatus": "",
-      "notes": "",
+      "actionStatus": "Done",
+      "notes": "Decreased from 1 year to 6 months already submitted",
       "rm": "Jihad",
       "csm": "Hatem",
       "product": "Talentera",
       "location": "Jordan - Local",
       "renewalStatus": "Pending High",
-      "updatedValue": 7000,
+      "updatedValue": 3500,
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -6583,7 +6583,7 @@ window.DASHBOARD_DATA = {
       "csm": "Haia",
       "product": "Talentera",
       "location": "KSA - Jeddah",
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Lost",
       "updatedValue": 56000,
       "renewalSchedule": [
         {
@@ -6604,7 +6604,7 @@ window.DASHBOARD_DATA = {
       "dueDateRaw": "",
       "dueDate": null,
       "actionStatus": "",
-      "notes": "They have problem with ministry of Finance",
+      "notes": "Will coe back on Dec 2026",
       "rm": "Jihad",
       "csm": "Haia",
       "product": "Talentera",
@@ -8630,12 +8630,12 @@ window.DASHBOARD_DATA = {
     "Jihad": {
       "name": "Jihad",
       "accountsCount": 74,
-      "updatedValue": 1198852,
+      "updatedValue": 1195352,
       "renewed": 625757,
-      "pendingHigh": 235881,
+      "pendingHigh": 232381,
       "pendingMedium": 136158,
-      "pendingLow": 180880,
-      "lost": 20176
+      "pendingLow": 124880,
+      "lost": 76176
     },
     "Fadi": {
       "name": "Fadi",
@@ -8650,7 +8650,7 @@ window.DASHBOARD_DATA = {
     "Unassigned": {
       "name": "Unassigned",
       "accountsCount": 1,
-      "updatedValue": 4437876,
+      "updatedValue": 4434376,
       "renewed": 0,
       "pendingHigh": 0,
       "pendingMedium": 0,
@@ -8672,9 +8672,9 @@ window.DASHBOARD_DATA = {
     "Hatem": {
       "name": "Hatem",
       "accountsCount": 58,
-      "updatedValue": 590163,
+      "updatedValue": 586663,
       "renewed": 179588,
-      "pendingHigh": 143184,
+      "pendingHigh": 139684,
       "pendingMedium": 100775,
       "pendingLow": 146440,
       "lost": 20176
@@ -8686,8 +8686,8 @@ window.DASHBOARD_DATA = {
       "renewed": 524832,
       "pendingHigh": 155100,
       "pendingMedium": 63000,
-      "pendingLow": 176580,
-      "lost": 0
+      "pendingLow": 120580,
+      "lost": 56000
     },
     "Maryam": {
       "name": "Maryam",
@@ -8712,7 +8712,7 @@ window.DASHBOARD_DATA = {
     "Unassigned": {
       "name": "Unassigned",
       "accountsCount": 1,
-      "updatedValue": 4437876,
+      "updatedValue": 4434376,
       "renewed": 0,
       "pendingHigh": 0,
       "pendingMedium": 0,
@@ -8784,7 +8784,9 @@ window.DASHBOARD_DATA = {
       "Hatem",
       "Jihad"
     ],
-    "actionStatuses": []
+    "actionStatuses": [
+      "Done"
+    ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-07-23T10:00:53.007Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-07-23T16:00:51.721Z";
