@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-08-02T22:00:52.349Z",
+  "generatedAt": "2026-08-03T04:00:52.923Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -9,9 +9,9 @@ window.DASHBOARD_DATA = {
     "team": {
       "rm": "Team",
       "target": 5392548,
-      "worst": 4096114,
-      "medium": 4841828,
-      "best": 5428928
+      "worst": 4141915,
+      "medium": 4887629,
+      "best": 5482243
     },
     "rms": {
       "Jihad": {
@@ -24,16 +24,16 @@ window.DASHBOARD_DATA = {
       "Fadi": {
         "rm": "Fadi",
         "target": 1948648,
-        "worst": 1746034,
-        "medium": 2284839,
-        "best": 2484892
+        "worst": 1791835,
+        "medium": 2330640,
+        "best": 2530693
       },
       "Faizan": {
         "rm": "Faizan",
         "target": 1635048,
         "worst": 1134866,
         "medium": 1256817,
-        "best": 1442808
+        "best": 1450322
       }
     }
   },
@@ -1271,7 +1271,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-44",
       "rowNumber": 44,
-      "status": "Active",
+      "status": "Expected",
       "product": "Talentera",
       "csm": "Haia",
       "location": "KSA - EP",
@@ -1281,8 +1281,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 5000,
       "updatedValueRaw": "5000",
       "updatedValue": 5000,
-      "renewalStatusRaw": "Lost",
-      "renewalStatus": "Lost",
+      "renewalStatusRaw": "Pending - Low",
+      "renewalStatus": "Pending Low",
       "renewalSchedule": [
         {
           "month": "Dec",
@@ -1302,7 +1302,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-45",
       "rowNumber": 45,
-      "status": "Active",
+      "status": "Lost",
       "product": "Talentera",
       "csm": "Haia",
       "location": "KSA - EP",
@@ -1470,7 +1470,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-51",
       "rowNumber": 51,
-      "status": "Active",
+      "status": "Lost",
       "product": "Talentera",
       "csm": "Haia",
       "location": "KSA - Jeddah",
@@ -1501,7 +1501,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-52",
       "rowNumber": 52,
-      "status": "Active",
+      "status": "Expected",
       "product": "Talentera",
       "csm": "Haia",
       "location": "KSA - Jeddah",
@@ -1511,8 +1511,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 38000,
       "updatedValueRaw": "38000",
       "updatedValue": 38000,
-      "renewalStatusRaw": "Lost",
-      "renewalStatus": "Lost",
+      "renewalStatusRaw": "Pending - Low",
+      "renewalStatus": "Pending Low",
       "renewalSchedule": [
         {
           "month": "Mar",
@@ -2187,7 +2187,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-75",
       "rowNumber": 75,
-      "status": "Active",
+      "status": "Expected",
       "product": "Talentera",
       "csm": "Maryam",
       "location": "KSA - Jazan",
@@ -2197,8 +2197,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 10667,
       "updatedValueRaw": "0",
       "updatedValue": 0,
-      "renewalStatusRaw": "lost",
-      "renewalStatus": "Lost",
+      "renewalStatusRaw": "Pending - Low",
+      "renewalStatus": "Pending Low",
       "renewalSchedule": [
         {
           "month": "May",
@@ -2333,7 +2333,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-80",
       "rowNumber": 80,
-      "status": "Active",
+      "status": "Expected",
       "product": "Talentera",
       "csm": "Maryam",
       "location": "KSA - Riyadh",
@@ -2343,8 +2343,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 23067,
       "updatedValueRaw": "23067",
       "updatedValue": 23067,
-      "renewalStatusRaw": "Lost",
-      "renewalStatus": "Lost",
+      "renewalStatusRaw": "Pending - Low",
+      "renewalStatus": "Pending Low",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -5041,12 +5041,12 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-169",
       "rowNumber": 169,
-      "status": "Lost From 2025",
+      "status": "Lost from 2025",
       "product": "Talentera",
       "csm": "Haia",
       "location": "KSA - Jeddah",
       "rm": "Jihad",
-      "clientName": "yasref",
+      "clientName": "Aal Taher Group / Radwa Food",
       "originalValueRaw": "0",
       "originalValue": 0,
       "updatedValueRaw": "0",
@@ -5302,7 +5302,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-178",
       "rowNumber": 178,
-      "status": "Active",
+      "status": "Expected",
       "product": "Talentera",
       "csm": "Hatem",
       "location": "Kuwait",
@@ -5312,8 +5312,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 7514,
       "updatedValueRaw": "7513.86",
       "updatedValue": 7514,
-      "renewalStatusRaw": "Renewed",
-      "renewalStatus": "Renewed",
+      "renewalStatusRaw": "Pending - Low",
+      "renewalStatus": "Pending Low",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -6479,7 +6479,7 @@ window.DASHBOARD_DATA = {
       "csm": "Haia",
       "product": "Talentera",
       "location": "KSA - EP",
-      "renewalStatus": "Lost",
+      "renewalStatus": "Pending Low",
       "updatedValue": 5000,
       "renewalSchedule": [
         {
@@ -6609,7 +6609,7 @@ window.DASHBOARD_DATA = {
       "csm": "Haia",
       "product": "Talentera",
       "location": "KSA - Jeddah",
-      "renewalStatus": "Lost",
+      "renewalStatus": "Pending Low",
       "updatedValue": 38000,
       "renewalSchedule": [
         {
@@ -6895,7 +6895,7 @@ window.DASHBOARD_DATA = {
       "csm": "Maryam",
       "product": "Talentera",
       "location": "KSA - Jazan",
-      "renewalStatus": "Lost",
+      "renewalStatus": "Pending Low",
       "updatedValue": 0,
       "renewalSchedule": [
         {
@@ -6940,7 +6940,7 @@ window.DASHBOARD_DATA = {
       "csm": "Maryam",
       "product": "Talentera",
       "location": "KSA - Riyadh",
-      "renewalStatus": "Lost",
+      "renewalStatus": "Pending Low",
       "updatedValue": 23067,
       "renewalSchedule": [
         {
@@ -8422,7 +8422,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Talentera",
       "location": "Kuwait",
-      "renewalStatus": "Renewed",
+      "renewalStatus": "Pending Low",
       "updatedValue": 7514,
       "renewalSchedule": [
         {
@@ -8621,10 +8621,10 @@ window.DASHBOARD_DATA = {
       "name": "Faizan",
       "accountsCount": 60,
       "updatedValue": 1394967,
-      "renewed": 762993,
+      "renewed": 755479,
       "pendingHigh": 324032,
       "pendingMedium": 121951,
-      "pendingLow": 185991,
+      "pendingLow": 193505,
       "lost": 0
     },
     "Jihad": {
@@ -8634,8 +8634,8 @@ window.DASHBOARD_DATA = {
       "renewed": 743150,
       "pendingHigh": 220781,
       "pendingMedium": 84958,
-      "pendingLow": 72300,
-      "lost": 128756
+      "pendingLow": 115300,
+      "lost": 85756
     },
     "Fadi": {
       "name": "Fadi",
@@ -8644,8 +8644,8 @@ window.DASHBOARD_DATA = {
       "renewed": 867757,
       "pendingHigh": 237442,
       "pendingMedium": 538805,
-      "pendingLow": 98400,
-      "lost": 101653
+      "pendingLow": 121467,
+      "lost": 78586
     },
     "Unassigned": {
       "name": "Unassigned",
@@ -8673,10 +8673,10 @@ window.DASHBOARD_DATA = {
       "name": "Hatem",
       "accountsCount": 58,
       "updatedValue": 586663,
-      "renewed": 245035,
+      "renewed": 237521,
       "pendingHigh": 105384,
       "pendingMedium": 100775,
-      "pendingLow": 115293,
+      "pendingLow": 122807,
       "lost": 20176
     },
     "Haia": {
@@ -8686,8 +8686,8 @@ window.DASHBOARD_DATA = {
       "renewed": 599292,
       "pendingHigh": 145900,
       "pendingMedium": 63000,
-      "pendingLow": 68000,
-      "lost": 108580
+      "pendingLow": 111000,
+      "lost": 65580
     },
     "Maryam": {
       "name": "Maryam",
@@ -8696,8 +8696,8 @@ window.DASHBOARD_DATA = {
       "renewed": 382851,
       "pendingHigh": 97334,
       "pendingMedium": 173734,
-      "pendingLow": 54001,
-      "lost": 38001
+      "pendingLow": 77068,
+      "lost": 14934
     },
     "Sara": {
       "name": "Sara",
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-08-02T22:00:52.352Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-08-03T04:00:52.961Z";
