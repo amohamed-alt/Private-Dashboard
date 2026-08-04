@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-08-04T10:00:41.903Z",
+  "generatedAt": "2026-08-04T16:00:42.047Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -5690,7 +5690,7 @@ window.DASHBOARD_DATA = {
       "id": "action-2",
       "accountId": "ret-2",
       "clientName": "Rotana Hotels",
-      "action": "Onsite Visit",
+      "action": "Onsite Visit, Conduct Early Renewal Meeting, Push Security Team to finilize Sama Approval Questions",
       "ownerRaw": "Bassam",
       "owner": "Bassam",
       "dueDateRaw": "",
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-08-04T10:00:41.907Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-08-04T16:00:42.049Z";
