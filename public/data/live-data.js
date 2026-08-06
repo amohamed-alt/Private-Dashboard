@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-08-06T10:00:52.421Z",
+  "generatedAt": "2026-08-06T16:00:52.490Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -9,17 +9,17 @@ window.DASHBOARD_DATA = {
     "team": {
       "rm": "Team",
       "target": 5392548,
-      "worst": 4209355,
-      "medium": 4955069,
-      "best": 5549683
+      "worst": 4219355,
+      "medium": 4965069,
+      "best": 5559683
     },
     "rms": {
       "Jihad": {
         "rm": "Jihad",
         "target": 1808852,
-        "worst": 1215214,
-        "medium": 1300172,
-        "best": 1501228
+        "worst": 1225214,
+        "medium": 1310172,
+        "best": 1511228
       },
       "Fadi": {
         "rm": "Fadi",
@@ -1664,8 +1664,8 @@ window.DASHBOARD_DATA = {
       "clientName": "Saudia Dairy and Foodstuff",
       "originalValueRaw": "35000",
       "originalValue": 35000,
-      "updatedValueRaw": "35000",
-      "updatedValue": 35000,
+      "updatedValueRaw": "45000",
+      "updatedValue": 45000,
       "renewalStatusRaw": "Pending - High",
       "renewalStatus": "Pending High",
       "renewalSchedule": [
@@ -5673,8 +5673,8 @@ window.DASHBOARD_DATA = {
       "clientName": "",
       "originalValueRaw": "4712549",
       "originalValue": 4712549,
-      "updatedValueRaw": "4488968.86",
-      "updatedValue": 4488969,
+      "updatedValueRaw": "4498968.86",
+      "updatedValue": 4498969,
       "renewalStatusRaw": "",
       "renewalStatus": "",
       "renewalSchedule": [],
@@ -6714,7 +6714,7 @@ window.DASHBOARD_DATA = {
       "product": "Talentera",
       "location": "KSA - Jeddah",
       "renewalStatus": "Pending High",
-      "updatedValue": 35000,
+      "updatedValue": 45000,
       "renewalSchedule": [
         {
           "month": "Jun",
@@ -8630,9 +8630,9 @@ window.DASHBOARD_DATA = {
     "Jihad": {
       "name": "Jihad",
       "accountsCount": 74,
-      "updatedValue": 1249945,
+      "updatedValue": 1259945,
       "renewed": 743150,
-      "pendingHigh": 220781,
+      "pendingHigh": 230781,
       "pendingMedium": 84958,
       "pendingLow": 115300,
       "lost": 85756
@@ -8650,7 +8650,7 @@ window.DASHBOARD_DATA = {
     "Unassigned": {
       "name": "Unassigned",
       "accountsCount": 1,
-      "updatedValue": 4488969,
+      "updatedValue": 4498969,
       "renewed": 0,
       "pendingHigh": 0,
       "pendingMedium": 0,
@@ -8682,9 +8682,9 @@ window.DASHBOARD_DATA = {
     "Haia": {
       "name": "Haia",
       "accountsCount": 36,
-      "updatedValue": 984772,
+      "updatedValue": 994772,
       "renewed": 599292,
-      "pendingHigh": 145900,
+      "pendingHigh": 155900,
       "pendingMedium": 63000,
       "pendingLow": 111000,
       "lost": 65580
@@ -8712,7 +8712,7 @@ window.DASHBOARD_DATA = {
     "Unassigned": {
       "name": "Unassigned",
       "accountsCount": 1,
-      "updatedValue": 4488969,
+      "updatedValue": 4498969,
       "renewed": 0,
       "pendingHigh": 0,
       "pendingMedium": 0,
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-08-06T10:00:52.423Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-08-06T16:00:52.492Z";
