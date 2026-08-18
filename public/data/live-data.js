@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-08-17T22:00:52.559Z",
+  "generatedAt": "2026-08-18T04:00:53.545Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -9,9 +9,9 @@ window.DASHBOARD_DATA = {
     "team": {
       "rm": "Team",
       "target": 5392548,
-      "worst": 4157102,
-      "medium": 4902816,
-      "best": 5497430
+      "worst": 4164402,
+      "medium": 4910116,
+      "best": 5504730
     },
     "rms": {
       "Jihad": {
@@ -31,9 +31,9 @@ window.DASHBOARD_DATA = {
       "Faizan": {
         "rm": "Faizan",
         "target": 1635048,
-        "worst": 1134866,
-        "medium": 1256817,
-        "best": 1450322
+        "worst": 1142166,
+        "medium": 1264117,
+        "best": 1457622
       }
     }
   },
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-08-17T22:00:52.561Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-08-18T04:00:53.548Z";
