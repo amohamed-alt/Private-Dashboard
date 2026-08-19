@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-08-19T16:00:53.070Z",
+  "generatedAt": "2026-08-19T22:00:41.696Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -1395,7 +1395,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-48",
       "rowNumber": 48,
-      "status": "Active",
+      "status": "amwa",
       "product": "Talentera",
       "csm": "Haia",
       "location": "KSA - Jeddah",
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-08-19T16:00:53.074Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-08-19T22:00:41.699Z";
