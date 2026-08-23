@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-08-23T10:00:43.108Z",
+  "generatedAt": "2026-08-23T16:00:53.046Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -9,31 +9,31 @@ window.DASHBOARD_DATA = {
     "team": {
       "rm": "Team",
       "target": 5392548,
-      "worst": 4336176,
-      "medium": 5081890,
-      "best": 5676504
+      "worst": 4192768,
+      "medium": 4866416,
+      "best": 5461030
     },
     "rms": {
       "Jihad": {
         "rm": "Jihad",
         "target": 1808852,
         "worst": 1352883,
-        "medium": 1437841,
-        "best": 1638897
+        "medium": 1418775,
+        "best": 1619831
       },
       "Fadi": {
         "rm": "Fadi",
         "target": 1948648,
-        "worst": 1737354,
-        "medium": 2276159,
-        "best": 2476212
+        "worst": 1680047,
+        "medium": 2218852,
+        "best": 2418905
       },
       "Faizan": {
         "rm": "Faizan",
         "target": 1635048,
-        "worst": 1245939,
-        "medium": 1367890,
-        "best": 1561395
+        "worst": 1159838,
+        "medium": 1228789,
+        "best": 1422294
       }
     }
   },
@@ -268,8 +268,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 66101,
       "updatedValueRaw": "66101",
       "updatedValue": 66101,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Aug",
@@ -834,8 +834,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 20000,
       "updatedValueRaw": "20000",
       "updatedValue": 20000,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Aug",
@@ -2164,8 +2164,8 @@ window.DASHBOARD_DATA = {
       "clientName": "Hail Region Development Authority",
       "originalValueRaw": "39066",
       "originalValue": 39066,
-      "updatedValueRaw": "39066",
-      "updatedValue": 39066,
+      "updatedValueRaw": "20000",
+      "updatedValue": 20000,
       "renewalStatusRaw": "Pending - Medium",
       "renewalStatus": "Pending Medium",
       "renewalSchedule": [
@@ -3282,8 +3282,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 57307,
       "updatedValueRaw": "57307",
       "updatedValue": 57307,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -4086,10 +4086,10 @@ window.DASHBOARD_DATA = {
       "clientName": "American University of Kuwait",
       "originalValueRaw": "53000",
       "originalValue": 53000,
-      "updatedValueRaw": "53000",
-      "updatedValue": 53000,
-      "renewalStatusRaw": "Pending - Medium",
-      "renewalStatus": "Pending Medium",
+      "updatedValueRaw": "17000",
+      "updatedValue": 17000,
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -5673,8 +5673,8 @@ window.DASHBOARD_DATA = {
       "clientName": "",
       "originalValueRaw": "4712549",
       "originalValue": 4712549,
-      "updatedValueRaw": "4498968.86",
-      "updatedValue": 4498969,
+      "updatedValueRaw": "4443902.86",
+      "updatedValue": 4443903,
       "renewalStatusRaw": "",
       "renewalStatus": "",
       "renewalSchedule": [],
@@ -5857,7 +5857,7 @@ window.DASHBOARD_DATA = {
       "csm": "Darshna",
       "product": "Talentera",
       "location": "Dubai",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 66101,
       "renewalSchedule": [
         {
@@ -6219,7 +6219,7 @@ window.DASHBOARD_DATA = {
       "csm": "Darshna",
       "product": "AfterHire",
       "location": "Dubai",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 20000,
       "renewalSchedule": [
         {
@@ -6870,7 +6870,7 @@ window.DASHBOARD_DATA = {
       "product": "Talentera",
       "location": "KSA - Hail",
       "renewalStatus": "Pending Medium",
-      "updatedValue": 39066,
+      "updatedValue": 20000,
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -7486,7 +7486,7 @@ window.DASHBOARD_DATA = {
       "csm": "Sara",
       "product": "Talentera",
       "location": "KSA - Riyadh",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 57307,
       "renewalSchedule": [
         {
@@ -8620,20 +8620,20 @@ window.DASHBOARD_DATA = {
     "Faizan": {
       "name": "Faizan",
       "accountsCount": 60,
-      "updatedValue": 1394967,
-      "renewed": 755479,
-      "pendingHigh": 324032,
-      "pendingMedium": 121951,
+      "updatedValue": 1358967,
+      "renewed": 858580,
+      "pendingHigh": 237931,
+      "pendingMedium": 68951,
       "pendingLow": 193505,
       "lost": 0
     },
     "Jihad": {
       "name": "Jihad",
       "accountsCount": 74,
-      "updatedValue": 1259945,
+      "updatedValue": 1240879,
       "renewed": 743150,
       "pendingHigh": 230781,
-      "pendingMedium": 84958,
+      "pendingMedium": 65892,
       "pendingLow": 115300,
       "lost": 85756
     },
@@ -8641,8 +8641,8 @@ window.DASHBOARD_DATA = {
       "name": "Fadi",
       "accountsCount": 54,
       "updatedValue": 1844057,
-      "renewed": 867757,
-      "pendingHigh": 237442,
+      "renewed": 925064,
+      "pendingHigh": 180135,
       "pendingMedium": 538805,
       "pendingLow": 121467,
       "lost": 78586
@@ -8650,7 +8650,7 @@ window.DASHBOARD_DATA = {
     "Unassigned": {
       "name": "Unassigned",
       "accountsCount": 1,
-      "updatedValue": 4498969,
+      "updatedValue": 4443903,
       "renewed": 0,
       "pendingHigh": 0,
       "pendingMedium": 0,
@@ -8663,8 +8663,8 @@ window.DASHBOARD_DATA = {
       "name": "Darshna",
       "accountsCount": 35,
       "updatedValue": 1042211,
-      "renewed": 621283,
-      "pendingHigh": 293529,
+      "renewed": 707384,
+      "pendingHigh": 207428,
       "pendingMedium": 52401,
       "pendingLow": 74998,
       "lost": 0
@@ -8672,10 +8672,10 @@ window.DASHBOARD_DATA = {
     "Hatem": {
       "name": "Hatem",
       "accountsCount": 58,
-      "updatedValue": 586663,
-      "renewed": 237521,
+      "updatedValue": 550663,
+      "renewed": 254521,
       "pendingHigh": 105384,
-      "pendingMedium": 100775,
+      "pendingMedium": 47775,
       "pendingLow": 122807,
       "lost": 20176
     },
@@ -8692,10 +8692,10 @@ window.DASHBOARD_DATA = {
     "Maryam": {
       "name": "Maryam",
       "accountsCount": 28,
-      "updatedValue": 745921,
+      "updatedValue": 726855,
       "renewed": 382851,
       "pendingHigh": 97334,
-      "pendingMedium": 173734,
+      "pendingMedium": 154668,
       "pendingLow": 77068,
       "lost": 14934
     },
@@ -8703,8 +8703,8 @@ window.DASHBOARD_DATA = {
       "name": "Sara",
       "accountsCount": 31,
       "updatedValue": 1129402,
-      "renewed": 525439,
-      "pendingHigh": 140108,
+      "renewed": 582746,
+      "pendingHigh": 82801,
       "pendingMedium": 355804,
       "pendingLow": 44399,
       "lost": 63652
@@ -8712,7 +8712,7 @@ window.DASHBOARD_DATA = {
     "Unassigned": {
       "name": "Unassigned",
       "accountsCount": 1,
-      "updatedValue": 4498969,
+      "updatedValue": 4443903,
       "renewed": 0,
       "pendingHigh": 0,
       "pendingMedium": 0,
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-08-23T10:00:43.110Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-08-23T16:00:53.051Z";
