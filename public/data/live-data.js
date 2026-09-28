@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-08-31T22:01:01.845Z",
+  "generatedAt": "2026-09-28T19:50:35.630Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -9,31 +9,31 @@ window.DASHBOARD_DATA = {
     "team": {
       "rm": "Team",
       "target": 5392548,
-      "worst": 4267470,
-      "medium": 4941118,
-      "best": 5535731
+      "worst": 4390251,
+      "medium": 5029232,
+      "best": 5566513
     },
     "rms": {
       "Jihad": {
         "rm": "Jihad",
         "target": 1808852,
-        "worst": 1352883,
-        "medium": 1418775,
-        "best": 1619831
+        "worst": 1329881,
+        "medium": 1361106,
+        "best": 1504829
       },
       "Fadi": {
         "rm": "Fadi",
         "target": 1948648,
-        "worst": 1754714,
-        "medium": 2293519,
-        "best": 2493572
+        "worst": 1847271,
+        "medium": 2386076,
+        "best": 2586129
       },
       "Faizan": {
         "rm": "Faizan",
         "target": 1635048,
-        "worst": 1159873,
-        "medium": 1228824,
-        "best": 1422328
+        "worst": 1213099,
+        "medium": 1282050,
+        "best": 1475555
       }
     }
   },
@@ -1135,8 +1135,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 7000,
       "updatedValueRaw": "3500",
       "updatedValue": 3500,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -1197,8 +1197,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 2121,
       "updatedValueRaw": "2121",
       "updatedValue": 2121,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jun",
@@ -1395,7 +1395,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-48",
       "rowNumber": 48,
-      "status": "amwa",
+      "status": "Active",
       "product": "Talentera",
       "csm": "Haia",
       "location": "KSA - Jeddah",
@@ -1405,8 +1405,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 3000,
       "updatedValueRaw": "3000",
       "updatedValue": 3000,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Aug",
@@ -1666,8 +1666,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 35000,
       "updatedValueRaw": "45000",
       "updatedValue": 45000,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jun",
@@ -2020,8 +2020,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 18400,
       "updatedValueRaw": "9200",
       "updatedValue": 9200,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jun",
@@ -2166,8 +2166,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 39066,
       "updatedValueRaw": "20000",
       "updatedValue": 20000,
-      "renewalStatusRaw": "Pending - Medium",
-      "renewalStatus": "Pending Medium",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -2195,8 +2195,8 @@ window.DASHBOARD_DATA = {
       "clientName": "Jazan Strategic Office for Development",
       "originalValueRaw": "10667",
       "originalValue": 10667,
-      "updatedValueRaw": "0",
-      "updatedValue": 0,
+      "updatedValueRaw": "10667",
+      "updatedValue": 10667,
       "renewalStatusRaw": "Pending - Low",
       "renewalStatus": "Pending Low",
       "renewalSchedule": [
@@ -2427,8 +2427,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 12000,
       "updatedValueRaw": "12000",
       "updatedValue": 12000,
-      "renewalStatusRaw": "Pending - Medium",
-      "renewalStatus": "Pending Medium",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -2458,8 +2458,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 2667,
       "updatedValueRaw": "2667",
       "updatedValue": 2667,
-      "renewalStatusRaw": "Pending - Medium",
-      "renewalStatus": "Pending Medium",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -3995,8 +3995,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 2550,
       "updatedValueRaw": "2550",
       "updatedValue": 2550,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Feb",
@@ -4759,8 +4759,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 45251,
       "updatedValueRaw": "45251",
       "updatedValue": 45251,
-      "renewalStatusRaw": "Renewed",
-      "renewalStatus": "Renewed",
+      "renewalStatusRaw": "Pending - High",
+      "renewalStatus": "Pending High",
       "renewalSchedule": [
         {
           "month": "Nov",
@@ -4821,8 +4821,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 6200,
       "updatedValueRaw": "6200",
       "updatedValue": 6200,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Aug",
@@ -5095,8 +5095,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 68000,
       "updatedValueRaw": "68000",
       "updatedValue": 68000,
-      "renewalStatusRaw": "Pending - Low",
-      "renewalStatus": "Pending Low",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Aug",
@@ -5116,7 +5116,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-172",
       "rowNumber": 172,
-      "status": "Active",
+      "status": "Expected",
       "product": "Talentera",
       "csm": "Maryam",
       "location": "KSA - Riyadh",
@@ -5302,7 +5302,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-178",
       "rowNumber": 178,
-      "status": "Expected",
+      "status": "Lost",
       "product": "Talentera",
       "csm": "Hatem",
       "location": "Kuwait",
@@ -5312,8 +5312,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 7514,
       "updatedValueRaw": "7513.86",
       "updatedValue": 7514,
-      "renewalStatusRaw": "Pending - Low",
-      "renewalStatus": "Pending Low",
+      "renewalStatusRaw": "Lost",
+      "renewalStatus": "Lost",
       "renewalSchedule": [
         {
           "month": "Jul",
@@ -5673,8 +5673,8 @@ window.DASHBOARD_DATA = {
       "clientName": "",
       "originalValueRaw": "4712549",
       "originalValue": 4712549,
-      "updatedValueRaw": "4443902.86",
-      "updatedValue": 4443903,
+      "updatedValueRaw": "4454569.86",
+      "updatedValue": 4454570,
       "renewalStatusRaw": "",
       "renewalStatus": "",
       "renewalSchedule": [],
@@ -6427,7 +6427,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Talentera",
       "location": "Jordan - Local",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 3500,
       "renewalSchedule": [
         {
@@ -6557,7 +6557,7 @@ window.DASHBOARD_DATA = {
       "csm": "Haia",
       "product": "Talentera",
       "location": "KSA - Jeddah",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 3000,
       "renewalSchedule": [
         {
@@ -6713,7 +6713,7 @@ window.DASHBOARD_DATA = {
       "csm": "Haia",
       "product": "Talentera",
       "location": "KSA - Jeddah",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 45000,
       "renewalSchedule": [
         {
@@ -6869,7 +6869,7 @@ window.DASHBOARD_DATA = {
       "csm": "Maryam",
       "product": "Talentera",
       "location": "KSA - Hail",
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Renewed",
       "updatedValue": 20000,
       "renewalSchedule": [
         {
@@ -6896,7 +6896,7 @@ window.DASHBOARD_DATA = {
       "product": "Talentera",
       "location": "KSA - Jazan",
       "renewalStatus": "Pending Low",
-      "updatedValue": 0,
+      "updatedValue": 10667,
       "renewalSchedule": [
         {
           "month": "May",
@@ -6992,7 +6992,7 @@ window.DASHBOARD_DATA = {
       "csm": "Maryam",
       "product": "Talentera",
       "location": "KSA - EP",
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Renewed",
       "updatedValue": 12000,
       "renewalSchedule": [
         {
@@ -7018,7 +7018,7 @@ window.DASHBOARD_DATA = {
       "csm": "Maryam",
       "product": "Evalufy",
       "location": "KSA - EP",
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Renewed",
       "updatedValue": 2667,
       "renewalSchedule": [
         {
@@ -7798,7 +7798,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Talentera",
       "location": "Egypt",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 2550,
       "renewalSchedule": [
         {
@@ -8162,7 +8162,7 @@ window.DASHBOARD_DATA = {
       "csm": "Darshna",
       "product": "Talentera",
       "location": "Abu Dhabi",
-      "renewalStatus": "Renewed",
+      "renewalStatus": "Pending High",
       "updatedValue": 45251,
       "renewalSchedule": [
         {
@@ -8214,7 +8214,7 @@ window.DASHBOARD_DATA = {
       "csm": "Darshna",
       "product": "Talentera",
       "location": "Abu Dhabi",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 6200,
       "renewalSchedule": [
         {
@@ -8292,7 +8292,7 @@ window.DASHBOARD_DATA = {
       "csm": "Haia",
       "product": "Talentera",
       "location": "KSA - Jeddah",
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Renewed",
       "updatedValue": 68000,
       "renewalSchedule": [
         {
@@ -8422,7 +8422,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Talentera",
       "location": "Kuwait",
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Lost",
       "updatedValue": 7514,
       "renewalSchedule": [
         {
@@ -8621,20 +8621,20 @@ window.DASHBOARD_DATA = {
       "name": "Faizan",
       "accountsCount": 60,
       "updatedValue": 1358967,
-      "renewed": 858580,
-      "pendingHigh": 237931,
+      "renewed": 819529,
+      "pendingHigh": 276982,
       "pendingMedium": 68951,
-      "pendingLow": 193505,
-      "lost": 0
+      "pendingLow": 185991,
+      "lost": 7514
     },
     "Jihad": {
       "name": "Jihad",
       "accountsCount": 74,
-      "updatedValue": 1240879,
-      "renewed": 743150,
-      "pendingHigh": 230781,
-      "pendingMedium": 65892,
-      "pendingLow": 115300,
+      "updatedValue": 1251546,
+      "renewed": 911188,
+      "pendingHigh": 165410,
+      "pendingMedium": 31225,
+      "pendingLow": 57967,
       "lost": 85756
     },
     "Fadi": {
@@ -8650,7 +8650,7 @@ window.DASHBOARD_DATA = {
     "Unassigned": {
       "name": "Unassigned",
       "accountsCount": 1,
-      "updatedValue": 4443903,
+      "updatedValue": 4454570,
       "renewed": 0,
       "pendingHigh": 0,
       "pendingMedium": 0,
@@ -8663,8 +8663,8 @@ window.DASHBOARD_DATA = {
       "name": "Darshna",
       "accountsCount": 35,
       "updatedValue": 1042211,
-      "renewed": 707384,
-      "pendingHigh": 207428,
+      "renewed": 668333,
+      "pendingHigh": 246479,
       "pendingMedium": 52401,
       "pendingLow": 74998,
       "lost": 0
@@ -8673,30 +8673,30 @@ window.DASHBOARD_DATA = {
       "name": "Hatem",
       "accountsCount": 58,
       "updatedValue": 550663,
-      "renewed": 254521,
-      "pendingHigh": 105384,
+      "renewed": 262692,
+      "pendingHigh": 97213,
       "pendingMedium": 47775,
-      "pendingLow": 122807,
-      "lost": 20176
+      "pendingLow": 115293,
+      "lost": 27690
     },
     "Haia": {
       "name": "Haia",
       "accountsCount": 36,
       "updatedValue": 994772,
-      "renewed": 599292,
-      "pendingHigh": 155900,
+      "renewed": 724492,
+      "pendingHigh": 98700,
       "pendingMedium": 63000,
-      "pendingLow": 111000,
+      "pendingLow": 43000,
       "lost": 65580
     },
     "Maryam": {
       "name": "Maryam",
       "accountsCount": 28,
-      "updatedValue": 726855,
-      "renewed": 382851,
+      "updatedValue": 737522,
+      "renewed": 417518,
       "pendingHigh": 97334,
-      "pendingMedium": 154668,
-      "pendingLow": 77068,
+      "pendingMedium": 120001,
+      "pendingLow": 87735,
       "lost": 14934
     },
     "Sara": {
@@ -8712,7 +8712,7 @@ window.DASHBOARD_DATA = {
     "Unassigned": {
       "name": "Unassigned",
       "accountsCount": 1,
-      "updatedValue": 4443903,
+      "updatedValue": 4454570,
       "renewed": 0,
       "pendingHigh": 0,
       "pendingMedium": 0,
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-08-31T22:01:01.936Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-09-28T19:50:35.649Z";
