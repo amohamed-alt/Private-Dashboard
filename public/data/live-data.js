@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-10-18T16:00:52.626Z",
+  "generatedAt": "2026-10-18T22:00:52.245Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -10,7 +10,7 @@ window.DASHBOARD_DATA = {
       "rm": "Team",
       "target": 5392548,
       "worst": 4544587,
-      "medium": 5131167,
+      "medium": 5127667,
       "best": 5720849
     },
     "rms": {
@@ -18,7 +18,7 @@ window.DASHBOARD_DATA = {
         "rm": "Jihad",
         "target": 1808852,
         "worst": 1331581,
-        "medium": 1362806,
+        "medium": 1359306,
         "best": 1506529
       },
       "Fadi": {
@@ -2479,7 +2479,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-85",
       "rowNumber": 85,
-      "status": "Active",
+      "status": "Expected",
       "product": "Talentera",
       "csm": "Maryam",
       "location": "KSA - Riyadh",
@@ -4326,7 +4326,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-145",
       "rowNumber": 145,
-      "status": "Active",
+      "status": "Lost",
       "product": "Evalufy",
       "csm": "Hatem",
       "location": "Jordan - Local",
@@ -4336,8 +4336,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 1300,
       "updatedValueRaw": "1300",
       "updatedValue": 1300,
-      "renewalStatusRaw": "Pending - Low",
-      "renewalStatus": "Pending Low",
+      "renewalStatusRaw": "Lost",
+      "renewalStatus": "Lost",
       "renewalSchedule": [
         {
           "month": "Mar",
@@ -4926,7 +4926,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-165",
       "rowNumber": 165,
-      "status": "Active",
+      "status": "Lost",
       "product": "Talentera",
       "csm": "Hatem",
       "location": "Jordan - Local",
@@ -4936,8 +4936,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 3500,
       "updatedValueRaw": "3500",
       "updatedValue": 3500,
-      "renewalStatusRaw": "Pending - Medium",
-      "renewalStatus": "Pending Medium",
+      "renewalStatusRaw": "Lost",
+      "renewalStatus": "Lost",
       "renewalSchedule": [
         {
           "month": "Jun",
@@ -7980,7 +7980,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Evalufy",
       "location": "Jordan - Local",
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Lost",
       "updatedValue": 1300,
       "renewalSchedule": [
         {
@@ -8266,7 +8266,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Talentera",
       "location": "Jordan - Local",
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Lost",
       "updatedValue": 3500,
       "renewalSchedule": [
         {
@@ -8633,9 +8633,9 @@ window.DASHBOARD_DATA = {
       "updatedValue": 1251546,
       "renewed": 911188,
       "pendingHigh": 165410,
-      "pendingMedium": 31225,
-      "pendingLow": 57967,
-      "lost": 85756
+      "pendingMedium": 27725,
+      "pendingLow": 56667,
+      "lost": 90556
     },
     "Fadi": {
       "name": "Fadi",
@@ -8675,9 +8675,9 @@ window.DASHBOARD_DATA = {
       "updatedValue": 550663,
       "renewed": 262692,
       "pendingHigh": 97213,
-      "pendingMedium": 47775,
-      "pendingLow": 46800,
-      "lost": 96183
+      "pendingMedium": 44275,
+      "pendingLow": 45500,
+      "lost": 100983
     },
     "Haia": {
       "name": "Haia",
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-10-18T16:00:52.628Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-10-18T22:00:52.248Z";
