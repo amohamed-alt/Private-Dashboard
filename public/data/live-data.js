@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-10-26T05:00:52.453Z",
+  "generatedAt": "2026-10-26T11:00:41.822Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -11,7 +11,7 @@ window.DASHBOARD_DATA = {
       "target": 5392548,
       "worst": 4551346,
       "medium": 5000691,
-      "best": 5593873
+      "best": 5590873
     },
     "rms": {
       "Jihad": {
@@ -19,7 +19,7 @@ window.DASHBOARD_DATA = {
         "target": 1808852,
         "worst": 1338340,
         "medium": 1366065,
-        "best": 1513288
+        "best": 1510288
       },
       "Fadi": {
         "rm": "Fadi",
@@ -5551,8 +5551,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 3000,
       "updatedValueRaw": "3000",
       "updatedValue": 3000,
-      "renewalStatusRaw": "Pending - Low",
-      "renewalStatus": "Pending Low",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Dec",
@@ -8578,7 +8578,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Talentera",
       "location": "Jordan",
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Renewed",
       "updatedValue": 3000,
       "renewalSchedule": [
         {
@@ -8631,10 +8631,10 @@ window.DASHBOARD_DATA = {
       "name": "Jihad",
       "accountsCount": 74,
       "updatedValue": 1251546,
-      "renewed": 912888,
+      "renewed": 915888,
       "pendingHigh": 163710,
       "pendingMedium": 27725,
-      "pendingLow": 56667,
+      "pendingLow": 53667,
       "lost": 90556
     },
     "Fadi": {
@@ -8673,10 +8673,10 @@ window.DASHBOARD_DATA = {
       "name": "Hatem",
       "accountsCount": 58,
       "updatedValue": 550663,
-      "renewed": 264392,
+      "renewed": 267392,
       "pendingHigh": 95513,
       "pendingMedium": 44275,
-      "pendingLow": 45500,
+      "pendingLow": 42500,
       "lost": 100983
     },
     "Haia": {
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-10-26T05:00:52.455Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-10-26T11:00:41.824Z";
