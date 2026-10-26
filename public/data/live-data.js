@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-10-26T11:00:41.822Z",
+  "generatedAt": "2026-10-26T17:00:52.717Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -9,8 +9,8 @@ window.DASHBOARD_DATA = {
     "team": {
       "rm": "Team",
       "target": 5392548,
-      "worst": 4551346,
-      "medium": 5000691,
+      "worst": 4547346,
+      "medium": 4996691,
       "best": 5590873
     },
     "rms": {
@@ -31,8 +31,8 @@ window.DASHBOARD_DATA = {
       "Faizan": {
         "rm": "Faizan",
         "target": 1635048,
-        "worst": 1285334,
-        "medium": 1301884,
+        "worst": 1281334,
+        "medium": 1297884,
         "best": 1547790
       }
     }
@@ -4047,7 +4047,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-136",
       "rowNumber": 136,
-      "status": "Active",
+      "status": "Expected",
       "product": "Talentera",
       "csm": "Hatem",
       "location": "Kuwait",
@@ -4656,7 +4656,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-156",
       "rowNumber": 156,
-      "status": "Active",
+      "status": "Lost",
       "product": "Evalufy",
       "csm": "Hatem",
       "location": "Qatar",
@@ -4666,8 +4666,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 4000,
       "updatedValueRaw": "4000",
       "updatedValue": 4000,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Lost",
+      "renewalStatus": "Lost",
       "renewalSchedule": [
         {
           "month": "Oct",
@@ -8084,7 +8084,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Evalufy",
       "location": "Qatar",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Lost",
       "updatedValue": 4000,
       "renewalSchedule": [
         {
@@ -8622,10 +8622,10 @@ window.DASHBOARD_DATA = {
       "accountsCount": 60,
       "updatedValue": 1358967,
       "renewed": 888531,
-      "pendingHigh": 207980,
+      "pendingHigh": 203980,
       "pendingMedium": 16550,
       "pendingLow": 117498,
-      "lost": 128408
+      "lost": 132408
     },
     "Jihad": {
       "name": "Jihad",
@@ -8674,10 +8674,10 @@ window.DASHBOARD_DATA = {
       "accountsCount": 58,
       "updatedValue": 550663,
       "renewed": 267392,
-      "pendingHigh": 95513,
+      "pendingHigh": 91513,
       "pendingMedium": 44275,
       "pendingLow": 42500,
-      "lost": 100983
+      "lost": 104983
     },
     "Haia": {
       "name": "Haia",
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-10-26T11:00:41.824Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-10-26T17:00:52.719Z";
