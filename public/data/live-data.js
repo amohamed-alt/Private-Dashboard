@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-10-29T05:00:47.533Z",
+  "generatedAt": "2026-10-29T11:00:41.788Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -10,8 +10,8 @@ window.DASHBOARD_DATA = {
       "rm": "Team",
       "target": 5392548,
       "worst": 4694813,
-      "medium": 5001448,
-      "best": 5597523
+      "medium": 4998148,
+      "best": 5594223
     },
     "rms": {
       "Jihad": {
@@ -32,8 +32,8 @@ window.DASHBOARD_DATA = {
         "rm": "Faizan",
         "target": 1635048,
         "worst": 1355733,
-        "medium": 1366033,
-        "best": 1554440
+        "medium": 1362733,
+        "best": 1551140
       }
     }
   },
@@ -3561,7 +3561,7 @@ window.DASHBOARD_DATA = {
       "originalValue": 6250,
       "updatedValueRaw": "6250",
       "updatedValue": 6250,
-      "renewalStatusRaw": "renewed",
+      "renewalStatusRaw": "Renewed",
       "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
@@ -4488,7 +4488,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-150",
       "rowNumber": 150,
-      "status": "Active",
+      "status": "Lost From 2025",
       "product": "Evalufy",
       "csm": "Haia",
       "location": "KSA - Jeddah",
@@ -4498,8 +4498,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 0,
       "updatedValueRaw": "0",
       "updatedValue": 0,
-      "renewalStatusRaw": "Renewed",
-      "renewalStatus": "Renewed",
+      "renewalStatusRaw": "Lost",
+      "renewalStatus": "Lost",
       "renewalSchedule": [],
       "renewalMonths": [],
       "monthlyTotal": 0,
@@ -4728,8 +4728,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 3300,
       "updatedValueRaw": "3300",
       "updatedValue": 3300,
-      "renewalStatusRaw": "Pending - Medium",
-      "renewalStatus": "Pending Medium",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Aug",
@@ -5019,7 +5019,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-168",
       "rowNumber": 168,
-      "status": "Active",
+      "status": "Lost From 2025",
       "product": "Talentera",
       "csm": "Haia",
       "location": "KSA - Jeddah",
@@ -5029,8 +5029,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 0,
       "updatedValueRaw": "0",
       "updatedValue": 0,
-      "renewalStatusRaw": "Renewed",
-      "renewalStatus": "Renewed",
+      "renewalStatusRaw": "Lost",
+      "renewalStatus": "Lost",
       "renewalSchedule": [],
       "renewalMonths": [],
       "monthlyTotal": 0,
@@ -8136,7 +8136,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Evalufy",
       "location": "Qatar",
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Renewed",
       "updatedValue": 3300,
       "renewalSchedule": [
         {
@@ -8621,9 +8621,9 @@ window.DASHBOARD_DATA = {
       "name": "Faizan",
       "accountsCount": 60,
       "updatedValue": 1358967,
-      "renewed": 931432,
+      "renewed": 934732,
       "pendingHigh": 228828,
-      "pendingMedium": 10300,
+      "pendingMedium": 7000,
       "pendingLow": 46599,
       "lost": 141808
     },
@@ -8673,9 +8673,9 @@ window.DASHBOARD_DATA = {
       "name": "Hatem",
       "accountsCount": 58,
       "updatedValue": 550663,
-      "renewed": 273642,
+      "renewed": 276942,
       "pendingHigh": 93010,
-      "pendingMedium": 13300,
+      "pendingMedium": 10000,
       "pendingLow": 31603,
       "lost": 139108
     },
@@ -8789,4 +8789,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-10-29T05:00:47.535Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-10-29T11:00:41.790Z";
