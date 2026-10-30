@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-10-30T17:00:52.745Z",
+  "generatedAt": "2026-10-30T23:00:52.871Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -8790,4 +8790,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-10-30T17:00:52.748Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-10-30T23:00:52.873Z";
