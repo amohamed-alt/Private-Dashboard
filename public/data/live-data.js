@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-11-01T11:00:52.781Z",
+  "generatedAt": "2026-11-01T17:00:44.202Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -9,9 +9,9 @@ window.DASHBOARD_DATA = {
     "team": {
       "rm": "Team",
       "target": 5392548,
-      "worst": 4704465,
-      "medium": 5007800,
-      "best": 5603875
+      "worst": 4691465,
+      "medium": 4994800,
+      "best": 5590875
     },
     "rms": {
       "Jihad": {
@@ -31,9 +31,9 @@ window.DASHBOARD_DATA = {
       "Faizan": {
         "rm": "Faizan",
         "target": 1635048,
-        "worst": 1365385,
-        "medium": 1372385,
-        "best": 1560792
+        "worst": 1352385,
+        "medium": 1359385,
+        "best": 1547792
       }
     }
   },
@@ -165,7 +165,7 @@ window.DASHBOARD_DATA = {
     {
       "id": "ret-6",
       "rowNumber": 6,
-      "status": "Active",
+      "status": "Expected",
       "product": "Talentera",
       "csm": "Hatem",
       "location": "Bahrain",
@@ -856,7 +856,7 @@ window.DASHBOARD_DATA = {
       "id": "ret-30",
       "rowNumber": 30,
       "status": "Active",
-      "product": "AfterHire",
+      "product": "AfterHire - Standalone",
       "csm": "Darshna",
       "location": "Dubai",
       "rm": "Faizan",
@@ -3964,8 +3964,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 13000,
       "updatedValueRaw": "13000",
       "updatedValue": 13000,
-      "renewalStatusRaw": "Pending - High",
-      "renewalStatus": "Pending High",
+      "renewalStatusRaw": "Renewed",
+      "renewalStatus": "Renewed",
       "renewalSchedule": [
         {
           "month": "Dec",
@@ -6243,7 +6243,7 @@ window.DASHBOARD_DATA = {
       "notes": "",
       "rm": "Faizan",
       "csm": "Darshna",
-      "product": "AfterHire",
+      "product": "AfterHire - Standalone",
       "location": "Dubai",
       "renewalStatus": "Pending High",
       "updatedValue": 22000,
@@ -7772,7 +7772,7 @@ window.DASHBOARD_DATA = {
       "csm": "Hatem",
       "product": "Talentera",
       "location": "Qatar",
-      "renewalStatus": "Pending High",
+      "renewalStatus": "Renewed",
       "updatedValue": 13000,
       "renewalSchedule": [
         {
@@ -8621,8 +8621,8 @@ window.DASHBOARD_DATA = {
       "name": "Faizan",
       "accountsCount": 60,
       "updatedValue": 1358967,
-      "renewed": 938082,
-      "pendingHigh": 225478,
+      "renewed": 951082,
+      "pendingHigh": 212478,
       "pendingMedium": 7000,
       "pendingLow": 46599,
       "lost": 141808
@@ -8673,8 +8673,8 @@ window.DASHBOARD_DATA = {
       "name": "Hatem",
       "accountsCount": 58,
       "updatedValue": 550663,
-      "renewed": 276942,
-      "pendingHigh": 93010,
+      "renewed": 289942,
+      "pendingHigh": 80010,
       "pendingMedium": 10000,
       "pendingLow": 31603,
       "lost": 139108
@@ -8735,6 +8735,7 @@ window.DASHBOARD_DATA = {
     ],
     "products": [
       "AfterHire",
+      "AfterHire - Standalone",
       "Evalufy",
       "Evalufy - Standalone",
       "Talentera"
@@ -8790,4 +8791,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-11-01T11:00:52.784Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-11-01T17:00:44.204Z";
