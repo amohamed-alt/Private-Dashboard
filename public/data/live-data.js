@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generatedAt": "2026-11-10T05:00:52.605Z",
+  "generatedAt": "2026-11-10T11:00:41.674Z",
   "source": {
     "summary": "Target, Worst, Medium and Best only from Summary",
     "retention": "All operational details from Retention",
@@ -10,7 +10,7 @@ window.DASHBOARD_DATA = {
       "rm": "Team",
       "target": 5392548,
       "worst": 4691465,
-      "medium": 4994800,
+      "medium": 4993467,
       "best": 5590875
     },
     "rms": {
@@ -25,7 +25,7 @@ window.DASHBOARD_DATA = {
         "rm": "Fadi",
         "target": 1948648,
         "worst": 2000740,
-        "medium": 2294075,
+        "medium": 2292742,
         "best": 2532795
       },
       "Faizan": {
@@ -2582,8 +2582,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 4000,
       "updatedValueRaw": "4000",
       "updatedValue": 4000,
-      "renewalStatusRaw": "Pending - low",
-      "renewalStatus": "Pending Low",
+      "renewalStatusRaw": "Lost",
+      "renewalStatus": "Lost",
       "renewalSchedule": [
         {
           "month": "Dec",
@@ -2666,8 +2666,8 @@ window.DASHBOARD_DATA = {
       "originalValue": 1333,
       "updatedValueRaw": "1333",
       "updatedValue": 1333,
-      "renewalStatusRaw": "Pending - Medium",
-      "renewalStatus": "Pending Medium",
+      "renewalStatusRaw": "Lost",
+      "renewalStatus": "Lost",
       "renewalSchedule": [
         {
           "month": "Dec",
@@ -7122,7 +7122,7 @@ window.DASHBOARD_DATA = {
       "csm": "Maryam",
       "product": "Talentera",
       "location": "KSA - Riyadh",
-      "renewalStatus": "Pending Low",
+      "renewalStatus": "Lost",
       "updatedValue": 4000,
       "renewalSchedule": [
         {
@@ -7174,7 +7174,7 @@ window.DASHBOARD_DATA = {
       "csm": "Maryam",
       "product": "Evalufy",
       "location": "KSA - Riyadh",
-      "renewalStatus": "Pending Medium",
+      "renewalStatus": "Lost",
       "updatedValue": 1333,
       "renewalSchedule": [
         {
@@ -8643,9 +8643,9 @@ window.DASHBOARD_DATA = {
       "updatedValue": 1844057,
       "renewed": 1141600,
       "pendingHigh": 170402,
-      "pendingMedium": 293335,
-      "pendingLow": 58667,
-      "lost": 180053
+      "pendingMedium": 292002,
+      "pendingLow": 54667,
+      "lost": 185386
     },
     "Unassigned": {
       "name": "Unassigned",
@@ -8695,9 +8695,9 @@ window.DASHBOARD_DATA = {
       "updatedValue": 737522,
       "renewed": 417518,
       "pendingHigh": 97334,
-      "pendingMedium": 116001,
-      "pendingLow": 24000,
-      "lost": 82669
+      "pendingMedium": 114668,
+      "pendingLow": 20000,
+      "lost": 88002
     },
     "Sara": {
       "name": "Sara",
@@ -8791,4 +8791,4 @@ window.DASHBOARD_DATA = {
     ]
   }
 };
-window.DASHBOARD_DATA_LOADED_AT = "2026-11-10T05:00:52.608Z";
+window.DASHBOARD_DATA_LOADED_AT = "2026-11-10T11:00:41.677Z";
